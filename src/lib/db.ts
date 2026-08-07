@@ -1,50 +1,40 @@
-import Database from 'better-sqlite3';
-import path from 'path';
-
-// Define the database path relative to CWD
-const DB_PATH = path.join(process.cwd(), 'triz-data.db');
-
-// Initialize the database
-const db = new Database(DB_PATH);
-
-// Initialize schema
-db.exec(`
-  CREATE TABLE IF NOT EXISTS history (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-    situation TEXT NOT NULL,
-    language TEXT NOT NULL,
-    constraints TEXT,
-    result TEXT
-  )
-`);
+import type { D1Database } from '@cloudflare/workers-types';
 
 /**
- * Saves a TRIZ analysis result to the database.
+ * Saves a TRIZ analysis result to D1.
+ *
+ * Never throws: a storage failure must not break the analysis the user just
+ * paid an LLM round-trip for. Returns false so callers can log/ignore.
  */
-export function saveAnalysis(
+export async function saveAnalysis(
+    db: D1Database | undefined,
     situation: string,
     lang: string,
-    constraints: any,
-    result: any
-) {
+    constraints: unknown,
+    result: unknown
+): Promise<boolean> {
+    if (!db) {
+        console.error('Skipping saveAnalysis: D1 binding DB is not available.');
+        return false;
+    }
+
     try {
-        const stmt = db.prepare(`
-            INSERT INTO history (situation, language, constraints, result) 
-            VALUES (?, ?, ?, ?)
-        `);
+        await db
+            .prepare(
+                `INSERT INTO history (situation, language, constraints, result)
+                 VALUES (?, ?, ?, ?)`
+            )
+            .bind(
+                situation,
+                lang,
+                JSON.stringify(constraints ?? {}),
+                JSON.stringify(result ?? {})
+            )
+            .run();
 
-        stmt.run(
-            situation,
-            lang,
-            JSON.stringify(constraints || {}),
-            JSON.stringify(result || {})
-        );
-
-        console.log("Analysis saved to database.");
         return true;
     } catch (error) {
-        console.error("Failed to save analysis to DB:", error);
+        console.error('Failed to save analysis to D1:', error);
         return false;
     }
 }

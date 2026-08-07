@@ -1,24 +1,39 @@
 import { defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
 import { GoogleGenAI } from "@google/genai";
-import fs from 'fs/promises';
-import path from 'path';
 import { saveAnalysis } from '@/lib/db';
 
 // Data Imports
 import matrixRaw from '../Data/Matrix2010.csv?raw';
 import principlesText from '../Data/40principles.md?raw';
 
-// Utility to get API Key
-const API_KEY_PATH = path.join(process.cwd(), 'apikey.txt');
-async function getApiKey(): Promise<string> {
-    try {
-        const apiKey = await fs.readFile(API_KEY_PATH, 'utf-8');
-        return apiKey.trim();
-    } catch (error) {
-        console.error("Error reading API key:", error);
-        throw new Error("Failed to read API key. Please ensure apikey.txt exists in the project root.");
+/**
+ * Cloudflare bindings reachable from an Astro action context.
+ * `runtime` is injected by @astrojs/cloudflare; it is absent under `astro dev`.
+ */
+type CloudflareEnv = {
+    GOOGLE_API_KEY?: string;
+    DB?: import('@cloudflare/workers-types').D1Database;
+};
+
+function getEnv(locals: App.Locals): CloudflareEnv {
+    return (locals as any)?.runtime?.env ?? {};
+}
+
+/**
+ * Resolves the Gemini API key from the Worker secret, falling back to the
+ * build-time env var so `astro dev` keeps working locally.
+ */
+function getApiKey(locals: App.Locals): string {
+    const apiKey = getEnv(locals).GOOGLE_API_KEY ?? import.meta.env.GOOGLE_API_KEY;
+
+    if (!apiKey) {
+        throw new Error(
+            "GOOGLE_API_KEY is not configured. Set it with `wrangler secret put GOOGLE_API_KEY` in production, or in .env for local development."
+        );
     }
+
+    return apiKey;
 }
 
 /**
@@ -44,10 +59,10 @@ export const server = {
         input: z.object({
             text: z.string(),
         }),
-        handler: async ({ text }) => {
+        handler: async ({ text }, context) => {
             if (!text || text.trim() === "") return "";
             try {
-                const apiKey = await getApiKey();
+                const apiKey = getApiKey(context.locals);
                 const ai = new GoogleGenAI({ apiKey });
                 const response = await ai.models.generateContent({
                     model: "gemini-3-pro-preview",
@@ -71,12 +86,12 @@ export const server = {
                 risk: z.number().default(50),
             }).optional(),
         }),
-        handler: async ({ situation, lang, constraints }) => {
+        handler: async ({ situation, lang, constraints }, context) => {
             if (!situation || situation.trim() === "") {
                 return { error: lang === 'vi' ? "Vui lòng nhập vấn đề." : "Please enter a problem." };
             }
             try {
-                const apiKey = await getApiKey();
+                const apiKey = getApiKey(context.locals);
                 const ai = new GoogleGenAI({ apiKey });
 
                 let constraintContext = "";
@@ -226,8 +241,8 @@ export const server = {
                 // But TypeScript types say string.
                 // We will relax the type check in the return or cast it.
 
-                // Save to Database
-                saveAnalysis(situation, lang, constraints, fullResult);
+                // Save to Database (best-effort: never blocks the response on a write failure)
+                await saveAnalysis(getEnv(context.locals).DB, situation, lang, constraints, fullResult);
 
                 // Return directly, don't wrap in { data: ... }
                 return fullResult;

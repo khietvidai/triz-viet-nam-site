@@ -13,12 +13,13 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return next();
   }
 
-  // 2. Lấy header từ Nginx gửi sang
-  // Lưu ý: Nếu Nginx chưa cấu hình xong hoặc lỗi, giá trị này sẽ là null
-  const country = context.request.headers.get("X-Country-Code");
-
-  // In ra log để bạn kiểm tra xem VPS đang nhận được gì (Xem trong terminal)
-  console.log(`[Middleware] IP Country: ${country} | Path: ${path}`);
+  // 2. Lấy mã quốc gia.
+  // Trên Cloudflare Workers: header CF-IPCountry do chính Cloudflare gắn.
+  // X-Country-Code giữ lại để tương thích khi chạy sau Nginx trên VPS.
+  // Thiếu cả hai (ví dụ `astro dev`) thì giá trị là null.
+  const country =
+    context.request.headers.get("CF-IPCountry") ??
+    context.request.headers.get("X-Country-Code");
 
   // 3. LOGIC MỚI: MẶC ĐỊNH LÀ VIỆT NAM
   // Chỉ coi là khách nước ngoài khi có mã quốc gia VÀ mã đó KHÔNG phải VN

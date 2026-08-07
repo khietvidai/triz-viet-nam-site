@@ -1,0 +1,23 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "triz-ai-solver",
+	"main": "./dist/_worker.js/index.js",
+	"compatibility_date": "2026-02-24",
+	"compatibility_flags": ["nodejs_compat"],
+	// Astro xuất client assets ra ./dist, worker nằm trong ./dist/_worker.js
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+	// Lịch sử phân tích TRIZ (thay cho triz-data.db của better-sqlite3)
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "triz-ai-history",
+			"database_id": "99f5756d-9576-470a-a5b1-55fba6180264",
+			"migrations_dir": "migrations"
+		}
+	]
+	// GOOGLE_API_KEY được nạp bằng `wrangler secret put GOOGLE_API_KEY`,
+	// không khai báo ở đây để khỏi lọt vào git.
+}
