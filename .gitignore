@@ -1,0 +1,37 @@
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+.env.*
+!.env.example
+
+# secrets
+apikey.txt
+*.key
+*.pem
+
+# runtime database (contains user history)
+triz-data.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/

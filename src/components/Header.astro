@@ -1,0 +1,316 @@
+---
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { Image } from "astro:assets";
+import logoImage from "../assets/logo-triz-ai.webp";
+
+interface Props {
+    lang: string;
+}
+
+const { lang } = Astro.props;
+
+const links = [
+    { href: `/${lang}`, label: lang === "vi" ? "Trang chủ" : "Home" },
+    { href: `/${lang}/triz`, label: lang === "vi" ? "TRIZ AI" : "TRIZ AI" },
+    {
+        href: `/${lang}/principles`,
+        label: lang === "vi" ? "40 Nguyên lý" : "40 Principles",
+    },
+    {
+        href: `/${lang}/parameters`,
+        label: lang === "vi" ? "50 Thông số" : "50 Parameters",
+    },
+    {
+        href: `/${lang}/about-triz-vietnam`,
+        label: lang === "vi" ? "Di sản TRIZ" : "TRIZ Vietnam",
+    },
+];
+
+const currentPath = Astro.url.pathname;
+const isActive = (href: string) => {
+    // Exact match or sub-path match for simplicity, but exact is better for these top levels
+    if (href === `/${lang}` && currentPath === `/${lang}`) return true;
+    if (href !== `/${lang}` && currentPath.startsWith(href)) return true;
+    return false;
+};
+---
+
+<header
+    id="main-header"
+    class="fixed top-0 left-0 right-0 z-50 bg-obsidian/80
+backdrop-blur-md border-b border-white/5 shadow-lg shadow-violet-500/5
+transition-all duration-300"
+>
+    <!-- Note: bg-obsidian kept for branding consistency -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center h-16">
+            <!-- Logo Container (Left) -->
+            <div class="flex-1 flex justify-start">
+                <a
+                    href={`/${lang}`}
+                    class="flex items-center gap-2 group relative z-50"
+                    aria-label="TRIZ Việt Nam Home"
+                >
+                    <div class="relative w-8 h-8">
+                        <div
+                            class="absolute inset-0 bg-violet-500/30 rounded-full blur-md group-hover:bg-cyan-500/30 transition-colors animate-pulse"
+                        >
+                        </div>
+                        <img
+                            src="/triz-viet-nam-logo.webp"
+                            alt="TRIZ AI Logo"
+                            width="32"
+                            height="32"
+                            class="w-full h-full object-contain relative z-10 brightness-110 drop-shadow-[0_0_8px_rgba(139,92,246,0.5)]"
+                        />
+                    </div>
+                    <span
+                        class="font-bold text-xl tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-violet-400 group-hover:to-cyan-400 transition-all"
+                    >
+                        TRIZ <span
+                            class="text-cyan-400 group-hover:text-cyan-300"
+                            >VIETNAM</span
+                        >
+                    </span>
+                </a>
+            </div>
+
+            <!-- Desktop Nav (Center) -->
+            <nav class="hidden lg:flex items-center justify-center gap-8">
+                {
+                    links.map((link) => (
+                        <a
+                            href={link.href}
+                            class:list={[
+                                "text-sm font-medium transition-all duration-200 relative py-1",
+                                isActive(link.href)
+                                    ? "text-red-600 font-bold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600 after:shadow-[0_0_8px_rgba(220,38,38,0.5)]"
+                                    : "text-slate-300 hover:text-red-500 hover:drop-shadow-sm transition-colors",
+                            ]}
+                        >
+                            {link.label}
+                        </a>
+                    ))
+                }
+            </nav>
+
+            <!-- Right Actions (Right) -->
+            <div class="flex-1 flex justify-end items-center gap-4">
+                <!-- Language Switcher -->
+                <div class="hidden lg:block">
+                    <LanguageSwitcher
+                        client:visible
+                        currentLang={lang as "en" | "vi"}
+                        label={lang === "vi" ? "Ngôn ngữ" : "Language"}
+                    />
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button
+                    id="mobile-menu-btn"
+                    class="lg:hidden relative z-50 p-2 text-slate-300 hover:text-white transition-colors"
+                    aria-label="Toggle Menu"
+                >
+                    <div class="relative w-6 h-6 overflow-hidden">
+                        <span
+                            id="icon-menu"
+                            class="absolute inset-0 transition-all duration-300 opacity-100 rotate-0 scale-100"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-menu"
+                                ><line x1="4" x2="20" y1="12" y2="12"
+                                ></line><line x1="4" x2="20" y1="6" y2="6"
+                                ></line><line x1="4" x2="20" y1="18" y2="18"
+                                ></line></svg
+                            >
+                        </span>
+                        <span
+                            id="icon-close"
+                            class="absolute inset-0 transition-all duration-300 opacity-0 -rotate-90 scale-75"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-x"
+                                ><path d="M18 6 6 18"></path><path
+                                    d="m6 6 12 12"></path></svg
+                            >
+                        </span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+        id="mobile-menu"
+        class="fixed inset-0 z-40 bg-obsidian/98 backdrop-blur-2xl translate-x-full transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) lg:hidden flex items-center justify-center opacity-0 pointer-events-none"
+    >
+        <!-- Background decorative elements -->
+        <div
+            class="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-[100px] pointer-events-none"
+        >
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-orange-500/10 rounded-full blur-[100px] pointer-events-none"
+        >
+        </div>
+
+        <div
+            class="flex flex-col items-center gap-6 p-8 w-full relative z-10 pt-24"
+        >
+            {
+                links.map((link) => (
+                    <a
+                        href={link.href}
+                        class:list={[
+                            "text-3xl font-bold transition-all duration-300 mobile-nav-link transform translate-y-8 opacity-0",
+                            isActive(link.href)
+                                ? "text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500"
+                                : "text-slate-400 hover:text-white hover:scale-105",
+                        ]}
+                    >
+                        {link.label}
+                    </a>
+                ))
+            }
+            <div
+                class="mt-8 mobile-nav-link transform translate-y-8 opacity-0 scale-90"
+            >
+                <LanguageSwitcher
+                    client:visible
+                    currentLang={lang as "en" | "vi"}
+                    label={lang === "vi" ? "Ngôn ngữ" : "Language"}
+                />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("astro:page-load", () => {
+            const header = document.getElementById("main-header");
+            const btn = document.getElementById("mobile-menu-btn");
+            const menu = document.getElementById("mobile-menu");
+            const iconMenu = document.getElementById("icon-menu");
+            const iconClose = document.getElementById("icon-close");
+            const links = document.querySelectorAll(".mobile-nav-link");
+            let isOpen = false;
+
+            // Remove existing listeners to avoid duplicates if any (though usually clean slate)
+            // Just cloning node or clean logic isn't strictly needed if DOM is replaced,
+            // but good practice if elements persist. Here assuming replacement.
+
+            const toggleMenu = () => {
+                isOpen = !isOpen;
+                if (isOpen) {
+                    // Open
+                    menu?.classList.remove(
+                        "translate-x-full",
+                        "opacity-0",
+                        "pointer-events-none",
+                    );
+
+                    // Icon Animation
+                    iconMenu?.classList.add(
+                        "opacity-0",
+                        "rotate-90",
+                        "scale-75",
+                    );
+                    iconClose?.classList.remove(
+                        "opacity-0",
+                        "-rotate-90",
+                        "scale-75",
+                    );
+
+                    // Header Transparency
+                    header?.classList.add(
+                        "!bg-transparent",
+                        "!backdrop-blur-none",
+                        "!shadow-none",
+                        "!border-transparent",
+                    );
+
+                    document.body.style.overflow = "hidden";
+
+                    // Stagger animation
+                    links.forEach((link, index) => {
+                        setTimeout(
+                            () => {
+                                link.classList.remove(
+                                    "translate-y-8",
+                                    "opacity-0",
+                                    "scale-90",
+                                );
+                            },
+                            150 + index * 70,
+                        );
+                    });
+                } else {
+                    // Close
+                    menu?.classList.add(
+                        "translate-x-full",
+                        "opacity-0",
+                        "pointer-events-none",
+                    );
+
+                    // Icon Reset
+                    iconMenu?.classList.remove(
+                        "opacity-0",
+                        "rotate-90",
+                        "scale-75",
+                    );
+                    iconClose?.classList.add(
+                        "opacity-0",
+                        "-rotate-90",
+                        "scale-75",
+                    );
+
+                    // Restore Header
+                    header?.classList.remove(
+                        "!bg-transparent",
+                        "!backdrop-blur-none",
+                        "!shadow-none",
+                        "!border-transparent",
+                    );
+
+                    document.body.style.overflow = "";
+
+                    // Reset links
+                    links.forEach((link) => {
+                        link.classList.add(
+                            "translate-y-8",
+                            "opacity-0",
+                            "scale-90",
+                        );
+                    });
+                }
+            };
+
+            btn?.addEventListener("click", toggleMenu);
+
+            // Close on link click
+            links.forEach((link) => {
+                link.addEventListener("click", () => {
+                    if (isOpen) toggleMenu();
+                });
+            });
+        });
+    </script>
+</header>

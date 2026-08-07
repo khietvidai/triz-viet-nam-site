@@ -1,0 +1,331 @@
+[
+    {
+        "id": 1,
+        "title": "Nguyên tắc phân nhỏ",
+        "details": [
+            "Chia đối tượng thành các phần độc lập.",
+            "Làm cho đối tượng trở nên tháo lắp được.",
+            "Tăng mức độ phân nhỏ của đối tượng."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Nguyên tắc tách khỏi",
+        "details": [
+            "Tách phần gây phiền phức (tính chất gây phiền phức) hay phần ngược lại, tách phần duy nhất cần thiết (tính chất cần thiết) ra khỏi đối tượng."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Nguyên tắc phẩm chất cục bộ",
+        "details": [
+            "Chuyển đối tượng (hay môi trường bên ngoài, tác động bên ngoài) có cấu trúc đồng nhất thành không đồng nhất.",
+            "Các phần khác nhau của đối tượng phải có các chức năng khác nhau.",
+            "Mỗi phần của đối tượng phải đặt trong những điều kiện thích hợp nhất đối với công việc."
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Nguyên tắc phản đối xứng",
+        "details": [
+            "Chuyển đối tượng có hình dạng đối xứng thành không đối xứng.",
+            "Nếu đối tượng đã không đối xứng, tăng mức độ không đối xứng."
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Nguyên tắc kết hợp",
+        "details": [
+            "Kết hợp các đối tượng đồng nhất hoặc các đối tượng dùng cho các hoạt động kế cận.",
+            "Kết hợp về mặt thời gian các hoạt động đồng nhất hoặc kế cận."
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Nguyên tắc vạn năng",
+        "details": [
+            "Đối tượng thực hiện một số chức năng khác nhau, do đó không cần sự tham gia của các đối tượng khác."
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Nguyên tắc chứa trong",
+        "details": [
+            "Một đối tượng được đặt bên trong đối tượng khác và bản thân nó lại chứa đối tượng thứ ba, v.v...",
+            "Một đối tượng chuyển động xuyên qua khoảng trống của đối tượng khác."
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Nguyên tắc phản trọng lượng",
+        "details": [
+            "Bù trừ trọng lượng của đối tượng bằng cách gắn nó với đối tượng khác có lực nâng.",
+            "Bù trừ trọng lượng của đối tượng bằng tương tác với môi trường như sử dụng các lực thủy động, khí động..."
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Nguyên tắc gây ứng suất sơ bộ",
+        "details": [
+            "Nếu cần thực hiện một biến đổi nào đó đối với đối tượng, hãy thực hiện trước biến đổi ngược lại.",
+            "Tạo ứng suất trước trong đối tượng để chống lại những ứng suất làm việc không mong muốn."
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Nguyên tắc thực hiện sơ bộ",
+        "details": [
+            "Thực hiện trước sự thay đổi cần có đối với đối tượng (hoàn toàn hoặc từng phần).",
+            "Sắp xếp đối tượng trước sao cho chúng có thể hoạt động từ vị trí thuận lợi nhất mà không mất thời gian dịch chuyển."
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Nguyên tắc dự phòng",
+        "details": [
+            "Bù đắp độ tin cậy không lớn của đối tượng bằng cách chuẩn bị trước các phương tiện báo động, ứng cứu, an toàn."
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Nguyên tắc đẳng thế",
+        "details": [
+            "Thay đổi điều kiện làm việc để không phải nâng lên hay hạ xuống các đối tượng."
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Nguyên tắc đảo ngược",
+        "details": [
+            "Thay vì hành động như yêu cầu bài toán, hành động ngược lại (ví dụ: làm lạnh đối tượng thay vì nung nóng).",
+            "Làm phần chuyển động thành đứng yên và ngược lại.",
+            "Lật ngược đối tượng."
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Nguyên tắc cầu hóa",
+        "details": [
+            "Chuyển những phần thẳng, bề mặt phẳng, hình lập phương thành cong, mặt cầu, hình cầu.",
+            "Sử dụng các con lăn, viên bi, đường xoắn ốc.",
+            "Chuyển sang chuyển động quay, sử dụng lực ly tâm."
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Nguyên tắc linh động",
+        "details": [
+            "Thay đổi các đặc trưng của đối tượng hay môi trường bên ngoài sao cho chúng tối ưu trong từng giai đoạn làm việc.",
+            "Phân chia đối tượng thành các phần có khả năng dịch chuyển với nhau.",
+            "Đối tượng cứng nhắc trở thành đàn hồi hoặc linh động."
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Nguyên tắc giải quyết từng phần",
+        "details": [
+            "Nếu không thể đạt được 100% hiệu quả, hãy thử đạt được hiệu quả ít hơn hoặc nhiều hơn một chút."
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Nguyên tắc chuyển sang chiều khác",
+        "details": [
+            "Di chuyển đối tượng trong không gian hai hoặc ba chiều.",
+            "Sử dụng các kết cấu nhiều tầng thay cho một tầng.",
+            "Đặt đối tượng nằm nghiêng hoặc nằm ngang.",
+            "Sử dụng mặt sau của bề mặt."
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Nguyên tắc dao động cơ học",
+        "details": [
+            "Làm đối tượng dao động.",
+            "Nếu đã có dao động, tăng tần số (đến siêu âm).",
+            "Sử dụng tần số cộng hưởng.",
+            "Thay dao động cơ học bằng các dao động điện từ (như piezoelectric).",
+            "Sử dụng siêu âm kết hợp với trường điện từ."
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Nguyên tắc tác động theo chu kỳ",
+        "details": [
+            "Chuyển tác động liên tục thành tác động theo chu kỳ (xung).",
+            "Nếu tác động đã theo chu kỳ, hãy thay đổi chu kỳ.",
+            "Sử dụng các khoảng dừng giữa các xung để thực hiện tác động khác."
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Nguyên tắc liên tục tác động có ích",
+        "details": [
+            "Thực hiện công việc một cách liên tục (tất cả các phần của đối tượng làm việc đầy tải mọi lúc).",
+            "Loại bỏ các chuyển động chạy không tải hoặc trung gian."
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Nguyên tắc vượt nhanh",
+        "details": [
+            "Tiến hành quá trình hay các giai đoạn có hại hoặc nguy hiểm với tốc độ rất nhanh."
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Nguyên tắc biến hại thành lợi",
+        "details": [
+            "Sử dụng các tác nhân có hại (ví dụ tác động có hại của môi trường) để thu được hiệu quả có lợi.",
+            "Khắc phục tác nhân có hại bằng cách kết hợp nó với tác nhân có hại khác.",
+            "Tăng cường tác nhân có hại đến mức nó không còn gây hại nữa."
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Nguyên tắc quan hệ phản hồi",
+        "details": [
+            "Thiết lập quan hệ phản hồi.",
+            "Nếu đã có quan hệ phản hồi, hãy thay đổi nó."
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Nguyên tắc sử dụng trung gian",
+        "details": [
+            "Sử dụng đối tượng trung gian để chuyển tiếp hoặc thực hiện tác động."
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Nguyên tắc tự phục vụ",
+        "details": [
+            "Đối tượng phải tự phục vụ bằng cách thực hiện các thao tác phụ trợ, sửa chữa.",
+            "Sử dụng phế liệu, chất thải, năng lượng thừa."
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Nguyên tắc sao chép",
+        "details": [
+            "Thay đối tượng không có sẵn, phức tạp, đắt tiền, dễ vỡ bằng bản sao đơn giản, rẻ tiền.",
+            "Thay thế đối tượng hoặc hệ thống bằng bản sao quang học (ảnh, hình chiếu).",
+            "Nếu đã sử dụng bản sao quang học, hãy chuyển sang bản sao hồng ngoại hoặc tử ngoại."
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Nguyên tắc rẻ thay cho đắt",
+        "details": [
+            "Thay thế một đối tượng đắt tiền bằng nhiều đối tượng rẻ tiền có chất lượng thấp hơn (ví dụ như tuổi thọ ngắn hơn)."
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Nguyên tắc thay thế sơ đồ cơ học",
+        "details": [
+            "Thay thế sơ đồ cơ học bằng điện, quang, nhiệt, âm hoặc mùi vị.",
+            "Sử dụng các trường điện, từ và điện từ để tác động lên đối tượng.",
+            "Chuyển từ các trường tĩnh sang trường động, trường có cấu trúc.",
+            "Sử dụng trường kết hợp với các hạt sắt từ."
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Nguyên tắc sử dụng các kết cấu khí và lỏng",
+        "details": [
+            "Thay thế các phần rắn của đối tượng bằng chất khí hoặc lỏng (đệm khí, thủy tĩnh...)."
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Nguyên tắc sử dụng vỏ dẻo và màng mỏng",
+        "details": [
+            "Sử dụng vỏ dẻo và màng mỏng thay cho các kết cấu khối.",
+            "Cách ly đối tượng với môi trường bên ngoài bằng vỏ dẻo và màng mỏng."
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Nguyên tắc sử dụng vật liệu xốp",
+        "details": [
+            "Làm đối tượng có dạng xốp hoặc sử dụng thêm các phần tử xốp (miếng đệm, tấm phủ...).",
+            "Nếu đối tượng đã xốp, hãy sơ bộ tẩm chất nào đó vào nó."
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Nguyên tắc thay đổi màu sắc",
+        "details": [
+            "Thay đổi màu sắc của đối tượng hay môi trường bên ngoài.",
+            "Thay đổi độ trong suốt của đối tượng hay môi trường bên ngoài.",
+            "Sử dụng các chất phụ gia màu để quan sát các đối tượng khó nhìn thấy.",
+            "Sử dụng các chất dạ quang, phần tử phát quang."
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Nguyên tắc đồng nhất",
+        "details": [
+            "Những đối tượng tương tác với đối tượng chính phải được làm từ cùng một vật liệu (hoặc vật liệu có tính chất gần giống)."
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Nguyên tắc phân hủy hoặc tái sinh",
+        "details": [
+            "Phần đối tượng đã hoàn thành nhiệm vụ hoặc trở nên vô ích phải tự phân hủy (hòa tan, bay hơi...) hoặc biến dạng.",
+            "Phục hồi các phần hao phí của đối tượng ngay trong quá trình làm việc."
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Nguyên tắc thay đổi các thông số hóa lý",
+        "details": [
+            "Thay đổi trạng thái lỏng, rắn, khí.",
+            "Thay đổi nồng độ hay độ đậm đặc.",
+            "Thay đổi độ dẻo.",
+            "Thay đổi nhiệt độ."
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Nguyên tắc sử dụng chuyển pha",
+        "details": [
+            "Sử dụng các hiện tượng nảy sinh trong quá trình chuyển pha (thay đổi thể tích, tỏa nhiệt hay thu nhiệt...)."
+        ]
+    },
+    {
+        "id": 37,
+        "title": "Nguyên tắc sử dụng nở nhiệt",
+        "details": [
+            "Sử dụng sự nở (hay co) do nhiệt của vật liệu.",
+            "Sử dụng các vật liệu có hệ số nở nhiệt khác nhau."
+        ]
+    },
+    {
+        "id": 38,
+        "title": "Nguyên tắc sử dụng chất oxy hóa mạnh",
+        "details": [
+            "Thay không khí thường bằng không khí giàu oxy.",
+            "Thay không khí giàu oxy bằng oxy tinh khiết.",
+            "Ion hóa không khí hoặc oxy.",
+            "Sử dụng oxy ozon hóa."
+        ]
+    },
+    {
+        "id": 39,
+        "title": "Nguyên tắc sử dụng môi trường trơ",
+        "details": [
+            "Thay môi trường thông thường bằng môi trường trơ.",
+            "Thực hiện quá trình trong chân không."
+        ]
+    },
+    {
+        "id": 40,
+        "title": "Nguyên tắc sử dụng vật liệu hợp thành",
+        "details": [
+            "Chuyển từ vật liệu đồng nhất sang vật liệu hợp thành (composite)."
+        ]
+    }
+]

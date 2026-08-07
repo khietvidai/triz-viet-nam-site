@@ -1,0 +1,76 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import principlesEn from "../../Data/40principles.json";
+import principlesVi from "../../Data/40principles_vi.json";
+import { getDictionary } from "../../lib/dictionary";
+
+export function getStaticPaths() {
+    return [{ params: { lang: "en" } }, { params: { lang: "vi" } }];
+}
+
+const { lang } = Astro.params;
+const dict = await getDictionary(lang as "en" | "vi");
+
+if (lang !== "en" && lang !== "vi") {
+    return Astro.redirect("/en");
+}
+
+const principlesData = lang === "vi" ? principlesVi : principlesEn;
+const title =
+    lang === "vi"
+        ? "40 Nguyên Lý Sáng Tạo TRIZ"
+        : "40 Inventive Principles of TRIZ";
+---
+
+<Layout title={title} lang={lang}>
+    <Header lang={lang} />
+    <main class="min-h-screen bg-gray-50 flex flex-col">
+        <div class="flex-grow max-w-5xl mx-auto px-6 pt-24 pb-12 w-full">
+            <div class="text-center mb-12">
+                <h1
+                    class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-4"
+                >
+                    {title}
+                </h1>
+                <p class="text-gray-600 text-lg">
+                    {
+                        lang === "vi"
+                            ? "Công cụ cốt lõi để giải quyết mâu thuẫn kỹ thuật."
+                            : "Core tools for resolving technical contradictions."
+                    }
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {
+                    principlesData.map((principle) => (
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 font-bold text-lg border border-blue-100">
+                                    {principle.id}
+                                </span>
+                                <h2 class="text-xl font-bold text-gray-900">
+                                    {principle.title}
+                                </h2>
+                            </div>
+                            <ul class="space-y-2">
+                                {principle.details.map((detail) => (
+                                    <li class="text-gray-600 text-sm flex gap-2">
+                                        <span class="text-blue-400">•</span>
+                                        <span>{detail}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <div class="mt-auto">
+            <Footer lang={lang} />
+        </div>
+    </main>
+</Layout>

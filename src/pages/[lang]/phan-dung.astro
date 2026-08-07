@@ -1,0 +1,280 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+/// Import content data
+import contentData from "../../Data/triz_vietnam_content.json";
+import { getDictionary } from "../../lib/dictionary";
+
+export function getStaticPaths() {
+    return [{ params: { lang: "en" } }, { params: { lang: "vi" } }];
+}
+
+interface TableData {
+    headers: string[];
+    rows: string[][];
+}
+
+interface Subsection {
+    title: string;
+    content: string[];
+    table?: TableData;
+}
+
+interface Section {
+    id: string;
+    title: string;
+    content?: string[];
+    subsections?: Subsection[];
+    table?: TableData;
+}
+
+interface ContentData {
+    mainTitle: string;
+    sections: Section[];
+}
+
+const { lang } = Astro.params;
+const dict = await getDictionary(lang as "en" | "vi");
+
+if (lang !== "en" && lang !== "vi") {
+    return Astro.redirect("/en");
+}
+
+const content = (
+    lang === "vi" ? contentData.vi : contentData.en
+) as ContentData;
+
+const title =
+    lang === "vi"
+        ? "Giáo sư Phan Dũng - Di sản TRIZ"
+        : "Professor Phan Dung - TRIZ Legacy";
+---
+
+<Layout title={title} lang={lang}>
+    <Header lang={lang} />
+
+    <main class="min-h-screen bg-white">
+        <!-- Hero Section -->
+        <section class="relative py-20 overflow-hidden">
+            <div class="absolute inset-0 bg-blue-50/50 -z-10"></div>
+            <div
+                class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/40 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"
+            >
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <div class="mb-8 flex justify-center">
+                    <div
+                        class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white"
+                    >
+                        <img
+                            src="/thay-phan-dung-triz.webp"
+                            alt={lang === "vi"
+                                ? "Thầy Phan Dũng"
+                                : "Professor Phan Dung"}
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+
+                <h1
+                    class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-purple-700 mb-6 leading-tight"
+                >
+                    {
+                        lang === "vi"
+                            ? "Giáo sư TSKH Phan Dũng"
+                            : "Prof. Dr. Sc. Phan Dung"
+                    }
+                </h1>
+                <p
+                    class="text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto"
+                >
+                    {content.mainTitle}
+                </p>
+
+                <div class="mt-8">
+                    <a
+                        href={`/${lang}/about-triz-vietnam`}
+                        class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-2 transition-colors"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><path d="m15 18-6-6 6-6"></path></svg
+                        >
+                        {
+                            lang === "vi"
+                                ? "Quay lại Di sản TRIZ"
+                                : "Back to TRIZ Legacy"
+                        }
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-6 max-w-4xl mx-auto">
+            <!-- Detail Article Section -->
+            <article
+                class="prose prose-lg md:prose-xl max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600"
+            >
+                <div class="space-y-12">
+                    {
+                        content.sections.map((section) => (
+                            <div class="scroll-mt-24" id={section.id}>
+                                {section.title && (
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">
+                                        {section.title}
+                                    </h3>
+                                )}
+
+                                {section.content &&
+                                    section.content.map((paragraph) => (
+                                        <p class="text-gray-700 leading-relaxed mb-4 text-justify">
+                                            {paragraph
+                                                .split("**")
+                                                .map((part, index) =>
+                                                    index % 2 === 1 ? (
+                                                        <strong class="font-semibold text-gray-900">
+                                                            {part}
+                                                        </strong>
+                                                    ) : (
+                                                        part
+                                                    ),
+                                                )}
+                                        </p>
+                                    ))}
+
+                                {section.subsections &&
+                                    section.subsections.map((sub) => (
+                                        <div class="mt-8 ml-0 md:ml-4">
+                                            <h4 class="text-xl font-bold text-gray-800 mb-3">
+                                                {sub.title}
+                                            </h4>
+                                            {sub.content &&
+                                                sub.content.map((paragraph) => (
+                                                    <p class="text-gray-700 leading-relaxed mb-4 text-justify">
+                                                        {paragraph
+                                                            .split("**")
+                                                            .map(
+                                                                (
+                                                                    part,
+                                                                    index,
+                                                                ) =>
+                                                                    index %
+                                                                        2 ===
+                                                                    1 ? (
+                                                                        <strong class="font-semibold text-gray-900">
+                                                                            {
+                                                                                part
+                                                                            }
+                                                                        </strong>
+                                                                    ) : (
+                                                                        part
+                                                                    ),
+                                                            )}
+                                                    </p>
+                                                ))}
+                                            {sub.table && (
+                                                <div class="overflow-hidden my-8 bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 ring-1 ring-gray-100">
+                                                    <div class="overflow-x-auto">
+                                                        <table class="w-full text-left border-collapse">
+                                                            <thead>
+                                                                <tr class="bg-gray-50/80 border-b border-gray-100">
+                                                                    {sub.table.headers.map(
+                                                                        (
+                                                                            header,
+                                                                            index,
+                                                                        ) => (
+                                                                            <th
+                                                                                class={`py-5 px-6 md:px-16 font-bold text-xs uppercase tracking-wider text-gray-500 ${index === 0 ? "w-[15%] whitespace-nowrap" : index === 1 ? "w-[35%]" : ""}`}
+                                                                            >
+                                                                                {
+                                                                                    header
+                                                                                }
+                                                                            </th>
+                                                                        ),
+                                                                    )}
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="divide-y divide-gray-100">
+                                                                {sub.table.rows.map(
+                                                                    (row) => (
+                                                                        <tr class="group hover:bg-blue-50/30 transition-colors duration-300">
+                                                                            {row.map(
+                                                                                (
+                                                                                    cell,
+                                                                                ) => (
+                                                                                    <td class="py-5 px-6 md:px-16 text-sm text-gray-600 group-hover:text-gray-900 transition-colors">
+                                                                                        {
+                                                                                            cell
+                                                                                        }
+                                                                                    </td>
+                                                                                ),
+                                                                            )}
+                                                                        </tr>
+                                                                    ),
+                                                                )}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+
+                                {section.table && (
+                                    <div class="overflow-hidden my-8 bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 ring-1 ring-gray-100">
+                                        <div class="overflow-x-auto">
+                                            <table class="w-full text-left border-collapse">
+                                                <thead>
+                                                    <tr class="bg-gray-50/80 border-b border-gray-100">
+                                                        {section.table.headers.map(
+                                                            (header, index) => (
+                                                                <th
+                                                                    class={`py-5 px-6 md:px-16 font-bold text-xs uppercase tracking-wider text-gray-500 ${index === 0 ? "w-[15%] whitespace-nowrap" : index === 1 ? "w-[35%]" : ""}`}
+                                                                >
+                                                                    {header}
+                                                                </th>
+                                                            ),
+                                                        )}
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="divide-y divide-gray-100">
+                                                    {section.table.rows.map(
+                                                        (row) => (
+                                                            <tr class="group hover:bg-blue-50/30 transition-colors duration-300">
+                                                                {row.map(
+                                                                    (cell) => (
+                                                                        <td class="py-5 px-6 md:px-16 text-sm text-gray-600 group-hover:text-gray-900 transition-colors">
+                                                                            {
+                                                                                cell
+                                                                            }
+                                                                        </td>
+                                                                    ),
+                                                                )}
+                                                            </tr>
+                                                        ),
+                                                    )}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        ))
+                    }
+                </div>
+            </article>
+        </section>
+
+        <Footer lang={lang} />
+    </main>
+</Layout>

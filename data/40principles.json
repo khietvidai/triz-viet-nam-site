@@ -1,0 +1,330 @@
+[
+    {
+        "id": 1,
+        "title": "Segmentation",
+        "details": [
+            "Divide an object into independent parts.",
+            "Make an object easy to disassemble (sectional).",
+            "Increase the degree of fragmentation or segmentation."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Taking out (Extraction)",
+        "details": [
+            "Separate an interfering part or property from an object, or single out the only necessary part (or property) of an object."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Local Quality",
+        "details": [
+            "Change an object's structure from uniform to non-uniform; change an external environment (or external influence) from uniform to non-uniform.",
+            "Make each part of an object function in conditions most suitable for its operation.",
+            "Make each part of an object fulfill a different and useful function."
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Asymmetry",
+        "details": [
+            "Change the shape of an object from symmetrical to asymmetrical.",
+            "If an object is asymmetrical, increase its degree of asymmetry."
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Merging (Consolidation)",
+        "details": [
+            "Bring closer together (or merge) identical or similar objects, assemble identical or similar parts to perform parallel operations.",
+            "Make operations contiguous or parallel; bring them together in time."
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Universality (Multi-functionality)",
+        "details": [
+            "Make a part or object perform multiple functions; eliminate the need for other parts."
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Nesting (Matryoshka)",
+        "details": [
+            "Place one object inside another; place each object, in turn, inside the other.",
+            "Make one part pass through a cavity in the other."
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Anti-Weight (Counterweight)",
+        "details": [
+            "To compensate for the weight of an object, merge it with other objects that provide lift.",
+            "To compensate for the weight of an object, make it interact with the environment (e.g. use aerodynamic, hydrodynamic, buoyancy and other forces)."
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Preliminary Anti-Action (Prior Counteraction)",
+        "details": [
+            "If it will be necessary to do an action with both useful and harmful effects, this action should be replaced with anti-actions to control harmful effects (or create pre-stresses in an object to oppose known undesirable working stresses)."
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Preliminary Action (Prior Action)",
+        "details": [
+            "Perform, before it is needed, the required change of an object (either fully or partially).",
+            "Pre-arrange objects such that they can come into action from the most convenient place and without losing time for their delivery."
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Beforehand Cushioning (Cushion in Advance)",
+        "details": [
+            "Prepare emergency means beforehand to compensate for the relatively low reliability of an object."
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Equipotentiality",
+        "details": [
+            "In a potential field, limit position changes (e.g. change operating conditions to eliminate the need to raise or lower objects in a gravity field)."
+        ]
+    },
+    {
+        "id": 13,
+        "title": "The Other Way Round (Inversion)",
+        "details": [
+            "Invert the action(s) used to solve the problem (e.g. cool an object instead of heating it).",
+            "Make movable parts (or the external environment) fixed, and fixed parts movable.",
+            "Turn the object (or process) 'upside down'."
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Spheroidality (Curvature)",
+        "details": [
+            "Instead of using rectilinear parts, surfaces, or forms, use curvilinear ones; move from flat surfaces to spherical ones; from parts shaped as a cube (parallelepiped) to ball-shaped structures.",
+            "Use rollers, balls, spirals, domes.",
+            "Go from linear motion to rotary motion, use centrifugal forces."
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Dynamics",
+        "details": [
+            "Allow (or design) the characteristics of an object, external environment, or process to change to be optimal or to find an optimal operating condition.",
+            "Divide an object into parts capable of movement relative to each other.",
+            "If an object (or process) is rigid or inflexible, make it movable or adaptive."
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Partial or Excessive Actions",
+        "details": [
+            "If 100 percent of an object is hard to achieve using a given solution method then, by using 'slightly less' or 'slightly more' of the same method, the problem may be considerably easier to solve."
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Another Dimension",
+        "details": [
+            "To move an object in two- or three-dimensional space.",
+            "Use a multi-story arrangement of objects instead of a single-story arrangement.",
+            "Tilt or re-orient the object, lay it on its side.",
+            "Use 'another side' of a given area."
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Mechanical Vibration",
+        "details": [
+            "Cause an object to oscillate or vibrate.",
+            "Increase its frequency (even up to the ultrasonic).",
+            "Use an object's resonant frequency.",
+            "Use piezoelectric vibrators instead of mechanical ones.",
+            "Use ultrasonic vibrations in conjunction with an electromagnetic field."
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Periodic Action",
+        "details": [
+            "Instead of continuous action, use periodic or pulsed action.",
+            "If an action is already periodic, change the periodic magnitude or frequency.",
+            "Use pauses between impulses to perform a different action."
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Continuity of Useful Action",
+        "details": [
+            "Carry on work continuously; make all parts of an object work at full load, all the time.",
+            "Eliminate all idle or intermittent actions or work."
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Rushing Through (Skipping)",
+        "details": [
+            "Conduct a process, or certain stages (e.g. destructible, harmful or hazardous operations) at high speed."
+        ]
+    },
+    {
+        "id": 22,
+        "title": "\"Blessing in Disguise\" (Convert Harmful into Useful)",
+        "details": [
+            "Use harmful factors (particularly, harmful effects of the environment or setting) to achieve a positive effect.",
+            "Eliminate the primary harmful action by adding it to another harmful action to resolve the problem.",
+            "Amplify a harmful factor to such a degree that it is no longer harmful."
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Feedback",
+        "details": [
+            "Introduce feedback (referencing, cross-checking) to improve a process or action.",
+            "If feedback is already used, change its magnitude or influence."
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Intermediary",
+        "details": [
+            "Use an intermediary carrier article or intermediary process."
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Self-service",
+        "details": [
+            "Make an object serve itself by performing auxiliary helpful functions (repairing, self-cleaning, etc.).",
+            "Use waste resources, energy, or substances."
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Copying",
+        "details": [
+            "Instead of an unavailable, expensive, fragile object, use simpler and inexpensive copies.",
+            "Replace an object, or process with optical copies.",
+            "If visible optical copies are used, move to infrared or ultraviolet copies."
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Cheap Short-Living Objects",
+        "details": [
+            "Replace an expensive object with a multiple of inexpensive objects, comprising certain qualities (such as service life)."
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Mechanics Substitution (Replace Mechanical System)",
+        "details": [
+            "Replace a mechanical means with a sensory (optical, acoustic, taste or smell) means.",
+            "Use electric, magnetic and electromagnetic fields to interact with the object.",
+            "Change from static fields to movable fields, from unstructured fields to those having structure.",
+            "Use fields in conjunction with ferromagnetic particles."
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Pneumatics and Hydraulics",
+        "details": [
+            "Use gas and liquid parts of an object instead of solid parts (e.g. inflatable, filled with liquids, air cushion, hydrostatic, hydro-reactive)."
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Flexible Shells and Thin Films",
+        "details": [
+            "Use flexible shells and thin films instead of three-dimensional structures.",
+            "Isolate the object from the external environment using flexible shells and thin films."
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Porous Materials",
+        "details": [
+            "Make an object porous or add porous elements (inserts, coatings, etc.).",
+            "If an object is already porous, use the pores to introduce a useful substance or function."
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Color Changes",
+        "details": [
+            "Change the color of an object or its external environment.",
+            "Change the transparency of an object or its external environment.",
+            "In order to observe things that are difficult to see, use colored additives or luminescent traces.",
+            "Use thermal sensors (change the emissivity properties)."
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Homogeneity",
+        "details": [
+            "Make objects interacting with a given object of the same material (or material with identical properties)."
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Discarding and Recovering",
+        "details": [
+            "Make portions of an object that have fulfilled their functions go away (discard by dissolving, evaporating, etc.) or modify these directly during operation.",
+            "Conversely, restore consumable parts of an object directly in operation."
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Parameter Changes",
+        "details": [
+            "Change an object's physical state (e.g. to a gas, liquid, or solid).",
+            "Change the concentration or consistency.",
+            "Change the degree of flexibility.",
+            "Change the temperature."
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Phase Transitions",
+        "details": [
+            "Use phenomena occurring during phase transitions (e.g. volume changes, loss or absorption of heat, etc.)."
+        ]
+    },
+    {
+        "id": 37,
+        "title": "Thermal Expansion",
+        "details": [
+            "Use thermal expansion (or contraction) of materials.",
+            "Use multiple materials with different coefficients of thermal expansion."
+        ]
+    },
+    {
+        "id": 38,
+        "title": "Strong Oxidants",
+        "details": [
+            "Replace common air with oxygen-enriched air.",
+            "Replace enriched air with pure oxygen.",
+            "Expose air or oxygen to ionizing radiation.",
+            "Use ozonized oxygen."
+        ]
+    },
+    {
+        "id": 39,
+        "title": "Inert Atmosphere",
+        "details": [
+            "Replace a normal environment with an inert one (e.g., vacuum, inert gas).",
+            "Add neutral parts or inert additives to an object."
+        ]
+    },
+    {
+        "id": 40,
+        "title": "Composite Materials",
+        "details": [
+            "Change from uniform to composite (multiple) materials."
+        ]
+    }
+]

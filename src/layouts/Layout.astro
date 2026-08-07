@@ -1,0 +1,98 @@
+---
+import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
+import "@fontsource/be-vietnam-pro";
+
+interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+  theme?: "light" | "dark";
+}
+
+const { title, description, lang = "en", theme } = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "CÔNG TY TNHH DMCA AI",
+  alternateName: "DMCA AI Co., Ltd.",
+  url: "https://dmcaai.com/",
+  logo: "https://dmcaai.com/logo.png",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+84-845-814-581",
+    contactType: "customer service",
+    email: "khiet@dmcaai.com",
+    areaServed: "VN",
+    availableLanguage: ["en", "vi"],
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "102 Quốc Hương, Phường An Khánh",
+    addressLocality: "TP. Hồ Chí Minh",
+    postalCode: "70000",
+    addressCountry: "VN",
+  },
+  taxID: "0319113618",
+  founder: {
+    "@type": "Person",
+    name: "Nguyễn Thanh Khiết",
+  },
+};
+
+// Logic to determine theme if not explicitly provided
+const currentPath = Astro.url.pathname;
+const isAppPage = /\/(en|vi)\/triz(\/|$)/.test(currentPath);
+const computedTheme = theme || (isAppPage ? "dark" : "light");
+---
+
+<!doctype html>
+<html lang={lang} class={computedTheme}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content={description ||
+        "Giải quyết các vấn đề kỹ thuật và kinh doanh phức tạp với các nguyên lý TRIZ và Gemini AI."}
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/triz-viet-nam-favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      {
+        title
+          ? `${title} | Triz Việt Nam`
+          : "Triz Việt Nam - Công cụ giải quyết vấn đề sáng tạo"
+      }
+    </title>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <ClientRouter />
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TVD2HZXQ");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body class="antialiased font-sans">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TVD2HZXQ"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    <slot />
+  </body>
+</html>

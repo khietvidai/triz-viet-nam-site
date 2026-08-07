@@ -1,0 +1,127 @@
+{
+    "common": {
+        "solveButton": "Giải quyết vấn đề",
+        "solving": "Đang xử lý...",
+        "commandInput": "NHẬP LỆNH",
+        "systemReady": "HỆ THỐNG SẴN SÀNG",
+        "executeAnalysis": "THỰC HIỆN PHÂN TÍCH",
+        "inputPlaceholder": "Mô tả vấn đề của bạn (ví dụ: Tôi muốn xe chạy nhanh hơn nhưng tốn quá nhiều xăng)...",
+        "language": "Ngôn ngữ",
+        "uploadContext": "Tải lên ngữ cảnh",
+        "validation": {
+            "validating": "Đang kiểm tra đầu vào...",
+            "invalid": "Đầu vào không hợp lệ",
+            "defaultError": "Vui lòng mô tả một vấn đề hoặc mâu thuẫn cụ thể để phân tích."
+        },
+        "examples": [
+            {
+                "label": "Tốc độ vs Nhiên liệu",
+                "text": "Tôi muốn xe chạy nhanh hơn để tăng hiệu suất vận chuyển, nhưng việc này lại khiến động cơ tiêu tốn quá nhiều nhiên liệu."
+            },
+            {
+                "label": "Bền bỉ vs Trọng lượng",
+                "text": "Tôi cần tấm kính cường lực siêu bền để chịu lực va đập mạnh, nhưng nó lại trở nên quá nặng và dày, khó lắp đặt."
+            },
+            {
+                "label": "Đào tạo vs Thời gian",
+                "text": "Nhân viên cần được đào tạo kỹ lưỡng để tránh sai sót trong quy trình, nhưng chúng tôi không có đủ thời gian dừng sản xuất để đào tạo."
+            }
+        ]
+    },
+    "results": {
+        "analysisReport": "Báo cáo phân tích",
+        "title": "Kết quả Phân tích",
+        "idealFinalResult": "KẾT QUẢ CUỐI CÙNG LÝ TƯỞNG",
+        "operationalDelta": "CHÊNH LỆCH VẬN HÀNH",
+        "technicalConflict": "MÂU THUẪN KỸ THUẬT",
+        "strategicOptions": "CÁC PHƯƠNG ÁN CHIẾN LƯỢC",
+        "aiRecommendation": "KHUYẾN NGHỊ TỪ AI",
+        "deployStrategy": "TRIỂN KHAI CHIẾN LƯỢC",
+        "implementationPlan": "KẾ HOẠCH TRIỂN KHAI",
+        "currentState": "Hiện trạng",
+        "idealState": "Lý tưởng",
+        "improving": "CẦN CẢI THIỆN",
+        "worsening": "BỊ ẢNH HƯỞNG",
+        "vs": "SO VỚI",
+        "metrics": {
+            "logisticsCost": "Chi phí Hậu cần",
+            "durability": "Độ bền",
+            "deployment": "Triển khai",
+            "feasibility": "Tính khả thi",
+            "risk": "Rủi ro",
+            "roi": "Hiệu quả đầu tư (ROI)"
+        },
+        "chart": {
+            "costEfficiency": "Hiệu quả Chi phí",
+            "durability": "Độ bền",
+            "speed": "Tốc độ",
+            "simplicity": "Đơn giản"
+        },
+        "units": {
+            "days": "ngày",
+            "percent": "%"
+        },
+        "problemStatement": "Phát biểu bài toán",
+        "contradictionAnalysis": "Phân tích mâu thuẫn",
+        "improvingParameter": "Thông số cải thiện",
+        "worseningParameter": "Thông số xấu đi",
+        "suggestedPrinciples": "Nguyên tắc gợi ý",
+        "generatedSolutions": "Giải pháp đề xuất",
+        "recommendedSolution": "Giải pháp khuyên dùng",
+        "detailedEvaluation": "Đánh giá chi tiết",
+        "valueContribution": "Đóng góp giá trị",
+        "feasibilityKey": "Tính khả thi",
+        "resourceCosts": "Chi phí tài nguyên",
+        "humanResources": "Nhân lực",
+        "timeInvestment": "Thời gian",
+        "financialCost": "Tài chính"
+    },
+    "landing": {
+        "badge": "Giải quyết vấn đề bằng AI",
+        "titlePrefix": "Hệ thống giải quyết vấn đề",
+        "titleSuffix": "TRIZ AI",
+        "subtitle": "Chấm dứt bẫy lãng phí 'thử và sai'. Hệ thống TRIZ AI giúp bạn chuyển hóa thách thức thành lợi nhuận ròng và vị thế độc tôn",
+        "startButton": "Tìm giải pháp ngay",
+        "features": {
+            "systematicTitle": "Tư duy hệ thống",
+            "systematicDesc": "Chia nhỏ các vấn đề phức tạp thành các mâu thuẫn có thể quản lý được.",
+            "instantTitle": "Thông tin chi tiết tức thì",
+            "instantDesc": "Nhận gợi ý ngay lập tức về các nguyên tắc và giải pháp.",
+            "innovativeTitle": "Kết quả đổi mới",
+            "innovativeDesc": "Tạo ra những ý tưởng đột phá giải quyết nguyên nhân gốc rễ."
+        }
+    },
+    "constraints": {
+        "title": "RÀNG BUỘC PHÂN TÍCH",
+        "budget": {
+            "label": "GIỚI HẠN NGÂN SÁCH",
+            "min": "HẠN CHẾ",
+            "max": "KHÔNG GIỚI HẠN"
+        },
+        "time": {
+            "label": "MỨC ĐỘ KHẨN CẤP",
+            "min": "DÀI HẠN",
+            "max": "NGAY LẬP TỨC"
+        },
+        "risk": {
+            "label": "CHẤP NHẬN RỦI RO",
+            "min": "ĐÃ KIỂM CHỨNG",
+            "max": "THỬ NGHIỆM"
+        },
+        "ai_note": {
+            "text": "AI sẽ tối ưu hóa giải pháp dựa trên các ràng buộc này.",
+            "sub_practical": "Mong đợi các cải tiến thực tế.",
+            "sub_radical": "Mong đợi sự đổi mới đột phá."
+        }
+    },
+    "footer": {
+        "cta": {
+            "exploreTitle": "Khám phá TRIZ AI",
+            "exploreDesc": "Hệ thống giải quyết vấn đề",
+            "communityTitle": "Cộng đồng sáng tạo",
+            "communityDesc": "Tham gia Zalo Group",
+            "contactTitle": "Liên hệ",
+            "contactDesc": "Nhà phát triển"
+        }
+    }
+}

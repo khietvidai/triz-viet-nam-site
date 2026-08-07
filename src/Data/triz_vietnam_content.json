@@ -1,0 +1,164 @@
+{
+    "vi": {
+        "mainTitle": "Di sản Giáo sư Phan Dũng: Kỷ nguyên TRIZ Mở Rộng & Tư Duy Quản Trị Hệ Thống",
+        "sections": [
+            {
+                "id": "intro",
+                "title": "1. Tiên phong Khai sáng Khoa học Sáng tạo",
+                "content": [
+                    "Giáo sư, Tiến sĩ Khoa học (GS.TSKH) Phan Dũng không chỉ là người du nhập TRIZ vào Việt Nam, mà còn là người đã bản địa hóa và nâng tầm nó thành \"TRIZ Mở Rộng\" - một công cụ tư duy sắc bén cho quản trị và kinh doanh.",
+                    "Là một trong những chuyên gia hiếm hoi trên thế giới được đào tạo trực tiếp bởi cha đẻ TRIZ (Genrich Altshuller) và đạt cấp độ TRIZ Master (Level 5), ông đã chứng minh: **Sáng tạo là một khoa học chính xác, không phải sự may rủi.**"
+                ]
+            },
+            {
+                "id": "history",
+                "title": "2. Uy tín Khoa học & Vị thế Quốc tế",
+                "subsections": [
+                    {
+                        "title": "2.1. Tiếp cận Nguồn Gen Gốc (1971-1973)",
+                        "content": [
+                            "Năm 1971 tại Baku, Phan Dũng may mắn thụ giáo trực tiếp Genrich Altshuller. Năm 1973, ông nhận bằng tốt nghiệp số 32 - trở thành một trong những chuyên gia TRIZ được đào tạo bài bản đầu tiên trên toàn cầu, đặt nền móng cho vị thế của Việt Nam trên bản đồ trí tuệ thế giới."
+                        ]
+                    },
+                    {
+                        "title": "2.2. Đỉnh cao TRIZ Master",
+                        "content": [
+                            "Năm 2001, ông được Hiệp hội TRIZ Quốc tế (MATRIZ) phong tặng danh hiệu TRIZ Master (Cấp độ 5) - cấp độ cao nhất về học thuật, khẳng định uy tín tuyệt đối trong cộng đồng khoa học sáng tạo."
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "organization",
+                "title": "3. TSK: Sức sống của Tư duy Độc lập",
+                "content": [
+                    "Năm 1991, Trung tâm Sáng tạo Khoa học - Kỹ thuật (TSK) ra đời với cơ chế \"tự chủ tài chính\" hoàn toàn. Việc TSK tồn tại và phát triển rực rỡ hơn 30 năm qua, đào tạo gần 20.000 học viên, là minh chứng thực tế nhất cho giá trị thương mại và ứng dụng của TRIZ. **Nếu không hiệu quả, thị trường đã không chấp nhận.**"
+                ]
+            },
+            {
+                "id": "enlarged",
+                "title": "4. TRIZ Mở Rộng: Giải pháp cho Doanh nghiệp",
+                "content": [
+                    "Đóng góp quan trọng nhất của GS Phan Dũng là \"TRIZ Mở Rộng\" (Enlarged TRIZ) - đưa tư duy sáng tạo ra khỏi phòng thí nghiệm để giải quyết các bài toán quản lý và đời sống.",
+                    "- **Tư duy Hệ thống:** Giúp lãnh đạo nhìn thấy bức tranh toàn cảnh và dự báo xu hướng phát triển.",
+                    "- **Xử lý Mâu thuẫn:** Cung cấp công cụ để giải quyết bài toán \"Được cái này, mất cái kia\" (Trade-off) trong kinh doanh mà không cần đánh đổi.",
+                    "- **Khoa học hóa Đổi mới:** Biến đổi mới sáng tạo thành quy trình có thể chuyển giao và nhân rộng trong tổ chức."
+                ]
+            },
+            {
+                "id": "appendix",
+                "title": "Tổng quan Thành tựu",
+                "table": {
+                    "headers": [
+                        "Năm",
+                        "Sự kiện Chính",
+                        "Ý nghĩa Doanh nghiệp & Xã hội"
+                    ],
+                    "rows": [
+                        [
+                            "1973",
+                            "Nhận bằng TRIZ số 32 từ Founder Altshuller",
+                            "Bảo chứng cho tính chính thống và chiều sâu chuyên môn."
+                        ],
+                        [
+                            "1991",
+                            "Thành lập Trung tâm TSK (Tự chủ tài chính)",
+                            "Minh chứng cho tính thực tiễn và sức sống của sản phẩm trí tuệ."
+                        ],
+                        [
+                            "2001",
+                            "Đạt danh hiệu TRIZ Master (Level 5)",
+                            "Vị thế chuyên gia hàng đầu thế giới."
+                        ],
+                        [
+                            "Nay",
+                            "Hàng ngàn Doanh nhân & Quản lý đã tốt nghiệp",
+                            "Lan tỏa tư duy đổi mới vào cộng đồng doanh nghiệp Việt."
+                        ]
+                    ]
+                }
+            }
+        ]
+    },
+    "en": {
+        "mainTitle": "Legacy of Prof. Phan Dung: Enlarged TRIZ Era & Systems Management Thinking",
+        "sections": [
+            {
+                "id": "intro",
+                "title": "1. Pioneer of Creative Science",
+                "content": [
+                    "Prof. Dr. Sc. Phan Dung is not only the person who introduced TRIZ to Vietnam but also the one who localized and elevated it into \"Enlarged TRIZ\" - a sharp thinking tool for management and business.",
+                    "As one of the rare experts in the world trained directly by the father of TRIZ (Genrich Altshuller) and achieving TRIZ Master (Level 5), he proved: **Creativity is an exact science, not luck.**"
+                ]
+            },
+            {
+                "id": "history",
+                "title": "2. Scientific Authority & International Position",
+                "subsections": [
+                    {
+                        "title": "2.1. Access to Original Source (1971-1973)",
+                        "content": [
+                            "In 1971 in Baku, Phan Dung studied directly under Genrich Altshuller. In 1973, he received Diploma No. 32 - becoming one of the first systematically trained TRIZ experts globally."
+                        ]
+                    },
+                    {
+                        "title": "2.2. TRIZ Master Pinnacle",
+                        "content": [
+                            "In 2001, he was awarded the title of TRIZ Master (Level 5) by the International TRIZ Association (MATRIZ) - the highest academic level."
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "organization",
+                "title": "3. CSTC: The Vitality of Independent Thinking",
+                "content": [
+                    "In 1991, the Center for Scientific and Technical Creativity (CSTC) was established with full \"financial autonomy\". Its survival and growth over 30 years, training nearly 20,000 students, is the most practical proof of TRIZ's commercial value."
+                ]
+            },
+            {
+                "id": "enlarged",
+                "title": "4. Enlarged TRIZ: Solutions for Business",
+                "content": [
+                    "Prof. Phan Dung's most significant contribution is \"Enlarged TRIZ\" - taking creative thinking beyond the laboratory to solve management and life problems.",
+                    "- **Systems Thinking:** Helps leaders see the big picture and development laws.",
+                    "- **Contradiction Solving:** Tools to handle trade-off problems in business.",
+                    "- **Scientizing Innovation:** Turning innovation into a transferable and scalable process."
+                ]
+            },
+            {
+                "id": "appendix",
+                "title": "Achievement Overview",
+                "table": {
+                    "headers": [
+                        "Year",
+                        "Key Event",
+                        "Business & Social Significance"
+                    ],
+                    "rows": [
+                        [
+                            "1973",
+                            "Received Diploma No. 32 from Founder Altshuller",
+                            "Guarantee of authenticity and professional depth."
+                        ],
+                        [
+                            "1991",
+                            "Established CSTC (Self-funded)",
+                            "Proof of practicality and vitality of intellectual products."
+                        ],
+                        [
+                            "2001",
+                            "Achieved TRIZ Master (Level 5)",
+                            "World-leading expert status."
+                        ],
+                        [
+                            "Present",
+                            "Thousands of Entrepreneurs & Managers graduated",
+                            "Spreading innovation thinking into the business community."
+                        ]
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,165 @@
+---
+interface Props {
+    lang?: "en" | "vi";
+}
+
+import { Rocket, Users, Phone, ArrowRight } from "lucide-react";
+import { getDictionary } from "../lib/dictionary";
+
+const { lang = "en" } = Astro.props;
+const dict = await getDictionary(lang);
+---
+
+<div class="relative z-10">
+    <!-- Footer CTA Section -->
+    <div class="w-full max-w-6xl mx-auto mt-12 mb-12 px-6 lg:px-0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Explore CTA -->
+            <a
+                href={`/${lang}/triz`}
+                class="group flex items-center justify-between p-6 rounded-3xl bg-gradient-to-br from-emerald-500 to-green-600 text-white shadow-xl shadow-green-500/20 hover:shadow-2xl hover:shadow-green-500/40 hover:-translate-y-1 transition-all duration-300"
+            >
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300"
+                    >
+                        <Rocket className="w-6 h-6" />
+                    </div>
+                    <div class="text-left">
+                        <h3 class="font-bold text-lg leading-tight">
+                            {dict.footer.cta.exploreTitle}
+                        </h3>
+                        <p class="text-green-50 text-sm font-medium">
+                            {dict.footer.cta.exploreDesc}
+                        </p>
+                    </div>
+                </div>
+                <ArrowRight
+                    className="w-5 h-5 opacity-60 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all"
+                />
+            </a>
+
+            <!-- Community CTA -->
+            <a
+                href="https://zalo.me/g/cmmvuf431"
+                target="_blank"
+                class="group flex items-center justify-between p-6 rounded-3xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white shadow-xl shadow-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300"
+            >
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300"
+                    >
+                        <Users className="w-6 h-6" />
+                    </div>
+                    <div class="text-left">
+                        <h3 class="font-bold text-lg leading-tight">
+                            {dict.footer.cta.communityTitle}
+                        </h3>
+                        <p class="text-blue-50 text-sm font-medium">
+                            {dict.footer.cta.communityDesc}
+                        </p>
+                    </div>
+                </div>
+                <ArrowRight
+                    className="w-5 h-5 opacity-60 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all"
+                />
+            </a>
+
+            <!-- Contact CTA -->
+            <a
+                href="https://zalo.me/0931451311"
+                target="_blank"
+                class="group flex items-center justify-between p-6 rounded-3xl bg-gradient-to-br from-orange-500 to-amber-600 text-white shadow-xl shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/40 hover:-translate-y-1 transition-all duration-300"
+            >
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300"
+                    >
+                        <Phone className="w-6 h-6" />
+                    </div>
+                    <div class="text-left">
+                        <h3 class="font-bold text-lg leading-tight">
+                            {dict.footer.cta.contactTitle}
+                        </h3>
+                        <p class="text-orange-50 text-sm font-medium">
+                            {dict.footer.cta.contactDesc}
+                        </p>
+                    </div>
+                </div>
+                <ArrowRight
+                    className="w-5 h-5 opacity-60 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all"
+                />
+            </a>
+        </div>
+    </div>
+
+    <footer
+        class="border-t border-slate-200 dark:border-white/5 bg-white/80 dark:bg-obsidian/90 backdrop-blur-sm transition-colors duration-300"
+    >
+        <!-- Constrained container with standard max-width and internal spacing -->
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-2"
+            >
+                <!-- Left Side -->
+                <div
+                    class="text-sm font-medium tracking-widest text-slate-800 dark:text-slate-400 uppercase text-center md:text-left"
+                >
+                    TRIZ <span
+                        class="text-red-600 dark:text-violet-500 font-bold"
+                        >VIETNAM</span
+                    > SYSTEM V1.1
+                </div>
+
+                <!-- Right Side -->
+                <div
+                    class="text-xs uppercase tracking-wider flex items-center gap-1 text-center md:text-right"
+                >
+                    <span class="text-slate-500 dark:text-slate-600"
+                        >ENGINEERED BY</span
+                    >
+                    <a
+                        href="https://dmcaai.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-slate-900 dark:text-slate-400 font-bold hover:text-red-600 dark:hover:text-cyan-400 transition-colors"
+                    >
+                        DMCA AI
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<style>
+    /* 
+     * Robust override to ensure Dark Mode style applies correctly 
+     * regardless of Tailwind config issues.
+     */
+    :global(html.dark) footer {
+        background-color: rgba(11, 15, 25, 0.9); /* #0B0F19 with 90% opacity */
+        border-top-color: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Target specific classes used in the new structure */
+    :global(html.dark) footer .text-slate-800 {
+        color: #94a3b8; /* slate-400 */
+    }
+
+    :global(html.dark) footer .text-red-600 {
+        color: #8b5cf6; /* violet-500 */
+    }
+
+    :global(html.dark) footer .text-slate-500 {
+        color: #475569; /* slate-600 */
+    }
+
+    :global(html.dark) footer a.text-slate-900 {
+        color: #94a3b8; /* slate-400 */
+    }
+
+    :global(html.dark) footer a:hover {
+        color: #22d3ee; /* cyan-400 */
+    }
+</style>

@@ -1,0 +1,127 @@
+{
+  "common": {
+    "solveButton": "Solve Problem",
+    "solving": "Solving...",
+    "commandInput": "COMMAND INPUT",
+    "systemReady": "SYSTEM READY",
+    "executeAnalysis": "EXECUTE ANALYSIS",
+    "inputPlaceholder": "Describe your problem (e.g., I want to make my car go faster but it uses too much fuel)...",
+    "language": "Language",
+    "uploadContext": "Upload Context",
+    "validation": {
+      "validating": "Validating input...",
+      "invalid": "Invalid Input",
+      "defaultError": "Please describe a specific problem or contradiction to analyze."
+    },
+    "examples": [
+      {
+        "label": "Speed vs Fuel",
+        "text": "I want the car to go faster to increase transport efficiency, but this causes the engine to consume too much fuel."
+      },
+      {
+        "label": "Strength vs Weight",
+        "text": "I need a super-strong tempered glass to withstand heavy impact, but it becomes too heavy and thick to install easily."
+      },
+      {
+        "label": "Training vs Time",
+        "text": "Employees need thorough training to avoid process errors, but we don't have enough time to stop production for training."
+      }
+    ]
+  },
+  "results": {
+    "title": "Analysis Results",
+    "analysisReport": "Analysis Report",
+    "idealFinalResult": "IDEAL FINAL RESULT",
+    "operationalDelta": "OPERATIONAL DELTA",
+    "technicalConflict": "TECHNICAL CONFLICT",
+    "strategicOptions": "STRATEGIC OPTIONS",
+    "aiRecommendation": "AI RECOMMENDATION",
+    "deployStrategy": "DEPLOY STRATEGY",
+    "implementationPlan": "IMPLEMENTATION PLAN",
+    "currentState": "Current State",
+    "idealState": "Ideal State",
+    "improving": "IMPROVING",
+    "worsening": "WORSENING",
+    "vs": "VS",
+    "metrics": {
+      "logisticsCost": "Logistics Cost",
+      "durability": "Durability",
+      "deployment": "Deployment",
+      "feasibility": "Feasibility",
+      "risk": "Risk",
+      "roi": "ROI"
+    },
+    "chart": {
+      "costEfficiency": "Cost Efficiency",
+      "durability": "Durability",
+      "speed": "Speed",
+      "simplicity": "Simplicity"
+    },
+    "units": {
+      "days": "days",
+      "percent": "%"
+    },
+    "problemStatement": "Problem Statement",
+    "contradictionAnalysis": "Contradiction Analysis",
+    "improvingParameter": "Improving Parameter",
+    "worseningParameter": "Worsening Parameter",
+    "suggestedPrinciples": "Suggested Principles",
+    "generatedSolutions": "Generated Solutions",
+    "recommendedSolution": "Recommended Solution",
+    "detailedEvaluation": "Detailed Evaluation",
+    "valueContribution": "Value Contribution",
+    "feasibility": "Feasibility",
+    "resourceCosts": "Resource Costs",
+    "humanResources": "Human Resources",
+    "timeInvestment": "Time Investment",
+    "financialCost": "Financial Cost"
+  },
+  "landing": {
+    "badge": "AI-Powered Problem Solving",
+    "titlePrefix": "Problem solving system",
+    "titleSuffix": "TRIZ AI",
+    "subtitle": "End the 'trial and error' waste trap. TRIZ AI system helps you transform challenges into net profits and unique position",
+    "startButton": "Find the solution now",
+    "features": {
+      "systematicTitle": "Systematic Thinking",
+      "systematicDesc": "Break down complex problems into manageable contradictions.",
+      "instantTitle": "Instant Insights",
+      "instantDesc": "Get immediate suggestions for principles and solutions.",
+      "innovativeTitle": "Innovative Results",
+      "innovativeDesc": "Generate out-of-the-box ideas that solve the root cause."
+    }
+  },
+  "constraints": {
+    "title": "ANALYSIS CONSTRAINTS",
+    "budget": {
+      "label": "BUDGET CAP",
+      "min": "RESTRICTED",
+      "max": "UNLIMITED"
+    },
+    "time": {
+      "label": "TIME URGENCY",
+      "min": "LONG TERM",
+      "max": "IMMEDIATE"
+    },
+    "risk": {
+      "label": "RISK TOLERANCE",
+      "min": "PROVEN",
+      "max": "EXPERIMENTAL"
+    },
+    "ai_note": {
+      "text": "AI will optimize solutions based on these constraints.",
+      "sub_practical": "Expecting practical improvements.",
+      "sub_radical": "Expecting radical innovation."
+    }
+  },
+  "footer": {
+    "cta": {
+      "exploreTitle": "Explore TRIZ AI",
+      "exploreDesc": "Problem Solving System",
+      "communityTitle": "Creative Community",
+      "communityDesc": "Join Zalo Group",
+      "contactTitle": "Contact",
+      "contactDesc": "Developer"
+    }
+  }
+}

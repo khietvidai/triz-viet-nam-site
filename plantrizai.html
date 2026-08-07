@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIZ AI AGENT v5.2.1 - Expert Review Board</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Mermaid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.2/dist/mermaid.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        triz: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        brand: {
+                            gold: '#f59e0b',
+                            alert: '#ef4444',
+                            safe: '#10b981',
+                        }
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .phase-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phase-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Mermaid Wrapper */
+        .mermaid-wrapper {
+            background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Typography Enhancements */
+        .prose-custom p {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+            color: #475569;
+        }
+
+        .sticky-nav-active {
+            color: #0284c7;
+            background-color: #f0f9ff;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans selection:bg-triz-100 selection:text-triz-900">
+
+    <!-- Header -->
+    <header class="glass-panel sticky top-0 z-50 shadow-sm border-b border-slate-200">
+        <div class="container mx-auto px-4 py-4 max-w-7xl">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="bg-gradient-to-br from-triz-800 to-triz-900 text-white p-3 rounded-2xl shadow-lg shadow-triz-900/20">
+                        <i class="ph-fill ph-brain text-3xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight leading-tight">TRIZ AI AGENT
+                        </h1>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span
+                                class="bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border border-green-200">v5.2.1
+                                Stable</span>
+                            <span
+                                class="bg-slate-100 text-slate-500 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border border-slate-200">Tri-Core
+                                Engine</span>
+                        </div>
+                    </div>
+                </div>
+
+                <nav
+                    class="hidden md:flex gap-1 text-sm font-semibold text-slate-500 bg-slate-100/50 p-1.5 rounded-full border border-slate-200">
+                    <a href="#philosophy"
+                        class="px-4 py-2 rounded-full hover:bg-white hover:text-triz-700 hover:shadow-sm transition-all duration-200">Triết
+                        lý Thiết kế</a>
+                    <a href="#diagram"
+                        class="px-4 py-2 rounded-full hover:bg-white hover:text-triz-700 hover:shadow-sm transition-all duration-200">Lưu
+                        đồ</a>
+                    <a href="#tri-core"
+                        class="px-4 py-2 rounded-full hover:bg-white hover:text-triz-700 hover:shadow-sm transition-all duration-200">Tri-Core</a>
+                    <a href="#safety"
+                        class="px-4 py-2 rounded-full hover:bg-white hover:text-triz-700 hover:shadow-sm transition-all duration-200">An
+                        toàn & Bảo vệ</a>
+                </nav>
+
+                <a href="#changelog" class="md:hidden text-slate-400 hover:text-slate-600">
+                    <i class="ph-bold ph-list text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 max-w-6xl">
+
+        <!-- EXECUTIVE SUMMARY & PHILOSOPHY -->
+        <section id="philosophy" class="mb-20 scroll-mt-32">
+            <div class="bg-white rounded-3xl p-10 shadow-glass border border-slate-100 relative overflow-hidden group">
+                <!-- Decoration -->
+                <div
+                    class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-triz-50 to-transparent rounded-full blur-3xl opacity-60 -mr-20 -mt-20 pointer-events-none">
+                </div>
+
+                <div class="relative z-10 max-w-3xl">
+                    <h2 class="text-3xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
+                        <i class="ph-duotone ph-shield-star text-triz-600"></i>
+                        Triết lý: "Người Thầy TRIZ Khắc nghiệt"
+                    </h2>
+                    <div class="prose-custom text-lg">
+                        <p>
+                            Tại sao TRIZ AI Agent lại <strong>"khó tính"</strong>? Bởi vì sự sáng tạo thực sự không đến
+                            từ việc thỏa hiệp.
+                            Hệ thống v5.2.1 được xây dựng để trở thành một người hướng dẫn (Mentor) kiên định, không cho
+                            phép bạn đi đường tắt.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-8">
+                        <div
+                            class="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:border-triz-200 transition-colors">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="bg-white p-2 rounded-lg shadow-sm text-red-500"><i
+                                        class="ph-fill ph-prohibit"></i></div>
+                                <h3 class="font-bold text-slate-800">Không Thỏa Hiệp (No Trade-off)</h3>
+                            </div>
+                            <p class="text-sm text-slate-600">AI sẽ từ chối các giải pháp theo kiểu "được cái này mất
+                                cái kia". Mâu thuẫn phải được triệt tiêu hoàn toàn.</p>
+                        </div>
+                        <div
+                            class="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:border-triz-200 transition-colors">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="bg-white p-2 rounded-lg shadow-sm text-amber-500"><i
+                                        class="ph-fill ph-brain"></i></div>
+                                <h3 class="font-bold text-slate-800">Phá vỡ Tính ỳ (Anti-Inertia)</h3>
+                            </div>
+                            <p class="text-sm text-slate-600">Nếu phát hiện bạn đang tư duy theo lối mòn, công cụ
+                                <strong>STC Operator</strong> sẽ tự động kích hoạt để "kéo dãn" trí tưởng tượng.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: LOGIC FLOW -->
+        <section id="diagram" class="mb-20 scroll-mt-32">
+            <div class="flex items-end justify-between mb-8 border-b border-slate-200 pb-4">
+                <div>
+                    <span class="text-triz-600 font-bold uppercase tracking-wider text-sm mb-2 block">Tổng quan Kiến
+                        trúc</span>
+                    <h2 class="text-3xl font-bold text-slate-900">Sơ đồ Luồng Tư duy (Logic Flow)</h2>
+                </div>
+                <!-- Legend -->
+                <div class="hidden md:flex gap-4 text-xs font-medium text-slate-500">
+                    <div class="flex items-center gap-2"><span
+                            class="w-3 h-3 rounded-full bg-red-100 border border-red-500"></span> Path A: Mâu thuẫn
+                    </div>
+                    <div class="flex items-center gap-2"><span
+                            class="w-3 h-3 rounded-full bg-amber-100 border border-amber-500"></span> Path B: Hệ thống
+                    </div>
+                    <div class="flex items-center gap-2"><span
+                            class="w-3 h-3 rounded-full bg-green-100 border border-green-500"></span> Path C: Xu hướng
+                    </div>
+                </div>
+            </div>
+
+            <div class="mermaid-wrapper">
+                <div class="mermaid">
+                    graph TD
+                    classDef default fill:#ffffff,stroke:#cbd5e1,stroke-width:1px,color:#334155
+                    classDef gate fill:#f0fdf4,stroke:#16a34a,stroke-width:1px,color:#15803d
+                    classDef file fill:#f8fafc,stroke:#94a3b8,stroke-dasharray:4 2,color:#64748b
+                    classDef pathA fill:#fef2f2,stroke:#ef4444,stroke-width:2px,color:#991b1b
+                    classDef pathB fill:#fefce8,stroke:#eab308,stroke-width:2px,color:#854d0e
+                    classDef pathC fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534
+                    classDef stcNode fill:#fff7ed,stroke:#f97316,stroke-width:2px,color:#9a3412
+
+                    Input["INPUT<br />raw.md"] --> Screen["SCREEN<br />screen.md"]
+                    Screen --> Gate0(["Gate 0"]):::gate
+                    Gate0 --> STC["STC OPERATOR<br />stc.md"]:::stcNode
+                    STC --> Gate15(["Gate 1.5"]):::gate
+                    Gate15 --> Sys["SYSTEM ANALYSIS<br />system.md"]
+                    Sys --> Gate2(["Gate 2"]):::gate
+                    Gate2 --> Func["FUNCTION MODEL<br />function.md"]
+                    Func --> Gate25(["Gate 2.5"]):::gate
+                    Gate25 --> Router{"AI ROUTER<br />CLASSIFIER"}
+
+                    Router --> PA_Top
+                    Router --> PB_Top
+                    Router --> PC_Top
+
+                    subgraph PathA ["PATH A: CONTRADICTION"]
+                    direction TB
+                    PA_Top["IFR"]:::pathA --> PA2["Contradiction"]:::pathA
+                    PA2 --> PA3["Proxy Mapping"]:::pathA
+                    PA3 --> PA4["Matrix 39x39"]:::pathA
+                    PA4 --> PA5["40 Principles"]:::pathA
+                    end
+
+                    subgraph PathB ["PATH B: SU-FIELD"]
+                    direction TB
+                    PB_Top["Su-Field Model"]:::pathB --> PB2["76 Standards"]:::pathB
+                    end
+
+                    subgraph PathC ["PATH C: TRENDS"]
+                    direction TB
+                    PC_Top["8 Trends"]:::pathC --> PC2["S-Curve"]:::pathC
+                    PC2 --> PC3["Forecast"]:::pathC
+                    end
+
+                    PA5 --> SolGen
+                    PB2 --> SolGen
+                    PC3 --> SolGen
+
+                    SolGen["SOLUTION GENERATION"] --> RecLim{"RECURSION LIMITER"}
+                    RecLim --> Eval["EVALUATION"]
+                    Eval --> Final["FINAL REPORT"]
+
+                    Check["CHECKPOINT SYSTEM"]:::file
+                    Check -.- Gate2
+                    Check -.- SolGen
+                </div>
+            </div>
+            <p class="text-center text-slate-500 text-sm mt-4 italic">Kiến trúc Tri-Core v5.2 cho phép xử lý song song
+                và đa luồng.</p>
+        </section>
+
+        <!-- SECTION 2: DEEP DIVE INTO PROCESS -->
+        <section id="tri-core" class="mb-20 scroll-mt-32">
+            <h2 class="text-3xl font-bold text-slate-900 mb-10 border-l-8 border-triz-600 pl-6">Chi tiết Hoạt động (Deep
+                Dive)</h2>
+
+            <!-- CARD 1: STC OPERATOR -->
+            <div class="mb-12 group">
+                <div class="flex items-center gap-4 mb-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
+                        1</div>
+                    <h3 class="text-2xl font-bold text-slate-800">Cổng Tâm lý: STC Operator</h3>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden grid md:grid-cols-5">
+                    <div class="md:col-span-2 bg-slate-50 p-8 border-r border-slate-200 flex flex-col justify-center">
+                        <h4 class="font-bold text-orange-700 mb-2 uppercase text-sm tracking-wide">Mục đích</h4>
+                        <p class="text-slate-600 mb-6">Khi người dùng "than vãn" rằng vấn đề là <strong>bất khả
+                                thi</strong> hoặc bị giới hạn bởi tiền bạc, AI sẽ chuyển sang chế độ <em>"Playful
+                                Innovator"</em>.</p>
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-orange-100">
+                            <div class="text-xs font-bold text-slate-400 uppercase mb-2">Kịch bản</div>
+                            <p class="text-slate-800 italic text-sm">"Tưởng tượng bạn có cây đũa thần: Tiền vô hạn, Thời
+                                gian vô hạn. Bạn sẽ làm gì?"</p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-3 p-8">
+                        <h4 class="font-bold text-slate-900 mb-4">Cơ chế Hoạt động (3 Bước)</h4>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <div class="mt-1 text-orange-500"><i class="ph-fill ph-rocket-launch text-xl"></i></div>
+                                <div>
+                                    <strong class="block text-slate-800">1. Size - Time - Cost (Vô hạn)</strong>
+                                    <p class="text-sm text-slate-600">Phóng đại mọi nguồn lực lên cực đại để tìm "Ideal
+                                        Vision" (Tầm nhìn Lý tưởng).</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="mt-1 text-orange-500"><i class="ph-fill ph-funnel text-xl"></i></div>
+                                <div>
+                                    <strong class="block text-slate-800">2. Thu hẹp dần (Constraints)</strong>
+                                    <p class="text-sm text-slate-600">Đưa người dùng trở lại thực tế từng chút một. "Nếu
+                                        ngân sách chỉ còn 50%?"</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="mt-1 text-orange-500"><i class="ph-fill ph-lightning text-xl"></i></div>
+                                <div>
+                                    <strong class="block text-slate-800">3. Phát hiện Mâu thuẫn Ẩn</strong>
+                                    <p class="text-sm text-slate-600">Khoảng cách giữa "Mơ ước" và "Thực tế" chính là
+                                        bản chất của mâu thuẫn cần giải quyết.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 1.5: 6/9 WINDOW SYSTEM ANALYSIS -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
+                        1.5</div>
+                    <h3 class="text-2xl font-bold text-slate-800">Phân tích Hệ thống: 6/9 Windows</h3>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <!-- Header explanation -->
+                    <div class="bg-gradient-to-r from-blue-50 to-slate-50 p-6 border-b border-slate-200">
+                        <p class="text-slate-700">
+                            <strong>95% người dùng TRIZ thất bại ở bước xác định vấn đề.</strong> Công cụ 6/9 Windows
+                            giúp bạn nhìn hệ thống từ nhiều góc độ:
+                            <span class="text-blue-700 font-semibold">Quá khứ - Hiện tại - Tương lai</span> và
+                            <span class="text-blue-700 font-semibold">Siêu hệ thống - Hệ thống - Hạ hệ thống</span>.
+                        </p>
+                    </div>
+
+                    <!-- 6-Screen vs 9-Screen Selection -->
+                    <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                        <!-- 6-Screen Mode -->
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">6-SCREEN</span>
+                                <span class="text-slate-500 text-sm">Tìm nguyên nhân gốc</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-4">Dùng khi bạn cần <strong>phân tích vấn đề hiện
+                                    tại</strong> và tìm ra nguyên nhân gốc rễ.</p>
+
+                            <!-- 6-Screen Grid -->
+                            <div class="grid grid-cols-2 gap-1 text-xs mb-4">
+                                <div class="bg-slate-100 p-2 rounded text-center font-bold text-slate-500">QUÁ KHỨ</div>
+                                <div class="bg-blue-100 p-2 rounded text-center font-bold text-blue-700">HIỆN TẠI</div>
+                                <div class="bg-slate-50 p-2 rounded border">Siêu HT cũ</div>
+                                <div class="bg-blue-50 p-2 rounded border border-blue-200">Siêu HT nay</div>
+                                <div class="bg-slate-50 p-2 rounded border">Hệ thống cũ</div>
+                                <div class="bg-blue-50 p-2 rounded border border-blue-200 font-semibold">HỆ THỐNG</div>
+                                <div class="bg-slate-50 p-2 rounded border">Hạ HT cũ</div>
+                                <div class="bg-blue-50 p-2 rounded border border-blue-200">Hạ HT nay</div>
+                            </div>
+
+                            <div class="text-xs text-slate-500 flex items-center gap-1">
+                                <i class="ph-bold ph-arrow-right"></i> Dẫn tới <strong class="text-red-600 ml-1">Path
+                                    A</strong> hoặc <strong class="text-amber-600 ml-1">Path B</strong>
+                            </div>
+                        </div>
+
+                        <!-- 9-Screen Mode -->
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span
+                                    class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">9-SCREEN</span>
+                                <span class="text-slate-500 text-sm">Dự báo tương lai</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-4">Dùng khi bạn cần <strong>dự đoán xu hướng phát
+                                    triển</strong> hoặc thiết kế sản phẩm thế hệ mới.</p>
+
+                            <!-- 9-Screen Grid -->
+                            <div class="grid grid-cols-3 gap-1 text-xs mb-4">
+                                <div class="bg-slate-100 p-2 rounded text-center font-bold text-slate-500">QUÁ KHỨ</div>
+                                <div class="bg-blue-100 p-2 rounded text-center font-bold text-blue-700">HIỆN TẠI</div>
+                                <div class="bg-green-100 p-2 rounded text-center font-bold text-green-700">TƯƠNG LAI
+                                </div>
+                                <div class="bg-slate-50 p-2 rounded border">Siêu HT cũ</div>
+                                <div class="bg-blue-50 p-2 rounded border">Siêu HT nay</div>
+                                <div class="bg-green-50 p-2 rounded border border-green-200">Siêu HT sẽ</div>
+                                <div class="bg-slate-50 p-2 rounded border">Hệ thống cũ</div>
+                                <div class="bg-blue-50 p-2 rounded border font-semibold">HỆ THỐNG</div>
+                                <div class="bg-green-50 p-2 rounded border border-green-200">HT tương lai</div>
+                                <div class="bg-slate-50 p-2 rounded border">Hạ HT cũ</div>
+                                <div class="bg-blue-50 p-2 rounded border">Hạ HT nay</div>
+                                <div class="bg-green-50 p-2 rounded border border-green-200">Hạ HT sẽ</div>
+                            </div>
+
+                            <div class="text-xs text-slate-500 flex items-center gap-1">
+                                <i class="ph-bold ph-arrow-right"></i> Dẫn tới <strong class="text-green-600 ml-1">Path
+                                    C (Trends)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: CONCRETE EXAMPLES -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div
+                        class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold">
+                        <i class="ph-fill ph-book-open"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800">Ví dụ Minh họa Chi tiết</h3>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Example 1: Path A -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-red-100 overflow-hidden">
+                        <div class="bg-red-50 px-6 py-4 border-b border-red-100 flex items-center gap-3">
+                            <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">PATH A</span>
+                            <h4 class="font-bold text-red-800">Ví dụ: Pin điện thoại (Mâu thuẫn Kỹ thuật)</h4>
+                        </div>
+                        <div class="p-6 grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h5 class="font-bold text-slate-800 mb-2"><i
+                                        class="ph-fill ph-warning-circle text-red-500"></i> Vấn đề</h5>
+                                <p class="text-sm text-slate-600 mb-4">"Tôi muốn pin điện thoại <strong>dung lượng
+                                        LỚN</strong> để dùng cả ngày, nhưng đồng thời máy phải <strong>mỏng nhẹ</strong>
+                                    để cầm thoải mái."</p>
+
+                                <h5 class="font-bold text-slate-800 mb-2"><i
+                                        class="ph-fill ph-magnifying-glass text-blue-500"></i> AI Phân tích (6-Screen)
+                                </h5>
+                                <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+                                    <li><strong>Hệ thống:</strong> Điện thoại di động</li>
+                                    <li><strong>Hạ hệ thống:</strong> Pin lithium, vỏ máy</li>
+                                    <li><strong>Siêu hệ thống:</strong> Túi xách người dùng, trạm sạc</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <h5 class="font-bold text-slate-800 mb-2"><i
+                                        class="ph-fill ph-lightbulb text-amber-500"></i> AI Router quyết định</h5>
+                                <p class="text-sm text-slate-600 mb-3">Đây là <strong class="text-red-600">Mâu thuẫn Kỹ
+                                        thuật</strong>:</p>
+                                <div class="text-sm space-y-1">
+                                    <div class="flex items-center gap-2"><span class="text-green-600">↑</span> Cải
+                                        thiện: <strong>Dung lượng năng lượng</strong></div>
+                                    <div class="flex items-center gap-2"><span class="text-red-600">↓</span> Xấu đi:
+                                        <strong>Trọng lượng/Kích thước</strong></div>
+                                </div>
+                                <div class="mt-4 p-3 bg-white rounded border border-red-200 text-xs">
+                                    <strong>→ Giải pháp từ Matrix:</strong> Nguyên lý #35 (Thay đổi trạng thái vật lý) -
+                                    Pin dạng gel uốn cong quanh khung máy.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 2: Path B -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-amber-100 overflow-hidden">
+                        <div class="bg-amber-50 px-6 py-4 border-b border-amber-100 flex items-center gap-3">
+                            <span class="bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">PATH B</span>
+                            <h4 class="font-bold text-amber-800">Ví dụ: Tiếng ồn trong nhà máy (Tác động có hại)</h4>
+                        </div>
+                        <div class="p-6 grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h5 class="font-bold text-slate-800 mb-2"><i
+                                        class="ph-fill ph-warning-circle text-amber-500"></i> Vấn đề</h5>
+                                <p class="text-sm text-slate-600 mb-4">"Máy dập kim loại tạo ra <strong>tiếng ồn rất
+                                        lớn</strong> làm công nhân bị đau tai và mệt mỏi sau mỗi ca làm việc."</p>
+
+                                <h5 class="font-bold text-slate-800 mb-2"><i
+                                        class="ph-fill ph-magnifying-glass text-blue-500"></i> AI Phân tích (6-Screen)
+                                </h5>
+                                <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+                                    <li><strong>S1 (Vật chất 1):</strong> Máy dập</li>
+                                    <li><strong>S2 (Vật chất 2):</strong> Tai công nhân</li>
+                                    <li><strong>Field (Trường):</strong> Sóng âm (có hại)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <h5 class="font-bold text-slate-800 mb-2"><i
+                                        class="ph-fill ph-lightbulb text-amber-500"></i> AI Router quyết định</h5>
+                                <p class="text-sm text-slate-600 mb-3">Đây là <strong class="text-amber-600">Tác động có
+                                        hại</strong> (Su-Field không đầy đủ/có hại):</p>
+                                <div class="text-sm p-2 bg-amber-100 rounded mb-3">
+                                    Mô hình: <code>S1 --[Âm thanh có hại]--&gt; S2</code>
+                                </div>
+                                <div class="mt-4 p-3 bg-white rounded border border-amber-200 text-xs">
+                                    <strong>→ Giải pháp từ 76 Chuẩn:</strong> Chuẩn 1.2.1 - Chèn vật chất thứ 3 (S3) để
+                                    chặn trường có hại → Thêm vách ngăn cách âm giữa máy và công nhân.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 3: Path C -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-green-100 overflow-hidden">
+                        <div class="bg-green-50 px-6 py-4 border-b border-green-100 flex items-center gap-3">
+                            <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">PATH C</span>
+                            <h4 class="font-bold text-green-800">Ví dụ: Vô lăng xe hơi (Dự báo Xu hướng)</h4>
+                        </div>
+                        <div class="p-6 grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h5 class="font-bold text-slate-800 mb-2"><i
+                                        class="ph-fill ph-trend-up text-green-500"></i> Câu hỏi</h5>
+                                <p class="text-sm text-slate-600 mb-4">"Vô lăng xe hơi hiện tại đã hoạt động tốt rồi.
+                                    Nhưng <strong>thế hệ tiếp theo sẽ như thế nào?</strong>"</p>
+
+                                <h5 class="font-bold text-slate-800 mb-2"><i
+                                        class="ph-fill ph-chart-line-up text-blue-500"></i> AI Phân tích (9-Screen)</h5>
+                                <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+                                    <li><strong>Quá khứ:</strong> Vô lăng cơ khí → Trợ lực thủy lực</li>
+                                    <li><strong>Hiện tại:</strong> Trợ lực điện, điều chỉnh được</li>
+                                    <li><strong>Siêu HT tương lai:</strong> Xe tự lái (không cần người lái)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <h5 class="font-bold text-slate-800 mb-2"><i
+                                        class="ph-fill ph-lightbulb text-green-500"></i> AI Router quyết định</h5>
+                                <p class="text-sm text-slate-600 mb-3">Áp dụng <strong class="text-green-600">8 Quy luật
+                                        Tiến hóa</strong>:</p>
+                                <div class="text-sm space-y-2">
+                                    <div class="p-2 bg-green-100 rounded"><strong>#4 Tăng tính động:</strong> Cứng →
+                                        Khớp → Mềm → Trường</div>
+                                    <div class="p-2 bg-green-100 rounded"><strong>#7 Giảm sự tham gia của con
+                                            người:</strong> Manual → Auto</div>
+                                </div>
+                                <div class="mt-4 p-3 bg-white rounded border border-green-200 text-xs">
+                                    <strong>→ Dự báo:</strong> Vô lăng sẽ trở thành "giao diện tùy chọn", có thể thu
+                                    gọn/biến mất khi xe tự lái. Thay thế bằng điều khiển bằng giọng nói hoặc cử chỉ.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2: TRI-CORE PATHS -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-triz-100 flex items-center justify-center text-triz-600 font-bold">
+                        2</div>
+                    <h3 class="text-2xl font-bold text-slate-800">Bộ Xử lý Trung tâm (Tri-Core Engine)</h3>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Path A -->
+                    <div
+                        class="phase-card bg-white p-6 rounded-2xl border border-slate-200 border-l-4 border-l-red-500 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-4">
+                            <span
+                                class="badge bg-red-50 text-red-700 px-3 py-1 rounded-full text-xs font-bold ring-1 ring-red-100">PATH
+                                A</span>
+                            <i class="ph-duotone ph-arrows-left-right text-3xl text-red-400"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Mâu thuẫn (Contradiction)</h4>
+                        <p class="text-sm text-slate-600 mb-4 h-16">Dành cho các bài toán "Đánh đổi". Muốn A thì mất B.
+                            Không chấp nhận trung hòa.</p>
+
+                        <div class="space-y-2 pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-2 text-xs text-slate-700"><i
+                                    class="ph-bold ph-check text-green-500"></i> ARIZ-85C Logic</div>
+                            <div class="flex items-center gap-2 text-xs text-slate-700"><i
+                                    class="ph-bold ph-check text-green-500"></i> 40 Nguyên lý (Matrix)</div>
+                        </div>
+                    </div>
+
+                    <!-- Path B -->
+                    <div
+                        class="phase-card bg-white p-6 rounded-2xl border border-slate-200 border-l-4 border-l-amber-500 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-4">
+                            <span
+                                class="badge bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-bold ring-1 ring-amber-100">PATH
+                                B</span>
+                            <i class="ph-duotone ph-cube-transparent text-3xl text-amber-400"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Vật chất - Trường (Su-Field)</h4>
+                        <p class="text-sm text-slate-600 mb-4 h-16">Dành cho hệ thống hoạt động kém, hoặc có tác nhân
+                            gây hại cần loại bỏ.</p>
+
+                        <div class="space-y-2 pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-2 text-xs text-slate-700"><i
+                                    class="ph-bold ph-check text-green-500"></i> Tăng tính đầy đủ</div>
+                            <div class="flex items-center gap-2 text-xs text-slate-700"><i
+                                    class="ph-bold ph-check text-green-500"></i> 76 Chuẩn (Standards)</div>
+                        </div>
+                    </div>
+
+                    <!-- Path C -->
+                    <div
+                        class="phase-card bg-white p-6 rounded-2xl border border-slate-200 border-l-4 border-l-green-500 hover:shadow-lg relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 bg-green-500 text-white text-[10px] px-2 py-0.5 rounded-bl-lg font-bold z-10">
+                            NEW v5.2</div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span
+                                class="badge bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-bold ring-1 ring-green-100">PATH
+                                C</span>
+                            <i class="ph-duotone ph-trend-up text-3xl text-green-400"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Dự báo Xu hướng (Trends)</h4>
+                        <p class="text-sm text-slate-600 mb-4 h-16">Dành cho việc nâng cấp, dự báo tương lai của sản
+                            phẩm dựa trên Quy luật Tiến hóa.</p>
+
+                        <div class="space-y-2 pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-2 text-xs text-slate-700"><i
+                                    class="ph-bold ph-check text-green-500"></i> S-Curve Analysis</div>
+                            <div class="flex items-center gap-2 text-xs text-slate-700"><i
+                                    class="ph-bold ph-check text-green-500"></i> 8 Quy luật (TESE)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SAFETY & CHECKPOINTS -->
+        <section id="safety" class="mb-24 scroll-mt-32">
+            <h2 class="text-3xl font-bold text-slate-900 mb-10 border-l-8 border-brand-safe pl-6">An toàn & Bảo vệ Người
+                dùng</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Feature: Checkpoint System -->
+                <div
+                    class="bg-gradient-to-br from-white to-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10"><i class="ph-fill ph-floppy-disk text-9xl"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i class="ph-fill ph-pause-circle text-triz-500"></i> Checkpoint System
+                    </h3>
+                    <p class="text-slate-600 mb-6 text-sm">
+                        Quy trình TRIZ rất tốn năng lượng não bộ. Để tránh "User Fatigue" (Mệt mỏi), hệ thống tự động
+                        tạo các điểm lưu (Checkpoint).
+                    </p>
+
+                    <div
+                        class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-sm font-mono text-slate-600">
+                        <div class="flex items-center justify-between mb-2">
+                            <span>> Phase 2 Complete.</span>
+                            <span class="text-green-500">✓ Saved</span>
+                        </div>
+                        <div class="text-slate-400">System: "Đây là bước khó nhất. Bạn muốn nghỉ ngơi không?"</div>
+                    </div>
+                </div>
+
+                <!-- Feature: Recursion Limiter -->
+                <div
+                    class="bg-gradient-to-br from-white to-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10"><i
+                            class="ph-fill ph-warning-octagon text-9xl"></i></div>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i class="ph-fill ph-shield-warning text-red-500"></i> Recursion Limiter
+                    </h3>
+                    <p class="text-slate-600 mb-6 text-sm">
+                        Ngăn chặn việc "giải quyết vấn đề này lại đẻ ra vấn đề khác" vô tận. AI sẽ DỪNG LẠI nếu giải
+                        pháp có Chi phí Lý tưởng (Ideality) quá thấp.
+                    </p>
+
+                    <div class="flex items-center gap-2 mb-2 text-sm font-bold text-slate-700">
+                        <span>Logic Flow:</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-slate-500">
+                        <span class="bg-white px-2 py-1 border rounded">Solution</span>
+                        <span>→</span>
+                        <span class="bg-red-50 text-red-600 px-2 py-1 border border-red-100 rounded">New Problem</span>
+                        <span>→</span>
+                        <span class="bg-slate-800 text-white px-2 py-1 rounded font-bold">STOP & ALERT</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-12 mt-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <i class="ph-fill ph-brain text-4xl text-slate-300"></i>
+            </div>
+            <p class="font-bold text-slate-800 text-lg">TRIZ AI AGENT</p>
+            <p class="text-sm text-slate-500 mt-2 mb-8 max-w-lg mx-auto">
+                Một sản phẩm nghiên cứu về Ứng dụng AI trong Tư duy Sáng tạo & Giải quyết Vấn đề.
+                <br>Dựa trên lý thuyết TRIZ cổ điển và Kiến trúc Agent hiện đại.
+            </p>
+
+            <div
+                class="inline-flex gap-4 text-xs font-mono text-slate-400 border py-2 px-4 rounded-full border-slate-100">
+                <span>v5.2.1-stable</span>
+                <span>•</span>
+                <span>Build: 2025.12.29</span>
+                <span>•</span>
+                <span>Team: DMCA AI</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Cấu hình Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#ffffff',
+                primaryBorderColor: '#94a3b8',
+                lineColor: '#64748b',
+                edgeLabelBackground: '#ffffff',
+                fontFamily: 'Inter',
+                fontSize: '14px'
+            },
+            flowchart: {
+                curve: 'basis',
+                htmlLabels: true,
+                useMaxWidth: false,
+                padding: 50,
+                nodeSpacing: 50
+            }
+        });
+    </script>
+</body>
+
+</html>

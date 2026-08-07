@@ -1,0 +1,252 @@
+[
+    {
+        "ID": 1,
+        "Name": "Trọng lượng của đối tượng chuyển động",
+        "Description": "Khối lượng hoặc lực hấp dẫn gây ra chuyển động của đối tượng."
+    },
+    {
+        "ID": 2,
+        "Name": "Trọng lượng của đối tượng tĩnh",
+        "Description": "Khối lượng hoặc lực hấp dẫn tác động lên đối tượng đang đứng yên."
+    },
+    {
+        "ID": 3,
+        "Name": "Chiều dài của đối tượng chuyển động",
+        "Description": "Kích thước dọc trục của đối tượng khi nó di chuyển."
+    },
+    {
+        "ID": 4,
+        "Name": "Chiều dài của đối tượng tĩnh",
+        "Description": "Kích thước dọc trục của đối tượng khi nó đứng yên."
+    },
+    {
+        "ID": 5,
+        "Name": "Diện tích của đối tượng chuyển động",
+        "Description": "Phần bề mặt hoặc diện tích mặt cắt của đối tượng di chuyển."
+    },
+    {
+        "ID": 6,
+        "Name": "Diện tích của đối tượng tĩnh",
+        "Description": "Phần bề mặt hoặc diện tích mặt cắt của đối tượng đứng yên."
+    },
+    {
+        "ID": 7,
+        "Name": "Thể tích của đối tượng chuyển động",
+        "Description": "Không gian ba chiều mà đối tượng di chuyển chiếm chỗ."
+    },
+    {
+        "ID": 8,
+        "Name": "Thể tích của đối tượng tĩnh",
+        "Description": "Không gian ba chiều mà đối tượng đứng yên chiếm chỗ."
+    },
+    {
+        "ID": 9,
+        "Name": "Tốc độ",
+        "Description": "Vận tốc hoặc nhịp độ của quá trình hoặc hành động."
+    },
+    {
+        "ID": 10,
+        "Name": "Lực (Cường độ tương tác)",
+        "Description": "Mức độ của lực tác động hoặc tương tác."
+    },
+    {
+        "ID": 11,
+        "Name": "Ứng suất hoặc áp suất",
+        "Description": "Lực trên một đơn vị diện tích."
+    },
+    {
+        "ID": 12,
+        "Name": "Hình dạng",
+        "Description": "Hình dáng bên ngoài hoặc đường bao của đối tượng."
+    },
+    {
+        "ID": 13,
+        "Name": "Sự ổn định của thành phần đối tượng",
+        "Description": "Tính toàn vẹn, độ bền vững của cấu trúc đôi tượng."
+    },
+    {
+        "ID": 14,
+        "Name": "Sức mạnh/Độ bền",
+        "Description": "Khả năng chịu tải trọng hoặc lực tác động mà không bị phá hủy."
+    },
+    {
+        "ID": 15,
+        "Name": "Thời gian hoạt động của đối tượng chuyển động",
+        "Description": "Độ bền hoặc tuổi thọ của đối tượng khi di chuyển."
+    },
+    {
+        "ID": 16,
+        "Name": "Thời gian hoạt động của đối tượng tĩnh",
+        "Description": "Độ bền hoặc tuổi thọ của đối tượng khi đứng yên."
+    },
+    {
+        "ID": 17,
+        "Name": "Nhiệt độ",
+        "Description": "Mức nhiệt lượng hoặc tình trạng nhiệt của hệ thống."
+    },
+    {
+        "ID": 18,
+        "Name": "Độ sáng / Cường độ chiếu sáng",
+        "Description": "Chất lượng hoặc cường độ ánh sáng."
+    },
+    {
+        "ID": 19,
+        "Name": "Năng lượng tiêu thụ của đối tượng chuyển động",
+        "Description": "Năng lượng cần thiết để duy trì chuyển động."
+    },
+    {
+        "ID": 20,
+        "Name": "Năng lượng tiêu thụ của đối tượng tĩnh",
+        "Description": "Năng lượng cần thiết khi đối tượng đứng yên."
+    },
+    {
+        "ID": 21,
+        "Name": "Công suất",
+        "Description": "Tốc độ sinh công hoặc tiêu thụ năng lượng."
+    },
+    {
+        "ID": 22,
+        "Name": "Lãng phí năng lượng",
+        "Description": "Năng lượng bị mất đi mà không sinh công có ích."
+    },
+    {
+        "ID": 23,
+        "Name": "Lãng phí vật chất",
+        "Description": "Sự mất mát nguyên vật liệu."
+    },
+    {
+        "ID": 24,
+        "Name": "Mất thông tin",
+        "Description": "Sự thiếu hụt hoặc sai lệch dữ liệu/thông tin."
+    },
+    {
+        "ID": 25,
+        "Name": "Lãng phí thời gian",
+        "Description": "Khoảng thời gian không sinh ra giá trị."
+    },
+    {
+        "ID": 26,
+        "Name": "Số lượng vật chất",
+        "Description": "Lượng vật liệu hoặc số lượng chi tiết."
+    },
+    {
+        "ID": 27,
+        "Name": "Độ tin cậy",
+        "Description": "Khả năng hệ thống thực hiện đúng chức năng trong điều kiện xác định."
+    },
+    {
+        "ID": 28,
+        "Name": "Độ chính xác đo lường",
+        "Description": "Sai số giữa giá trị đo và giá trị thực."
+    },
+    {
+        "ID": 29,
+        "Name": "Độ chính xác chế tạo",
+        "Description": "Mức độ sai lệch so với thiết kế chuẩn."
+    },
+    {
+        "ID": 30,
+        "Name": "Tác hại bên ngoài ảnh hưởng đến đối tượng",
+        "Description": "Các yếu tố môi trường gây hại cho hệ thống."
+    },
+    {
+        "ID": 31,
+        "Name": "Tác hại bên ngoài gây ra bởi đối tượng",
+        "Description": "Hệ thống gây hại cho môi trường xung quanh."
+    },
+    {
+        "ID": 32,
+        "Name": "Khả năng chế tạo",
+        "Description": "Mức độ dễ dàng hoặc thuận tiện trong sản xuất."
+    },
+    {
+        "ID": 33,
+        "Name": "Sự thuận tiện khi sử dụng",
+        "Description": "Mức độ dễ dàng, thoải mái cho người dùng."
+    },
+    {
+        "ID": 34,
+        "Name": "Khả năng sửa chữa",
+        "Description": "Mức độ dễ dàng bảo trì, sửa chữa."
+    },
+    {
+        "ID": 35,
+        "Name": "Khả năng thích ứng (Tính linh hoạt)",
+        "Description": "Khả năng thay đổi để phù hợp với điều kiện mới."
+    },
+    {
+        "ID": 36,
+        "Name": "Độ phức tạp của thiết bị",
+        "Description": "Số lượng thành phần hoặc sự rắc rối trong cấu trúc."
+    },
+    {
+        "ID": 37,
+        "Name": "Độ phức tạp của kiểm tra và đo lường",
+        "Description": "Khó khăn trong việc giám sát và đo đạc."
+    },
+    {
+        "ID": 38,
+        "Name": "Mức độ tự động hóa",
+        "Description": "Khả năng hệ thống tự vận hành mà không cần con người."
+    },
+    {
+        "ID": 39,
+        "Name": "Năng suất",
+        "Description": "Sản lượng đầu ra trên một đơn vị thời gian."
+    },
+    {
+        "ID": 40,
+        "Name": "Tính ổn định của hệ thống",
+        "Description": "Khả năng duy trì trạng thái cân bằng."
+    },
+    {
+        "ID": 41,
+        "Name": "An ninh",
+        "Description": "Sự an toàn trước các mối đe dọa hoặc truy cập trái phép."
+    },
+    {
+        "ID": 42,
+        "Name": "Tính dễ bị tổn thương",
+        "Description": "Điểm yếu khiến hệ thống dễ bị phá hỏng."
+    },
+    {
+        "ID": 43,
+        "Name": "Thẩm mỹ",
+        "Description": "Vẻ đẹp, hình thức bên ngoài."
+    },
+    {
+        "ID": 44,
+        "Name": "Sự tương thích cảm xúc",
+        "Description": "Cảm giác tích cực mà sản phẩm mang lại cho người dùng."
+    },
+    {
+        "ID": 45,
+        "Name": "Tiếng ồn",
+        "Description": "Âm thanh không mong muốn phát ra từ hệ thống."
+    },
+    {
+        "ID": 46,
+        "Name": "Ô nhiễm",
+        "Description": "Các chất thải gây hại cho môi trường."
+    },
+    {
+        "ID": 47,
+        "Name": "Mùi",
+        "Description": "Mùi hương phát ra (thường là khó chịu)."
+    },
+    {
+        "ID": 48,
+        "Name": "Rung động",
+        "Description": "Dao động cơ học không mong muốn."
+    },
+    {
+        "ID": 49,
+        "Name": "Tác dụng phụ",
+        "Description": "Các kết quả không mong muốn đi kèm."
+    },
+    {
+        "ID": 50,
+        "Name": "Tính mới",
+        "Description": "Mức độ sáng tạo, đột phá của giải pháp."
+    }
+]

@@ -1,0 +1,306 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getDictionary } from "../../lib/dictionary";
+
+export function getStaticPaths() {
+    return [{ params: { lang: "en" } }, { params: { lang: "vi" } }];
+}
+
+const { lang } = Astro.params;
+const dict = await getDictionary(lang as "en" | "vi");
+
+if (lang !== "en" && lang !== "vi") {
+    return Astro.redirect("/en");
+}
+
+const title =
+    lang === "vi"
+        ? "Thầy Trần Thế Hưởng - Người Thầy Vật Lý Và Những Bài Giảng Về Sự Sáng Tạo"
+        : "Teacher Tran The Huong - Physics Teacher and Lectures on Creativity";
+---
+
+<Layout title={title} lang={lang}>
+    <Header lang={lang} />
+
+    <main class="min-h-screen bg-white">
+        <!-- Hero Section -->
+        <section class="relative py-20 overflow-hidden">
+            <div class="absolute inset-0 bg-blue-50/50 -z-10"></div>
+            <div
+                class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/40 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"
+            >
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <div class="mb-8 flex justify-center">
+                    <div
+                        class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white"
+                    >
+                        <img
+                            src="/thay-tran-the-huong.webp"
+                            alt="Thầy Trần Thế Hưởng"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+
+                <h1
+                    class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-purple-700 mb-6 leading-tight"
+                >
+                    Thầy Trần Thế Hưởng
+                </h1>
+                <p
+                    class="text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto"
+                >
+                    Người Thầy Vật Lý Và Những Bài Giảng Về Sự Sáng Tạo
+                </p>
+
+                <div class="mt-8">
+                    <a
+                        href={`/${lang}/about-triz-vietnam`}
+                        class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-2 transition-colors"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><path d="m15 18-6-6 6-6"></path></svg
+                        >
+                        {
+                            lang === "vi"
+                                ? "Quay lại Di sản TRIZ"
+                                : "Back to TRIZ Legacy"
+                        }
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-6 max-w-4xl mx-auto">
+            <!-- Detail Article Section -->
+            <article
+                class="prose prose-lg md:prose-xl max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600"
+            >
+                <div class="space-y-6">
+                    <p class="text-gray-700 leading-relaxed text-justify">
+                        Ở Đại học Khoa học Tự nhiên, khi nhắc đến môn Phương
+                        pháp luận Sáng tạo (TRIZ), nếu Giáo sư Phan Dũng là
+                        người mở đường, thì Thầy Trần Thế Hưởng được nhiều thế
+                        hệ sinh viên nhớ đến như người dẫn lối cần mẫn.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed text-justify">
+                        Không ồn ào, không phô trương, câu chuyện của Thầy là
+                        hành trình lặng lẽ của một người chuyển dịch từ sự chính
+                        xác của Vật lý sang sự linh hoạt của Tư duy, với một
+                        mong mỏi giản đơn: Giúp sinh viên Việt Nam không chỉ
+                        biết học, mà còn biết cách nghĩ.
+                    </p>
+
+                    <div class="scroll-mt-24" id="section-1">
+                        <h3
+                            class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100 mt-12"
+                        >
+                            1. Người con của hai miền đất
+                        </h3>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Thầy Hưởng sinh năm 1957. Cuộc đời Thầy có một sự
+                            giao thoa thú vị về địa lý: sinh ra ở Hải Phòng đất
+                            Cảng, nhưng quê gốc lại ở Châu Thành, Tiền Giang
+                            sông nước.
+                        </p>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Lớn lên trong những năm tháng đất nước còn chia cắt
+                            và gian khó, có lẽ sự pha trộn giữa tính kỷ luật,
+                            chắc chắn của miền Bắc và nét phóng khoáng, thực tế
+                            của miền Nam đã ngấm vào tính cách Thầy. Để rồi sau
+                            này trên bục giảng, sinh viên thấy ở Thầy một phong
+                            thái vừa nghiêm ngắn của nhà khoa học, lại vừa đôn
+                            hậu, gần gũi của một người thầy miền Nam.
+                        </p>
+                    </div>
+
+                    <div class="scroll-mt-24" id="section-2">
+                        <h3
+                            class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100 mt-12"
+                        >
+                            2. Từ những quy luật Vật lý...
+                        </h3>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Thầy tốt nghiệp Cử nhân Vật lý năm 1983 tại Đại học
+                            Tổng hợp TP.HCM (nay là ĐH Khoa học Tự nhiên) trong
+                            thời kỳ bao cấp. Ngày ấy, Vật lý là một môn học khó
+                            và khô khan với nhiều người, nhưng nó đã rèn cho
+                            Thầy một tư duy logic chặt chẽ: mọi thứ đều có
+                            nguyên nhân và kết quả, mọi vấn đề đều có quy luật
+                            vận động.
+                        </p>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Nền tảng "cứng" ấy rất quan trọng. Nó giúp Thầy sau
+                            này khi tiếp cận với khoa học sáng tạo không bị sa
+                            đà vào những ý tưởng viển vông, mà luôn tìm kiếm
+                            những giải pháp có cơ sở, có tính khả thi.
+                        </p>
+                    </div>
+
+                    <div class="scroll-mt-24" id="section-3">
+                        <h3
+                            class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100 mt-12"
+                        >
+                            3. ...Đến cái duyên với môn học Sáng tạo
+                        </h3>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Năm 1986 là một cột mốc đáng nhớ. Khi ấy, Giáo sư
+                            Phan Dũng mang bộ môn Phương pháp luận sáng tạo
+                            (TRIZ) về Việt Nam.
+                        </p>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Chàng cử nhân Vật lý trẻ tuổi ngày ấy chợt nhận ra:
+                            Hóa ra sự sáng tạo không phải là sự ngẫu hứng may
+                            rủi, mà nó cũng có quy luật, cũng logic hệt như Vật
+                            lý vậy. Sự đồng điệu ấy đã giữ chân Thầy lại, để rồi
+                            từ một người học trò, Thầy trở thành người công sự,
+                            cùng Giáo sư Phan Dũng vun đắp cho bộ môn này trong
+                            thời gian 26 năm.
+                        </p>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Download: <a
+                                href="https://drive.google.com/file/d/10kwNsSCiwXCZJwB6bUcWXGmfP4-2t3R1/view?usp=sharing"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >ĐỀ ÁN THÀNH LẬP TRUNG TÂM KHOA HỌC: "TRUNG TÂM
+                                SÁNG TẠO KHOA HỌC KỸ THUẬT"</a
+                            >
+                        </p>
+                    </div>
+
+                    <div class="scroll-mt-24" id="section-4">
+                        <h3
+                            class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100 mt-12"
+                        >
+                            4. Học để dạy tốt hơn
+                        </h3>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Hành trình của Thầy là sự tích lũy kiến thức không
+                            ngừng nghỉ, nhưng không phải để lấy danh vị, mà là
+                            để dạy học trò được tốt hơn.
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 mb-4 text-gray-700">
+                            <li>
+                                Thầy học thêm về <strong>Vật lý Điện tử</strong> ở
+                                bậc sau đại học để hiểu sâu về kỹ thuật, giúp các
+                                ví dụ trong bài giảng sát với thực tế công nghệ.
+                            </li>
+                            <li>
+                                Năm 1995, Thầy tham gia khóa đào tạo <strong
+                                    >Quản trị Kinh doanh</strong
+                                > do các giảng viên của trường Đại học New Brunswick
+                                Canada dạy. Điều này giúp Thầy có thêm góc nhìn kinh
+                                tế: một sáng tạo hay không chỉ cần mới, mà còn phải
+                                bán được, phải dùng được.
+                            </li>
+                            <li>
+                                Năm 2015, thầy tham gia khóa đào tạo GIÁM ĐỐC
+                                ĐỔI MỚI trong chương trình nâng cao năng lực đổi
+                                mới do trường đại học Việt Đức và trường đại học
+                                Leipzig, Liên bang Đức đồng tổ chức tổ chức.
+                            </li>
+                        </ul>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Những kiến thức đa dạng ấy được Thầy chắt lọc, đưa
+                            vào từng trang giáo án, giúp môn Phương pháp luận
+                            sáng tạo trở nên dễ hiểu hơn với sinh viên các ngành
+                            kỹ thuật.
+                        </p>
+                    </div>
+
+                    <div class="scroll-mt-24" id="section-5">
+                        <h3
+                            class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100 mt-12"
+                        >
+                            5. Những trang sách viết cho sinh viên
+                        </h3>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Nếu nhìn vào danh sách các công trình của Thầy, ta
+                            thấy một sự chuyển dịch đầy tâm huyết.
+                        </p>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Những năm đầu, Thầy nghiên cứu về kỹ thuật: sấy thực
+                            phẩm, màng mỏng, công nghệ nano... Nhưng về sau, mối
+                            bận tâm của Thầy dồn cả cho sinh viên. Thầy viết
+                            sách về <strong>"Kỹ năng tự học"</strong>, về <strong
+                                >"Phương pháp học đại học"</strong
+                            >.
+                        </p>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Đặc biệt, cuốn <em
+                                >"Ma trận TRIZ: Công cụ giải các bài toán sáng
+                                tạo"</em
+                            > là cuốn sách "gối đầu giường" của nhiều sinh viên. Không
+                            lý thuyết dài dòng, cuốn sách là tập hợp những bài toán
+                            thực tế được giải quyết cặn kẽ, đúng như tính cách của
+                            Thầy: nói ít, làm nhiều, và phải hiệu quả.
+                        </p>
+                    </div>
+
+                    <div class="scroll-mt-24" id="section-6">
+                        <h3
+                            class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100 mt-12"
+                        >
+                            6. Lời kết
+                        </h3>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Thạc sĩ Trần Thế Hưởng là hình ảnh tiêu biểu của một
+                            người thầy giáo Việt Nam: khiêm cung, yêu nghề và
+                            luôn trăn trở với sự trưởng thành của học trò.
+                        </p>
+                        <p
+                            class="text-gray-700 leading-relaxed mb-4 text-justify"
+                        >
+                            Thầy dạy học viên cách quan sát một vấn đề, cách tìm
+                            ra mâu thuẫn và giải quyết nó bằng tư duy khoa học.
+                            Đó là những bài học không chỉ dùng trong phòng thi,
+                            mà dùng cho cả cuộc đời.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <Footer lang={lang} />
+    </main>
+</Layout>

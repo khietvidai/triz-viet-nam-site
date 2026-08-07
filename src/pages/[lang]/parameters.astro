@@ -1,0 +1,88 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import parametersEn from "../../Data/parameter.json";
+import parametersVi from "../../Data/parameter_vi.json";
+import { getDictionary } from "../../lib/dictionary";
+
+export function getStaticPaths() {
+    return [{ params: { lang: "en" } }, { params: { lang: "vi" } }];
+}
+
+const { lang } = Astro.params;
+const dict = await getDictionary(lang as "en" | "vi");
+
+if (lang !== "en" && lang !== "vi") {
+    return Astro.redirect("/en");
+}
+
+// Select data based on language
+const rawParameters = lang === "vi" ? parametersVi : parametersEn;
+
+// Filter out large embedding data for display (only exists in English file currently, but safe to map)
+const parameters = rawParameters.map((param: any) => {
+    const { Embedding, ...rest } = param;
+    return rest;
+});
+
+const title =
+    lang === "vi"
+        ? "50 Thông Số Kỹ Thuật (Matrix 2010)"
+        : "50 Parameters (Matrix 2010)";
+---
+
+<Layout title={title} lang={lang}>
+    <Header lang={lang} />
+    <main class="min-h-screen bg-gray-50 flex flex-col">
+        <div class="flex-grow max-w-5xl mx-auto px-6 pt-24 pb-12 w-full">
+            <div class="text-center mb-12">
+                <h1
+                    class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-4"
+                >
+                    {title}
+                </h1>
+                <p class="text-gray-600 text-lg">
+                    {
+                        lang === "vi"
+                            ? "Các thông số được sử dụng để xác định mâu thuẫn."
+                            : "Parameters used to define the contradiction."
+                    }
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6">
+                {
+                    parameters.map((param) => (
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:border-purple-200 transition-colors">
+                            <div class="flex flex-col md:flex-row md:items-center gap-4 mb-3">
+                                <span class="flex-shrink-0 inline-flex items-center justify-center px-4 py-1 rounded-full bg-purple-50 text-purple-700 font-bold text-sm border border-purple-100 w-fit">
+                                    ID: {param.ID}
+                                </span>
+                                <h2 class="text-xl font-bold text-gray-900">
+                                    {param.Name}
+                                </h2>
+                            </div>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                {param.Description}
+                            </p>
+                            {param.Keyword && (
+                                <div class="flex flex-wrap gap-2">
+                                    {param.Keyword.split(",").map((k) => (
+                                        <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-md">
+                                            {k.trim()}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <div class="mt-auto">
+            <Footer lang={lang} />
+        </div>
+    </main>
+</Layout>

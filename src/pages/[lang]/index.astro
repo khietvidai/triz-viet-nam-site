@@ -1,0 +1,146 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import { ArrowRight, Sparkles, Brain, Zap } from "lucide-react";
+import { getDictionary } from "../../lib/dictionary";
+import { Image } from "astro:assets";
+import logoImage from "../../assets/logo-triz-ai.webp";
+export function getStaticPaths() {
+    return [
+        {
+            params: { lang: "en" },
+        },
+        { params: { lang: "vi" } },
+    ];
+}
+const { lang } = Astro.params;
+const dict = await getDictionary(lang as "en" | "vi");
+if (lang !== "en" && lang !== "vi") {
+    return Astro.redirect("/en");
+}
+---
+
+<Layout title="TRIZ AI Solver" lang={lang}>
+    <Header lang={lang} />
+    <main
+        class="min-h-screen flex flex-col items-center justify-center px-8 pb-8 pt-24 relative overflow-hidden"
+    >
+        <!-- Dynamic Background -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div
+                class="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] opacity-[0.02]"
+            >
+            </div>
+            <div
+                class="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-blue-200/40 rounded-full blur-[120px] animate-pulse-glow"
+            >
+            </div>
+            <div
+                class="absolute bottom-[-10%] right-[20%] w-[500px] h-[500px] bg-purple-200/40 rounded-full blur-[120px] animate-pulse-glow delay-200"
+            >
+            </div>
+        </div>
+
+        <div class="max-w-6xl text-center space-y-16 relative z-10 pt-10">
+            <div class="space-y-8">
+                <!-- Hero Title -->
+                <h1
+                    class="text-4xl md:text-7xl font-black tracking-tight animate-fade-in-up delay-100 leading-tight text-slate-900"
+                >
+                    <span style="font-family: 'Roboto', sans-serif;"
+                        >{dict.landing.titlePrefix}</span
+                    >
+                    <br class="hidden md:block" />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-300% animate-gradient"
+                    >
+                        {dict.landing.titleSuffix}
+                    </span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p
+                    class="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed text-balance animate-fade-in-up delay-200 font-medium"
+                >
+                    {dict.landing.subtitle}
+                </p>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="flex justify-center animate-fade-in-up delay-300">
+                <a
+                    href={`/${lang}/triz`}
+                    class="group relative px-10 py-5 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-red-500/30 hover:scale-105 transition-all duration-300 flex items-center gap-3 overflow-hidden"
+                >
+                    <div
+                        class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+                    >
+                    </div>
+                    <span class="relative z-10 tracking-wide"
+                        >{dict.landing.startButton}</span
+                    >
+                    <div
+                        class="relative z-10 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-red-600 transition-all duration-300 group-hover:scale-110 shadow-sm backdrop-blur-sm"
+                    >
+                        <ArrowRight
+                            className="w-5 h-5 group-hover:translate-x-0.5 transition-transform duration-300"
+                        />
+                    </div>
+                </a>
+            </div>
+
+            <!-- Feature Cards -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 text-left animate-fade-in-up delay-300"
+            >
+                <div
+                    class="p-8 rounded-[2rem] bg-white border border-slate-200 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300 hover:-translate-y-1 group"
+                >
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-red-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                    >
+                        <Brain className="w-7 h-7 text-red-600" />
+                    </div>
+                    <h2 class="text-xl font-bold mb-3 text-slate-900">
+                        {dict.landing.features.systematicTitle}
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        {dict.landing.features.systematicDesc}
+                    </p>
+                </div>
+                <div
+                    class="p-8 rounded-[2rem] bg-white border border-slate-200 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300 hover:-translate-y-1 group"
+                >
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                    >
+                        <Zap className="w-7 h-7 text-orange-600" />
+                    </div>
+                    <h2 class="text-xl font-bold mb-3 text-slate-900">
+                        {dict.landing.features.instantTitle}
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        {dict.landing.features.instantDesc}
+                    </p>
+                </div>
+                <div
+                    class="p-8 rounded-[2rem] bg-white border border-slate-200 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-yellow-500/10 transition-all duration-300 hover:-translate-y-1 group"
+                >
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-yellow-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                    >
+                        <Sparkles className="w-7 h-7 text-yellow-600" />
+                    </div>
+                    <h2 class="text-xl font-bold mb-3 text-slate-900">
+                        {dict.landing.features.innovativeTitle}
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        {dict.landing.features.innovativeDesc}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <Footer lang={lang} />
+    </main>
+</Layout>

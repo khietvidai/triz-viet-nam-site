@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrizClient from "../../components/TrizClient";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import { getDictionary } from "../../lib/dictionary";
+
+export function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "vi" } }];
+}
+
+const { lang } = Astro.params;
+if (lang !== "en" && lang !== "vi") {
+  return Astro.redirect("/en/triz");
+}
+
+const dict = await getDictionary(lang as "en" | "vi");
+
+const title =
+  lang === "vi"
+    ? "TRIZ AI Solver - Giải Pháp AI"
+    : "TRIZ AI Solver - AI Innovation";
+const description =
+  lang === "vi"
+    ? "Giải quyết vấn đề phức tạp với nguyên lý TRIZ và Gemini AI."
+    : "Solve complex problems with TRIZ principles and Gemini AI.";
+---
+
+<Layout title={title} description={description} lang={lang} theme="dark">
+  <Header lang={lang} />
+  <TrizClient client:load lang={lang as "en" | "vi"} dict={dict} />
+  <Footer lang={lang} />
+</Layout>
