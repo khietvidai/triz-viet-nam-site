@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "title": "Nguyên tắc phân nhỏ",
+    "lecture": {
+      "summary": "Phân nhỏ là chia đối tượng thành những phần độc lập, làm nó tháo lắp được, và tăng dần mức độ chia nhỏ. Càng chia nhỏ, hệ càng linh hoạt và dễ điều khiển cục bộ.",
+      "body": [
+        "Ý tưởng cốt lõi: một khối liền có độ cứng và tính toàn vẹn cao nhưng rất kém linh hoạt. Khi tách khối đó thành nhiều phần độc lập, ta đánh đổi một phần tính toàn vẹn để lấy khả năng thay thế, vận chuyển và điều chỉnh từng phần riêng.",
+        "Ba mức độ vận dụng, tăng dần: (a) chia thành các phần độc lập; (b) làm cho đối tượng tháo lắp được; (c) tăng mức độ phân nhỏ tới giới hạn — chuyển sang dạng hạt, sợi, bột hoặc chất lỏng.",
+        "Dấu hiệu nên nghĩ tới nguyên tắc này: đối tượng quá lớn hoặc quá nặng để xử lý; hỏng một chỗ phải thay cả khối; cần thay đổi kích thước hoặc hình dạng theo tình huống sử dụng.",
+        "Giới hạn cần lưu ý: phân nhỏ làm tăng số mối ghép, kéo theo chi phí lắp ráp và nguy cơ rò rỉ hoặc lỏng lẻo tại các mối nối. Cần cân nhắc điểm dừng hợp lý."
+      ]
+    },
+    "cases": [
+      {
+        "title": "Vận chuyển kết cấu thép vào công trình chật hẹp",
+        "context": "Dầm thép nguyên khối dài 12 mét không thể đưa vào công trường nằm trong hẻm nhỏ nội đô.",
+        "contradiction": "Cần dầm dài để đủ khả năng chịu lực, nhưng dầm càng dài thì càng không vận chuyển được.",
+        "application": "Chia dầm thành các đoạn ngắn có mặt bích, bắt bu lông nối lại tại chỗ.",
+        "outcome": "Vận chuyển được bằng xe tải nhỏ, thi công không cần cẩu lớn. Đổi lại phải kiểm định kỹ các mối nối bu lông."
+      }
+    ],
+    "illustrations": [
+      {
+        "title": "Từ cục xà phòng sang nước rửa tay",
+        "problem": "Cục xà phòng dùng chung bị nhão, mất vệ sinh và khó định lượng.",
+        "principleApplied": "Tăng mức độ phân nhỏ tới hạn — chuyển vật rắn nguyên khối thành chất lỏng.",
+        "solution": "Nước rửa tay dạng lỏng bơm theo liều, mỗi lần lấy đúng lượng cần, không ai chạm vào phần còn lại."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Nguyên tắc tách khỏi",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 3,
+    "title": "Nguyên tắc phẩm chất cục bộ",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 4,
+    "title": "Nguyên tắc phản đối xứng",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 5,
+    "title": "Nguyên tắc kết hợp",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 6,
+    "title": "Nguyên tắc vạn năng",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 7,
+    "title": "Nguyên tắc chứa trong",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 8,
+    "title": "Nguyên tắc phản trọng lượng",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 9,
+    "title": "Nguyên tắc gây ứng suất sơ bộ",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 10,
+    "title": "Nguyên tắc thực hiện sơ bộ",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 11,
+    "title": "Nguyên tắc dự phòng",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 12,
+    "title": "Nguyên tắc đẳng thế",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 13,
+    "title": "Nguyên tắc đảo ngược",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 14,
+    "title": "Nguyên tắc cầu hóa",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 15,
+    "title": "Nguyên tắc linh động",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 16,
+    "title": "Nguyên tắc giải quyết từng phần",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 17,
+    "title": "Nguyên tắc chuyển sang chiều khác",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 18,
+    "title": "Nguyên tắc dao động cơ học",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 19,
+    "title": "Nguyên tắc tác động theo chu kỳ",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 20,
+    "title": "Nguyên tắc liên tục tác động có ích",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 21,
+    "title": "Nguyên tắc vượt nhanh",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 22,
+    "title": "Nguyên tắc biến hại thành lợi",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 23,
+    "title": "Nguyên tắc quan hệ phản hồi",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 24,
+    "title": "Nguyên tắc sử dụng trung gian",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 25,
+    "title": "Nguyên tắc tự phục vụ",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 26,
+    "title": "Nguyên tắc sao chép",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 27,
+    "title": "Nguyên tắc rẻ thay cho đắt",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 28,
+    "title": "Nguyên tắc thay thế sơ đồ cơ học",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 29,
+    "title": "Nguyên tắc sử dụng các kết cấu khí và lỏng",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 30,
+    "title": "Nguyên tắc sử dụng vỏ dẻo và màng mỏng",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 31,
+    "title": "Nguyên tắc sử dụng vật liệu xốp",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 32,
+    "title": "Nguyên tắc thay đổi màu sắc",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 33,
+    "title": "Nguyên tắc đồng nhất",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 34,
+    "title": "Nguyên tắc phân hủy hoặc tái sinh",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 35,
+    "title": "Nguyên tắc thay đổi các thông số hóa lý",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 36,
+    "title": "Nguyên tắc sử dụng chuyển pha",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 37,
+    "title": "Nguyên tắc sử dụng nở nhiệt",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 38,
+    "title": "Nguyên tắc sử dụng chất oxy hóa mạnh",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 39,
+    "title": "Nguyên tắc sử dụng môi trường trơ",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 40,
+    "title": "Nguyên tắc sử dụng vật liệu hợp thành",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  }
+]

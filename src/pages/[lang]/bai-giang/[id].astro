@@ -1,0 +1,100 @@
+---
+/**
+ * Mục 1 — BÀI GIẢNG 40 NGUYÊN TẮC SÁNG TẠO.
+ *
+ * Trang này CHỈ dành cho người được cấp quyền. Việc chặn truy cập do
+ * Cloudflare Access đảm nhiệm ở biên, trước khi request chạm tới site —
+ * xem docs/cloudflare-access.md. Đường dẫn /bai-giang/ được tách riêng
+ * chính vì Access chặn theo path, không chặn được một phần của trang.
+ */
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import lessonsEn from "../../../Data/principle-lessons_en.json";
+import lessonsVi from "../../../Data/principle-lessons_vi.json";
+
+export function getStaticPaths() {
+    return ["en", "vi"].flatMap((lang) =>
+        (lang === "vi" ? lessonsVi : lessonsEn).map((lesson) => ({
+            params: { lang, id: String(lesson.id) },
+        })),
+    );
+}
+
+const { lang, id } = Astro.params;
+const isVi = lang === "vi";
+
+const lessons = isVi ? lessonsVi : lessonsEn;
+const lesson = lessons.find((item) => String(item.id) === id);
+
+if (!lesson) {
+    return Astro.redirect(`/${lang}/principles`);
+}
+
+const t = {
+    back: isVi ? "Về nguyên tắc này" : "Back to this principle",
+    lecture: isVi ? "Bài giảng" : "Lecture",
+    principle: isVi ? "Nguyên tắc" : "Principle",
+    restricted: isVi ? "Nội dung được cấp quyền" : "Authorised content",
+    empty: isVi
+        ? "Bài giảng cho nguyên tắc này đang được biên soạn."
+        : "The lecture for this principle is being written.",
+};
+
+const title = `${t.lecture} — ${t.principle} ${lesson.id}: ${lesson.title}`;
+const hasLecture = Boolean(
+    lesson.lecture?.summary || lesson.lecture?.body?.length,
+);
+---
+
+<Layout title={title} lang={lang}>
+    <Header lang={lang} />
+    <main class="min-h-screen bg-gray-50 flex flex-col">
+        <div class="flex-grow max-w-3xl mx-auto px-6 pt-24 pb-12 w-full">
+            <a
+                href={`/${lang}/principles/${lesson.id}`}
+                class="text-sm text-blue-600 hover:text-blue-800 hover:underline"
+            >
+                &larr; {t.back}
+            </a>
+
+            <div
+                class="inline-flex items-center gap-2 mt-6 rounded-full bg-amber-50 border border-amber-200 px-3 py-1 text-xs font-semibold text-amber-700"
+            >
+                {t.restricted}
+            </div>
+
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-2">
+                {t.principle}
+                {lesson.id}: {lesson.title}
+            </h1>
+
+            {
+                !hasLecture ? (
+                    <p class="text-gray-500 text-sm italic bg-white rounded-xl border border-dashed border-gray-300 p-6 mt-8">
+                        {t.empty}
+                    </p>
+                ) : (
+                    <article class="mt-8 bg-white rounded-xl border border-gray-200 shadow-sm p-8">
+                        {lesson.lecture.summary && (
+                            <p class="text-lg text-gray-800 font-medium leading-relaxed border-l-4 border-blue-500 pl-4 mb-8">
+                                {lesson.lecture.summary}
+                            </p>
+                        )}
+                        <div class="space-y-5">
+                            {lesson.lecture.body.map((paragraph) => (
+                                <p class="text-gray-700 leading-relaxed">
+                                    {paragraph}
+                                </p>
+                            ))}
+                        </div>
+                    </article>
+                )
+            }
+        </div>
+
+        <div class="mt-auto">
+            <Footer lang={lang} />
+        </div>
+    </main>
+</Layout>

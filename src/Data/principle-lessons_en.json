@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "title": "Segmentation",
+    "lecture": {
+      "summary": "Segmentation means dividing an object into independent parts, making it sectional, and increasing the degree of division. The finer the division, the more flexible the system and the easier it is to control locally.",
+      "body": [
+        "Core idea: a solid monolith is rigid and structurally complete, but inflexible. Splitting it into independent parts trades some of that integrity for the ability to replace, transport and adjust each part on its own.",
+        "Three escalating levels: (a) divide into independent parts; (b) make the object sectional or easy to assemble and disassemble; (c) increase segmentation to its limit — move to granules, fibres, powder or liquid.",
+        "Signals to reach for this principle: the object is too large or heavy to handle; a failure in one spot forces replacement of the whole; size or shape must change with the situation.",
+        "Known limits: segmentation multiplies joints, which raises assembly cost and introduces leak or loosening risks at each connection. Decide deliberately where to stop."
+      ]
+    },
+    "cases": [
+      {
+        "title": "Moving structural steel into a constrained site",
+        "context": "A single 12-metre steel beam could not reach a site accessible only through a narrow inner-city lane.",
+        "contradiction": "The beam must be long to carry the load, yet length is exactly what makes it impossible to deliver.",
+        "application": "Split the beam into shorter flanged sections bolted together on site.",
+        "outcome": "Delivered by small truck and erected without a large crane, at the cost of rigorous inspection of every bolted joint."
+      }
+    ],
+    "illustrations": [
+      {
+        "title": "From a bar of soap to liquid hand wash",
+        "problem": "A shared bar of soap turns soggy, spreads germs and cannot be dosed.",
+        "principleApplied": "Segmentation taken to its limit — a solid monolith becomes a liquid.",
+        "solution": "Pump-dosed liquid soap delivers exactly the amount needed, and no user touches what remains."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Taking out (Extraction)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 3,
+    "title": "Local Quality",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 4,
+    "title": "Asymmetry",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 5,
+    "title": "Merging (Consolidation)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 6,
+    "title": "Universality (Multi-functionality)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 7,
+    "title": "Nesting (Matryoshka)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 8,
+    "title": "Anti-Weight (Counterweight)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 9,
+    "title": "Preliminary Anti-Action (Prior Counteraction)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 10,
+    "title": "Preliminary Action (Prior Action)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 11,
+    "title": "Beforehand Cushioning (Cushion in Advance)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 12,
+    "title": "Equipotentiality",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 13,
+    "title": "The Other Way Round (Inversion)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 14,
+    "title": "Spheroidality (Curvature)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 15,
+    "title": "Dynamics",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 16,
+    "title": "Partial or Excessive Actions",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 17,
+    "title": "Another Dimension",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 18,
+    "title": "Mechanical Vibration",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 19,
+    "title": "Periodic Action",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 20,
+    "title": "Continuity of Useful Action",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 21,
+    "title": "Rushing Through (Skipping)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 22,
+    "title": "\"Blessing in Disguise\" (Convert Harmful into Useful)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 23,
+    "title": "Feedback",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 24,
+    "title": "Intermediary",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 25,
+    "title": "Self-service",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 26,
+    "title": "Copying",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 27,
+    "title": "Cheap Short-Living Objects",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 28,
+    "title": "Mechanics Substitution (Replace Mechanical System)",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 29,
+    "title": "Pneumatics and Hydraulics",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 30,
+    "title": "Flexible Shells and Thin Films",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 31,
+    "title": "Porous Materials",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 32,
+    "title": "Color Changes",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 33,
+    "title": "Homogeneity",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 34,
+    "title": "Discarding and Recovering",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 35,
+    "title": "Parameter Changes",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 36,
+    "title": "Phase Transitions",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 37,
+    "title": "Thermal Expansion",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 38,
+    "title": "Strong Oxidants",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 39,
+    "title": "Inert Atmosphere",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  },
+  {
+    "id": 40,
+    "title": "Composite Materials",
+    "lecture": {
+      "summary": "",
+      "body": []
+    },
+    "cases": [],
+    "illustrations": []
+  }
+]

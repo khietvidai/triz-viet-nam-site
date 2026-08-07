@@ -1,0 +1,236 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import lessonsEn from "../../../Data/principle-lessons_en.json";
+import lessonsVi from "../../../Data/principle-lessons_vi.json";
+
+export function getStaticPaths() {
+    return ["en", "vi"].flatMap((lang) =>
+        (lang === "vi" ? lessonsVi : lessonsEn).map((lesson) => ({
+            params: { lang, id: String(lesson.id) },
+        })),
+    );
+}
+
+const { lang, id } = Astro.params;
+const isVi = lang === "vi";
+
+const lessons = isVi ? lessonsVi : lessonsEn;
+const lesson = lessons.find((item) => String(item.id) === id);
+
+if (!lesson) {
+    return Astro.redirect(`/${lang}/principles`);
+}
+
+const t = {
+    back: isVi ? "Về danh sách 40 nguyên tắc" : "Back to all 40 principles",
+    principle: isVi ? "Nguyên tắc" : "Principle",
+    lecture: isVi ? "Bài giảng" : "Lecture",
+    lectureLocked: isVi
+        ? "Nội dung dành riêng cho học viên được cấp quyền."
+        : "Restricted to authorised learners.",
+    lectureOpen: isVi ? "Vào bài giảng" : "Open the lecture",
+    cases: isVi ? "Tình huống nghiên cứu" : "Case studies",
+    illustrations: isVi
+        ? "Minh họa vận dụng TRIZ giải quyết vấn đề"
+        : "Applying TRIZ to solve problems",
+    empty: isVi
+        ? "Phần này đang được biên soạn."
+        : "This section is being written.",
+    context: isVi ? "Bối cảnh" : "Context",
+    contradiction: isVi ? "Mâu thuẫn" : "Contradiction",
+    application: isVi ? "Cách vận dụng" : "How the principle was applied",
+    outcome: isVi ? "Kết quả" : "Outcome",
+    problem: isVi ? "Vấn đề" : "Problem",
+    principleApplied: isVi ? "Nguyên tắc vận dụng" : "Principle applied",
+    solution: isVi ? "Giải pháp" : "Solution",
+};
+
+const title = `${t.principle} ${lesson.id}: ${lesson.title}`;
+const prev = lessons.find((item) => item.id === lesson.id - 1);
+const next = lessons.find((item) => item.id === lesson.id + 1);
+---
+
+<Layout title={title} lang={lang}>
+    <Header lang={lang} />
+    <main class="min-h-screen bg-gray-50 flex flex-col">
+        <div class="flex-grow max-w-4xl mx-auto px-6 pt-24 pb-12 w-full">
+            <a
+                href={`/${lang}/principles`}
+                class="text-sm text-blue-600 hover:text-blue-800 hover:underline"
+            >
+                &larr; {t.back}
+            </a>
+
+            <div class="flex items-center gap-4 mt-6 mb-10">
+                <span
+                    class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 font-bold text-2xl border border-blue-100"
+                >
+                    {lesson.id}
+                </span>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    {lesson.title}
+                </h1>
+            </div>
+
+            {/* Mục 1 — Bài giảng: chỉ hiện lối vào, nội dung nằm sau Cloudflare Access */}
+            <section class="mb-10">
+                <h2 class="text-xl font-bold text-gray-900 mb-4">
+                    <span class="text-blue-600">1.</span>
+                    {t.lecture}
+                </h2>
+                <div
+                    class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between"
+                >
+                    <p class="text-gray-600 text-sm">{t.lectureLocked}</p>
+                    <a
+                        href={`/${lang}/bai-giang/${lesson.id}`}
+                        class="flex-shrink-0 inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
+                    >
+                        {t.lectureOpen}
+                    </a>
+                </div>
+            </section>
+
+            {/* Mục 2 — Tình huống nghiên cứu */}
+            <section class="mb-10">
+                <h2 class="text-xl font-bold text-gray-900 mb-4">
+                    <span class="text-blue-600">2.</span>
+                    {t.cases}
+                </h2>
+                {
+                    lesson.cases.length === 0 ? (
+                        <p class="text-gray-500 text-sm italic bg-white rounded-xl border border-dashed border-gray-300 p-6">
+                            {t.empty}
+                        </p>
+                    ) : (
+                        <div class="space-y-4">
+                            {lesson.cases.map((item) => (
+                                <article class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+                                    <h3 class="font-bold text-gray-900 mb-4">
+                                        {item.title}
+                                    </h3>
+                                    <dl class="space-y-3 text-sm">
+                                        <div>
+                                            <dt class="font-semibold text-gray-500 uppercase text-xs tracking-wide">
+                                                {t.context}
+                                            </dt>
+                                            <dd class="text-gray-700 mt-1">
+                                                {item.context}
+                                            </dd>
+                                        </div>
+                                        <div>
+                                            <dt class="font-semibold text-gray-500 uppercase text-xs tracking-wide">
+                                                {t.contradiction}
+                                            </dt>
+                                            <dd class="text-gray-700 mt-1">
+                                                {item.contradiction}
+                                            </dd>
+                                        </div>
+                                        <div>
+                                            <dt class="font-semibold text-gray-500 uppercase text-xs tracking-wide">
+                                                {t.application}
+                                            </dt>
+                                            <dd class="text-gray-700 mt-1">
+                                                {item.application}
+                                            </dd>
+                                        </div>
+                                        <div>
+                                            <dt class="font-semibold text-gray-500 uppercase text-xs tracking-wide">
+                                                {t.outcome}
+                                            </dt>
+                                            <dd class="text-gray-700 mt-1">
+                                                {item.outcome}
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                </article>
+                            ))}
+                        </div>
+                    )
+                }
+            </section>
+
+            {/* Mục 3 — Minh họa vận dụng */}
+            <section>
+                <h2 class="text-xl font-bold text-gray-900 mb-4">
+                    <span class="text-blue-600">3.</span>
+                    {t.illustrations}
+                </h2>
+                {
+                    lesson.illustrations.length === 0 ? (
+                        <p class="text-gray-500 text-sm italic bg-white rounded-xl border border-dashed border-gray-300 p-6">
+                            {t.empty}
+                        </p>
+                    ) : (
+                        <div class="space-y-4">
+                            {lesson.illustrations.map((item) => (
+                                <article class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+                                    <h3 class="font-bold text-gray-900 mb-4">
+                                        {item.title}
+                                    </h3>
+                                    <dl class="space-y-3 text-sm">
+                                        <div>
+                                            <dt class="font-semibold text-gray-500 uppercase text-xs tracking-wide">
+                                                {t.problem}
+                                            </dt>
+                                            <dd class="text-gray-700 mt-1">
+                                                {item.problem}
+                                            </dd>
+                                        </div>
+                                        <div>
+                                            <dt class="font-semibold text-gray-500 uppercase text-xs tracking-wide">
+                                                {t.principleApplied}
+                                            </dt>
+                                            <dd class="text-gray-700 mt-1">
+                                                {item.principleApplied}
+                                            </dd>
+                                        </div>
+                                        <div>
+                                            <dt class="font-semibold text-gray-500 uppercase text-xs tracking-wide">
+                                                {t.solution}
+                                            </dt>
+                                            <dd class="text-gray-700 mt-1">
+                                                {item.solution}
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                </article>
+                            ))}
+                        </div>
+                    )
+                }
+            </section>
+
+            <nav class="flex justify-between gap-4 mt-12 text-sm">
+                {
+                    prev ? (
+                        <a
+                            href={`/${lang}/principles/${prev.id}`}
+                            class="text-blue-600 hover:text-blue-800 hover:underline"
+                        >
+                            &larr; {prev.id}. {prev.title}
+                        </a>
+                    ) : (
+                        <span />
+                    )
+                }
+                {
+                    next && (
+                        <a
+                            href={`/${lang}/principles/${next.id}`}
+                            class="text-blue-600 hover:text-blue-800 hover:underline text-right"
+                        >
+                            {next.id}. {next.title} &rarr;
+                        </a>
+                    )
+                }
+            </nav>
+        </div>
+
+        <div class="mt-auto">
+            <Footer lang={lang} />
+        </div>
+    </main>
+</Layout>

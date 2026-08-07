@@ -63,6 +63,26 @@ node ./dist/server/entry.mjs
 
 Server đọc `HOST` và `PORT` từ `.env`. Đặt sau reverse proxy Nginx — proxy cần gửi header `X-Country-Code` để middleware điều hướng ngôn ngữ (mặc định coi là Việt Nam khi thiếu header).
 
+## Bài giảng 40 nguyên tắc
+
+Mỗi nguyên tắc có hai trang:
+
+| Đường dẫn | Nội dung | Truy cập |
+|---|---|---|
+| `/{lang}/principles/{id}` | Mục 2 (tình huống nghiên cứu) + mục 3 (minh họa vận dụng) | Công khai |
+| `/{lang}/bai-giang/{id}` | Mục 1 (bài giảng) | Chỉ người được cấp quyền |
+
+Nội dung nằm trong `src/Data/principle-lessons_{vi,en}.json`. Nguyên tắc 1 đã
+có nội dung mẫu để tham chiếu định dạng; 39 nguyên tắc còn lại là khung rỗng.
+
+Sinh lại khung sau khi thêm/sửa nguyên tắc (mục đã soạn được giữ nguyên):
+
+```bash
+node scripts/generate-lesson-skeleton.mjs
+```
+
+Cách khoá mục 1: xem [docs/cloudflare-access.md](docs/cloudflare-access.md).
+
 ## Lưu ý bảo mật
 
 - `apikey.txt`, `.env`, `triz-data.db` đều nằm trong `.gitignore` — không được commit.
