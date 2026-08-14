@@ -17,7 +17,16 @@
 			"database_id": "99f5756d-9576-470a-a5b1-55fba6180264",
 			"migrations_dir": "migrations"
 		}
+	],
+	// Video đào tạo nội bộ (bucket private, chỉ truy cập qua Worker)
+	"r2_buckets": [
+		{
+			"binding": "VIDEOS",
+			"bucket_name": "triz-videos"
+		}
 	]
-	// GOOGLE_API_KEY được nạp bằng `wrangler secret put GOOGLE_API_KEY`,
-	// không khai báo ở đây để khỏi lọt vào git.
+	// Secrets nạp bằng `wrangler secret put <TÊN>`, không khai báo ở đây để khỏi lọt vào git:
+	// - DEEPSEEK_API_KEY: gọi TRIZ AI
+	// - SESSION_SECRET: ký cookie phiên đăng nhập khu vực nội bộ
+	// - ADMIN_SECRET: khóa trang duyệt người dùng /api/noibo/admin
 }
