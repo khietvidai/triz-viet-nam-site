@@ -1,0 +1,136 @@
+{
+    "vi": {
+        "title": "Bài toán thực tế",
+        "subtitle": "Những bài toán đời thực được giải bằng tư duy TRIZ - từ mâu thuẫn đến giải pháp sáng tạo.",
+        "labels": {
+            "problem": "Bài toán",
+            "contradiction": "Mâu thuẫn",
+            "solution": "Giải pháp TRIZ",
+            "principles": "Nguyên tắc áp dụng"
+        },
+        "cases": [
+            {
+                "id": 1,
+                "title": "Lon nước giải khát bằng nhôm",
+                "problem": "Nhà sản xuất muốn giảm lượng nhôm để tiết kiệm chi phí và bảo vệ môi trường, nhưng lon vẫn phải chịu được áp suất bên trong và lực nén khi chồng cao trong kho.",
+                "contradiction": "Lượng vật liệu giảm (vỏ mỏng hơn) ↔ Độ bền phải giữ nguyên hoặc tăng.",
+                "solution": "Thay vì dựa vào độ dày vật liệu, người ta dùng hình học để chịu lực: đáy lon dạng vòm lõm, thân hình trụ và mép gấp cuộn. Nhờ đó vỏ lon ngày nay mỏng hơn nhiều lần so với ban đầu mà vẫn chịu được áp suất và lực chồng xếp.",
+                "principles": [
+                    { "id": 14, "title": "Nguyên tắc cầu hóa" },
+                    { "id": 3, "title": "Nguyên tắc phẩm chất cục bộ" }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Chai tương cà để ngược",
+                "problem": "Tương cà đặc chảy rất chậm, người dùng phải gõ, lắc chai và luôn khó lấy phần còn lại ở đáy chai.",
+                "contradiction": "Độ đặc tạo cảm giác chất lượng ↔ Sự tiện lợi khi rót.",
+                "solution": "Đảo ngược cách nhìn: thay vì bắt người dùng dốc chai, hãy để chai luôn ở tư thế dốc sẵn. Chai được thiết kế đứng bằng nắp (úp ngược), kết hợp van silicon tự đóng - tương luôn dồn sẵn ở miệng chai, bóp nhẹ là ra ngay.",
+                "principles": [
+                    { "id": 13, "title": "Nguyên tắc đảo ngược" },
+                    { "id": 10, "title": "Nguyên tắc thực hiện sơ bộ" }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Xe đạp gấp",
+                "problem": "Người đi làm ở đô thị cần xe đạp đủ lớn để đạp thoải mái, nhưng lại phải mang được lên tàu điện, thang máy và cất trong căn hộ nhỏ.",
+                "contradiction": "Kích thước khi sử dụng ↔ Kích thước khi vận chuyển, cất giữ.",
+                "solution": "Chia khung xe thành các phần có khớp gấp, tay lái và yên có thể hạ xuống. Cùng một chiếc xe tồn tại ở hai trạng thái: đủ lớn khi đạp, gọn lại chỉ còn một phần ba khi gấp.",
+                "principles": [
+                    { "id": 1, "title": "Nguyên tắc phân nhỏ" },
+                    { "id": 15, "title": "Nguyên tắc linh động" }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Càng đáp máy bay thu vào thân",
+                "problem": "Máy bay cần bánh xe để cất cánh và hạ cánh, nhưng khi bay, bộ càng lộ ra ngoài gây lực cản không khí rất lớn, tốn nhiên liệu.",
+                "contradiction": "Cần có bánh xe (lúc cất/hạ cánh) ↔ Không được có bánh xe (lúc bay).",
+                "solution": "Tách mâu thuẫn theo thời gian: càng đáp chỉ xuất hiện khi cần. Sau khi cất cánh, toàn bộ bộ càng gập lại và thu gọn vào trong thân máy bay - vật thể này \"chứa trong\" vật thể kia.",
+                "principles": [
+                    { "id": 15, "title": "Nguyên tắc linh động" },
+                    { "id": 7, "title": "Nguyên tắc chứa trong" }
+                ]
+            },
+            {
+                "id": 5,
+                "title": "Xếp hàng bằng số thứ tự",
+                "problem": "Ngân hàng, bệnh viện đông khách: khách phải đứng xếp hàng mệt mỏi, không gian chật chội, dễ chen lấn và mất trật tự.",
+                "contradiction": "Phục vụ đúng thứ tự công bằng ↔ Khách không muốn đứng chờ tại chỗ.",
+                "solution": "Tách \"thứ tự\" ra khỏi \"con người\": khách lấy số thứ tự ngay khi đến rồi tự do ngồi chờ hoặc làm việc khác. Hàng đợi vẫn tồn tại nhưng ở dạng thông tin, không còn ở dạng hàng người - một ví dụ điển hình của TRIZ Mở Rộng áp dụng cho quản lý dịch vụ.",
+                "principles": [
+                    { "id": 2, "title": "Nguyên tắc tách khỏi" },
+                    { "id": 10, "title": "Nguyên tắc thực hiện sơ bộ" }
+                ]
+            }
+        ]
+    },
+    "en": {
+        "title": "Real-World Problems",
+        "subtitle": "Real-life problems solved with TRIZ thinking - from contradiction to inventive solution.",
+        "labels": {
+            "problem": "Problem",
+            "contradiction": "Contradiction",
+            "solution": "TRIZ Solution",
+            "principles": "Principles Applied"
+        },
+        "cases": [
+            {
+                "id": 1,
+                "title": "The Aluminum Beverage Can",
+                "problem": "Manufacturers want to reduce aluminum to cut cost and environmental impact, but the can must still withstand internal pressure and the stacking load in warehouses.",
+                "contradiction": "Less material (thinner walls) ↔ Strength must stay the same or increase.",
+                "solution": "Instead of relying on wall thickness, geometry carries the load: a domed concave bottom, cylindrical body, and rolled seams. Today's cans are several times thinner than early designs yet still handle pressure and stacking forces.",
+                "principles": [
+                    { "id": 14, "title": "Spheroidality - Curvature" },
+                    { "id": 3, "title": "Local Quality" }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "The Upside-Down Ketchup Bottle",
+                "problem": "Thick ketchup flows slowly; users must shake and tap the bottle, and the last portion is always hard to get out.",
+                "contradiction": "Thickness signals quality ↔ Convenience of pouring.",
+                "solution": "Invert the situation: instead of making users flip the bottle, keep the bottle permanently flipped. The bottle stands on its cap, combined with a self-sealing silicone valve - the ketchup is always waiting at the opening, ready with a gentle squeeze.",
+                "principles": [
+                    { "id": 13, "title": "The Other Way Round - Inversion" },
+                    { "id": 10, "title": "Preliminary Action" }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "The Folding Bicycle",
+                "problem": "Urban commuters need a bicycle large enough to ride comfortably, yet it must fit on trains, in elevators, and in small apartments.",
+                "contradiction": "Size in use ↔ Size in transport and storage.",
+                "solution": "Split the frame into hinged segments with a collapsible handlebar and seat post. One bicycle exists in two states: full-sized when riding, one third the size when folded.",
+                "principles": [
+                    { "id": 1, "title": "Segmentation" },
+                    { "id": 15, "title": "Dynamics" }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Retractable Aircraft Landing Gear",
+                "problem": "An aircraft needs wheels for takeoff and landing, but exposed landing gear creates enormous drag in flight and wastes fuel.",
+                "contradiction": "Wheels must exist (takeoff/landing) ↔ Wheels must not exist (in flight).",
+                "solution": "Separate the contradiction in time: the landing gear appears only when needed. After takeoff, the entire assembly folds and retracts inside the fuselage - one object nested inside another.",
+                "principles": [
+                    { "id": 15, "title": "Dynamics" },
+                    { "id": 7, "title": "Nested Doll" }
+                ]
+            },
+            {
+                "id": 5,
+                "title": "Queuing by Ticket Number",
+                "problem": "Crowded banks and hospitals: customers stand in exhausting lines, space gets congested, and disputes break out over queue positions.",
+                "contradiction": "Fair first-come-first-served order ↔ Customers do not want to stand and wait in place.",
+                "solution": "Separate the \"order\" from the \"people\": customers take a numbered ticket on arrival, then sit freely or do something else. The queue still exists, but as information instead of a line of people - a classic example of Enlarged TRIZ applied to service management.",
+                "principles": [
+                    { "id": 2, "title": "Taking Out - Separation" },
+                    { "id": 10, "title": "Preliminary Action" }
+                ]
+            }
+        ]
+    }
+}

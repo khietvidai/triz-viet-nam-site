@@ -1,0 +1,93 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import contentData from "../../Data/bai_toan_thuc_te.json";
+
+export function getStaticPaths() {
+    return [{ params: { lang: "en" } }, { params: { lang: "vi" } }];
+}
+
+const { lang } = Astro.params;
+
+if (lang !== "en" && lang !== "vi") {
+    return Astro.redirect("/en");
+}
+
+const content = lang === "vi" ? contentData.vi : contentData.en;
+const { labels } = content;
+---
+
+<Layout title={content.title} lang={lang}>
+    <Header lang={lang} />
+    <main class="min-h-screen bg-gray-50 flex flex-col">
+        <div class="flex-grow max-w-5xl mx-auto px-6 pt-24 pb-12 w-full">
+            <div class="text-center mb-12">
+                <h1
+                    class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-4"
+                >
+                    {content.title}
+                </h1>
+                <p class="text-gray-600 text-lg">{content.subtitle}</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6">
+                {
+                    content.cases.map((c) => (
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:border-purple-200 transition-colors">
+                            <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+                                <span class="flex-shrink-0 inline-flex items-center justify-center px-4 py-1 rounded-full bg-purple-50 text-purple-700 font-bold text-sm border border-purple-100 w-fit">
+                                    #{c.id}
+                                </span>
+                                <h2 class="text-xl font-bold text-gray-900">
+                                    {c.title}
+                                </h2>
+                            </div>
+
+                            <div class="space-y-3 text-gray-700 leading-relaxed">
+                                <p>
+                                    <strong class="text-gray-900">
+                                        {labels.problem}:
+                                    </strong>{" "}
+                                    {c.problem}
+                                </p>
+                                <p class="bg-amber-50 border border-amber-100 rounded-lg px-4 py-3">
+                                    <strong class="text-amber-800">
+                                        {labels.contradiction}:
+                                    </strong>{" "}
+                                    {c.contradiction}
+                                </p>
+                                <p>
+                                    <strong class="text-gray-900">
+                                        {labels.solution}:
+                                    </strong>{" "}
+                                    {c.solution}
+                                </p>
+                            </div>
+
+                            <div class="mt-4">
+                                <span class="text-sm font-semibold text-gray-500">
+                                    {labels.principles}:
+                                </span>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    {c.principles.map((p) => (
+                                        <a
+                                            href={`/${lang}/principles`}
+                                            class="px-3 py-1 bg-purple-50 text-purple-700 text-sm rounded-full border border-purple-100 hover:bg-purple-100 transition-colors"
+                                        >
+                                            {p.id}. {p.title}
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <div class="mt-auto">
+            <Footer lang={lang} />
+        </div>
+    </main>
+</Layout>
