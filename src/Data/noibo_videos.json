@@ -1,37 +1,44 @@
 [
     {
         "key": "principles-01-05.mp4",
-        "title": "Nguyên tắc 1 – 5",
+        "title": "Bài 1: Nguyên tắc 1 – 5",
+        "principleIds": [1, 2, 3, 4, 5],
         "sourceFile": "1 - 5 PRINCIPLE.mp4"
     },
     {
         "key": "principles-06-11.mp4",
-        "title": "Nguyên tắc 6 – 11",
+        "title": "Bài 2: Nguyên tắc 6 – 11",
+        "principleIds": [6, 7, 8, 9, 10, 11],
         "sourceFile": "6 - 11 PRINCIPLES.mp4"
     },
     {
         "key": "principles-12-18.mp4",
-        "title": "Nguyên tắc 12 – 18",
+        "title": "Bài 3: Nguyên tắc 12 – 18",
+        "principleIds": [12, 13, 14, 15, 16, 17, 18],
         "sourceFile": "12 - 18 PRINCIPLE.mp4"
     },
     {
         "key": "principles-19-24.mp4",
-        "title": "Nguyên tắc 19 – 24",
+        "title": "Bài 4: Nguyên tắc 19 – 24",
+        "principleIds": [19, 20, 21, 22, 23, 24],
         "sourceFile": "19 - 24 PRINCIPLES.mp4"
     },
     {
         "key": "principles-25-29.mp4",
-        "title": "Nguyên tắc 25 – 29",
+        "title": "Bài 5: Nguyên tắc 25 – 29",
+        "principleIds": [25, 26, 27, 28, 29],
         "sourceFile": "25 - 29 PRINCIPLES.mp4"
     },
     {
         "key": "principles-30-35.mp4",
-        "title": "Nguyên tắc 30 – 35",
+        "title": "Bài 6: Nguyên tắc 30 – 35",
+        "principleIds": [30, 31, 32, 33, 34, 35],
         "sourceFile": "30-35 PRINCIPLE.mp4"
     },
     {
         "key": "principles-36-40.mp4",
-        "title": "Nguyên tắc 36 – 40",
+        "title": "Bài 7: Nguyên tắc 36 – 40",
+        "principleIds": [36, 37, 38, 39, 40],
         "sourceFile": "36 - 40 PRINCIPLES.mp4"
     }
 ]
