@@ -11,12 +11,17 @@ export type NoiboEnv = {
     VIDEOS?: R2Bucket;
     SESSION_SECRET?: string;
     ADMIN_SECRET?: string;
+    GOOGLE_CLIENT_ID?: string;
+    GOOGLE_CLIENT_SECRET?: string;
 };
 
 export type VideoUser = {
     id: number;
     email: string;
     approved: number;
+    name?: string | null;
+    avatar_url?: string | null;
+    google_id?: string | null;
 };
 
 export const SESSION_COOKIE = 'noibo_session';
@@ -32,6 +37,8 @@ export function getNoiboEnv(locals: unknown): NoiboEnv {
         VIDEOS: env.VIDEOS,
         SESSION_SECRET: env.SESSION_SECRET ?? import.meta.env.SESSION_SECRET,
         ADMIN_SECRET: env.ADMIN_SECRET ?? import.meta.env.ADMIN_SECRET,
+        GOOGLE_CLIENT_ID: env.GOOGLE_CLIENT_ID ?? import.meta.env.GOOGLE_CLIENT_ID,
+        GOOGLE_CLIENT_SECRET: env.GOOGLE_CLIENT_SECRET ?? import.meta.env.GOOGLE_CLIENT_SECRET,
     };
 }
 
@@ -137,7 +144,7 @@ export async function getSessionUser(
     const email = await verifySessionToken(env.SESSION_SECRET, cookieValue);
     if (!email) return null;
     const row = await env.DB.prepare(
-        'SELECT id, email, approved FROM video_users WHERE email = ?'
+        'SELECT id, email, approved, name, avatar_url, google_id FROM video_users WHERE email = ?'
     )
         .bind(email)
         .first<VideoUser>();
