@@ -68,7 +68,7 @@ const title =
                             </p>
                             {param.Keyword && (
                                 <div class="flex flex-wrap gap-2">
-                                    {param.Keyword.split(",").map((k) => (
+                                    {param.Keyword.split(",").map((k: string) => (
                                         <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-md">
                                             {k.trim()}
                                         </span>
@@ -82,7 +82,7 @@ const title =
         </div>
 
         <div class="mt-auto">
-            <Footer lang={lang} />
+            <Footer lang={lang as "vi" | "en"} />
         </div>
     </main>
 </Layout>

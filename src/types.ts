@@ -184,7 +184,7 @@ export interface Dictionary {
         recommendedSolution: string;
         detailedEvaluation: string;
         valueContribution: string;
-        feasibility: string;
+        feasibility?: string;
         resourceCosts: string;
         humanResources: string;
         timeInvestment: string;
