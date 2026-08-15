@@ -34,8 +34,8 @@ export const GET: APIRoute = async ({ url, locals }) => {
         }
 
         const { results } = await env.DB.prepare(
-            'SELECT email, approved, created_at FROM video_users ORDER BY created_at DESC'
-        ).all<{ email: string; approved: number; created_at: string }>();
+            'SELECT email, name, avatar_url, google_id, approved, created_at FROM video_users ORDER BY created_at DESC'
+        ).all<{ email: string; name: string | null; avatar_url: string | null; google_id: string | null; approved: number; created_at: string }>();
 
         const esc = (s: string) =>
             s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -44,21 +44,28 @@ export const GET: APIRoute = async ({ url, locals }) => {
         const rows = (results ?? [])
             .map((u) => {
                 const email = esc(u.email);
+                const name = u.name ? esc(u.name) : '-';
+                const method = u.google_id
+                    ? '<span style="color:#2563eb;font-weight:600">Google</span>'
+                    : '<span>Mật khẩu</span>';
+                const avatar = u.avatar_url
+                    ? `<img src="${esc(u.avatar_url)}" style="width:24px;height:24px;border-radius:50%;vertical-align:middle;margin-right:6px" referrerpolicy="no-referrer" />`
+                    : '';
                 const emailParam = encodeURIComponent(u.email);
                 const action = u.approved
-                    ? `<a href="?key=${adminKey}&revoke=${emailParam}">Thu hồi</a>`
-                    : `<a href="?key=${adminKey}&approve=${emailParam}">Duyệt</a>`;
-                return `<tr><td>${email}</td><td>${u.approved ? '✅ Đã duyệt' : '⏳ Chờ duyệt'}</td><td>${esc(u.created_at)}</td><td>${action}</td></tr>`;
+                    ? `<a href="?key=${adminKey}&revoke=${emailParam}" style="color:#dc2626">Thu hồi</a>`
+                    : `<a href="?key=${adminKey}&approve=${emailParam}" style="color:#16a34a;font-weight:bold">Duyệt</a>`;
+                return `<tr><td>${avatar}${email}</td><td>${name}</td><td>${method}</td><td>${u.approved ? '✅ Đã duyệt' : '⏳ Chờ duyệt'}</td><td>${esc(u.created_at)}</td><td>${action}</td></tr>`;
             })
             .join('');
 
         const html = `<!doctype html><html lang="vi"><head><meta charset="utf-8">
 <title>Duyệt người xem video nội bộ</title>
-<style>body{font-family:system-ui;max-width:720px;margin:40px auto;padding:0 16px}
-table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8px;text-align:left}
-th{background:#f5f5f5}a{color:#6d28d9}</style></head><body>
+<style>body{font-family:system-ui;max-width:840px;margin:40px auto;padding:0 16px}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8px 12px;text-align:left}
+th{background:#f5f5f5}a{color:#6d28d9;text-decoration:none}a:hover{text-decoration:underline}</style></head><body>
 <h1>Người dùng video nội bộ</h1>
-<table><tr><th>Email</th><th>Trạng thái</th><th>Đăng ký lúc</th><th>Hành động</th></tr>${rows || '<tr><td colspan="4">Chưa có ai đăng ký</td></tr>'}</table>
+<table><tr><th>Email</th><th>Họ tên</th><th>Phương thức</th><th>Trạng thái</th><th>Đăng ký lúc</th><th>Hành động</th></tr>${rows || '<tr><td colspan="6">Chưa có ai đăng ký</td></tr>'}</table>
 </body></html>`;
 
         return new Response(html, {
