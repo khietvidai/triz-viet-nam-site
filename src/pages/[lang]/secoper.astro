@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SecoperClient from "../../components/SecoperClient";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import { getDictionary } from "../../lib/dictionary";
+
+export function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "vi" } }];
+}
+
+const { lang } = Astro.params;
+if (lang !== "en" && lang !== "vi") {
+  return Astro.redirect("/vi/secoper");
+}
+
+const dict = await getDictionary(lang as "en" | "vi");
+
+const title =
+  lang === "vi"
+    ? "SECOPER 3.0 AI - Chẩn Đoán & Phát Biểu Đúng Bài Toán"
+    : "SECOPER 3.0 AI - Problem Diagnostic Framework";
+const description =
+  lang === "vi"
+    ? "Quy trình 7 bước chẩn đoán bài toán có cấu trúc, bóc tách giả định, diệt thiên kiến và tìm đúng điểm nghẽn trước khi tìm giải pháp TRIZ."
+    : "7-step structured problem diagnosis to decouple facts from assumptions, isolate root bottlenecks, and formulate the exact problem before TRIZ solving.";
+---
+
+<Layout title={title} description={description} lang={lang} theme="dark">
+  <Header lang={lang} />
+  <SecoperClient client:load lang={lang as "en" | "vi"} dict={dict} />
+  <Footer lang={lang} />
+</Layout>

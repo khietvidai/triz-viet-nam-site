@@ -294,5 +294,259 @@ export const server = {
                 throw new Error(error.message || "An unexpected error occurred.");
             }
         }
+    }),
+
+    solveSecoperProblem: defineAction({
+        input: z.object({
+            situation: z.string(),
+            parkingLotSolutions: z.array(z.string()).optional().default([]),
+            lang: z.enum(['en', 'vi']).default('vi'),
+        }),
+        handler: async ({ situation, parkingLotSolutions, lang }, context) => {
+            if (!situation || situation.trim() === "") {
+                return { error: lang === 'vi' ? "Vui lòng nhập tình huống cần chẩn đoán." : "Please enter a problem situation." };
+            }
+            try {
+                const client = createClient(context.locals);
+
+                const parkingLotText = parkingLotSolutions && parkingLotSolutions.length > 0
+                    ? parkingLotSolutions.map((s, i) => `${i + 1}. ${s}`).join('\n')
+                    : 'None provided.';
+
+                const systemPrompt = `
+You are the Chief Diagnostic Master and Facilitator of the S.E.C.O.P.E.R 3.0 Framework (Phát biểu đúng bài toán).
+Your mission is to perform a complete, rigorous, and deep multi-step diagnostic analysis on real-world problems based strictly on the SECOPER 3.0 specification.
+You understand that SECOPER does NOT solve the problem; it ensures we are formulating the EXACT RIGHT problem before passing it to TRIZ or engineering.
+
+Key Principles & Rules of SECOPER 3.0:
+1. Giai đoạn 0 (TRIAGE & PARKING LOT):
+   - Check if problem is multi-variable, persistent, or contradictory (Qualified for SECOPER) vs simple single-step (Just-Do-It).
+   - Enforce Parking Lot: Seal preconceived solutions to prevent reverse-engineering bias.
+
+2. S - SITUATION:
+   - Quantify facts (baseline -> current), target statement with deadline.
+   - Guardrail metric (chỉ số đối trọng) with threshold "not worse than [limit]" to prevent waterbed effect.
+   - Shadow metric (chỉ số bóng) without financial KPI bonuses to prevent Goodhart's Law distortion.
+   - S-Curve Sanity Check: If current system reached theoretical ceiling, forbid mere optimization and flag need for a new paradigm.
+
+3. E - EVIDENCE:
+   - 4-part falsification for core assumptions: [Assumption], [Falsifier] (crafted from independent Devil's Advocate / Red-Team perspective), [Evidence], [Conclusion: TRUE/FALSE/INSUFFICIENT_DATA].
+   - Risk-tolerance threshold: If cost to verify > cost to prototype, tag [Giả định rủi ro cao — kiểm chứng bằng thực thi].
+   - Verify metric validity.
+
+4. C - CORE GAP:
+   - 6 steps: List 4-6 statements labeled exactly as Symptom, Gap, Contradiction, Cause, Consequence.
+   - Filter only valid candidates (Gap & Contradiction).
+   - Dependency graph: X disappears if Y solved? X leverages Z?
+   - Hierarchical ranking: Rank primarily by Impact (1-5), and ONLY break ties with Leverage (1-5). NEVER sum scores (Impact + Leverage).
+   - Reject Administrative Contradictions ("want marketing but lack money" -> downgrade to Gap or reframe to physical/technical contradiction).
+   - Strategic Bypass: Any candidate with Leverage = 5/5 MUST be split into a parallel strategic restructuring branch.
+
+5. OR - ROOT OBSTACLE:
+   - Multi-branch cause tree (include at least 1 alternative/fishbone branch).
+   - Reinforcing Loop Check: If leaf is part of a reinforcing loop, do NOT just chop the leaf; the core obstacle is the weakest link of the loop.
+   - Incentive Check (Cobra effect): Does anyone secretly benefit from the obstacle? If yes, problem shifts to redesigning incentive mechanisms.
+   - Score 3-5 leaf causes by Impact and Directness; select top 1.
+
+6. P - PERSPECTIVE:
+   - Locus (Individual, Department, System, Market).
+   - Authority level needed and decision required.
+   - Escalation Business Case with Default-to-Action rule and D-Day deadline (anti-zombie submission).
+   - Horizontal Handshake (co-sign if obstacle involves another department).
+   - Market handling: Escalate, Turn harm into benefit (TRIZ 22), or reduce scope.
+
+7. E - ESSENCE:
+   - Template A (Gap) or Template B (Contradiction).
+   - Check 3 mandatory anchors: Core Gap matches C, Obstacle matches OR, Constraints match S.
+
+8. R - REFRAME:
+   - Question embedded with TRIZ IFR DNA: "TỰ" (SELF-) and "nguồn lực sẵn có" (readily available resources).
+   - Resource Radar: 5 zones (Empty space, Idle time/waiting, Waste info/materials, Physical differentials, Turning harm into benefit).
+   - 5 Golden Gates: 1. No implicit solution (check vs Parking lot); 2. Measurable; 3. Authority exists; 4. Unambiguous; 5. Real vs fake constraints (eliminate fake company habits).
+   - Living Hypothesis notice & Boomerang loopback rule (Edge 8).
+
+Language: All values in the JSON output MUST be in ${lang === 'vi' ? 'VIETNAMESE' : 'ENGLISH'}.
+Output format: Return ONLY a valid JSON object matching the FullSecoperResult schema. No markdown wrapping outside the JSON.`;
+
+                const userPrompt = `
+Perform a complete SECOPER 3.0 diagnostic on the following situation:
+"""${situation}"""
+
+Parking Lot Sealed Preconceptions:
+"""${parkingLotText}"""
+
+Return a single valid JSON object strictly matching this schema:
+{
+  "triage": {
+    "isQualified": true,
+    "triageReason": "string",
+    "isJustDoIt": false,
+    "parkingLotSolutions": ["string"]
+  },
+  "situation": {
+    "situationStatement": "string",
+    "targetStatement": "string",
+    "guardrailMetric": {
+      "name": "string",
+      "threshold": "string",
+      "rationale": "string"
+    },
+    "shadowMetric": {
+      "name": "string",
+      "rationale": "string"
+    },
+    "rawGap": "string",
+    "sCurveSanityCheck": {
+      "status": "OPTIMIZATION_ALLOWED" or "S_CURVE_CEILING_REACHED",
+      "analysis": "string",
+      "recommendation": "string"
+    },
+    "isProxyOrFermi": false
+  },
+  "evidence": {
+    "assumptions": [
+      {
+        "assumption": "string",
+        "falsifier": "string (Red-team independent falsifier)",
+        "evidence": "string",
+        "conclusion": "TRUE" | "FALSE" | "INSUFFICIENT_DATA",
+        "riskLabel": "string or empty"
+      }
+    ],
+    "metricValidityConclusion": "string",
+    "redTeamReviewSummary": "string"
+  },
+  "coreGap": {
+    "allCandidates": [
+      {
+        "id": "cg1",
+        "text": "string",
+        "label": "Symptom" | "Gap" | "Contradiction" | "Cause" | "Consequence",
+        "impactScore": 1-5,
+        "leverageScore": 1-5,
+        "rank": 1,
+        "isStrategicBypass": boolean,
+        "isAdministrativeContradictionRejected": boolean
+      }
+    ],
+    "validCandidates": [
+      {
+        "id": "cg1",
+        "text": "string",
+        "label": "Gap" | "Contradiction",
+        "impactScore": 1-5,
+        "leverageScore": 1-5,
+        "rank": 1,
+        "isStrategicBypass": boolean
+      }
+    ],
+    "dependencyAnalysis": "string",
+    "selectedCoreGap": {
+      "type": "Gap" | "Contradiction",
+      "statement": "string",
+      "rationale": "string"
+    },
+    "parallelBranch": {
+      "type": "STRATEGIC_RESTRUCTURING" | "INDEPENDENT_CORE_GAP",
+      "statement": "string"
+    }
+  },
+  "obstacle": {
+    "causeTree": [
+      {
+        "id": "node1",
+        "name": "string",
+        "parentId": "optional parent id",
+        "impactScore": 1-5,
+        "directnessScore": 1-5,
+        "isLeaf": boolean,
+        "isAlternativeBranch": boolean
+      }
+    ],
+    "leafCauses": [
+      {
+        "cause": "string",
+        "impactScore": 1-5,
+        "directnessScore": 1-5
+      }
+    ],
+    "selectedObstacle": "string",
+    "impactRationale": "string",
+    "reinforcingLoopCheck": {
+      "isReinforcingLoop": boolean,
+      "analysis": "string",
+      "weakestLink": "string"
+    },
+    "incentiveCheck": {
+      "hasVestedInterest": boolean,
+      "cobraEffectAnalysis": "string",
+      "recommendation": "string"
+    }
+  },
+  "perspective": {
+    "locus": "INDIVIDUAL" | "DEPARTMENT" | "SYSTEM" | "MARKET",
+    "authorityLevelNeeded": "string",
+    "keyDecisionMaker": "string",
+    "decisionToChange": "string",
+    "escalationCase": {
+      "businessCaseSummary": "string",
+      "defaultToActionNotice": "string (with D-Day deadline)",
+      "horizontalHandshakeCoSignDepartment": "string"
+    },
+    "marketHandlingStrategy": "ESCALATE" | "TURN_HARM_INTO_BENEFIT" | "REDUCE_SCOPE_TO_SUB_SYSTEM"
+  },
+  "essence": {
+    "branchType": "A_GAP" | "B_CONTRADICTION",
+    "statement": "string",
+    "anchorsCheck": {
+      "isCoreGapMatched": true,
+      "isObstacleMatched": true,
+      "isSituationMatched": true
+    }
+  },
+  "reframe": {
+    "reframeQuestion": "string (strictly following Pattern A or B with 'TỰ' and 'nguồn lực sẵn có')",
+    "resourceRadar": {
+      "emptySpace": "string",
+      "idleTime": "string",
+      "wasteInfo": "string",
+      "physicalDifferential": "string",
+      "turnHarmIntoBenefit": "string"
+    },
+    "fiveGoldenGates": {
+      "noImplicitSolution": true,
+      "isMeasurable": true,
+      "hasAuthority": true,
+      "isUnambiguous": true,
+      "areRealConstraints": true
+    },
+    "gateNotes": ["string"],
+    "livingHypothesisNotice": "string"
+  }
+}
+IMPORTANT: Output ONLY pure JSON.`;
+
+                const rawText = await callDeepSeek(
+                    client,
+                    [
+                        { role: 'system', content: systemPrompt },
+                        { role: 'user', content: userPrompt },
+                    ],
+                    { json: true }
+                );
+
+                console.log("--- SECOPER RAW LLM RESPONSE START ---");
+                console.log(rawText);
+                console.log("--- SECOPER RAW LLM RESPONSE END ---");
+
+                const parsed = safeParseJSON(rawText || "{}");
+                return parsed;
+
+            } catch (error: any) {
+                console.error("SECOPER Analysis Error:", error);
+                throw new Error(error.message || "An unexpected error occurred during SECOPER diagnosis.");
+            }
+        }
     })
 };
+

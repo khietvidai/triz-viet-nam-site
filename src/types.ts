@@ -238,4 +238,176 @@ export interface Dictionary {
             contactDesc: string;
         };
     };
+    secoper?: {
+        title: string;
+        subtitle: string;
+        inputPlaceholder: string;
+        parkingLotLabel: string;
+        parkingLotPlaceholder: string;
+        diagnoseButton: string;
+        diagnosing: string;
+        examplesLabel: string;
+        handoffToTriz: string;
+        downloadPdf: string;
+        copyMarkdown: string;
+        copied: string;
+    };
 }
+
+/**
+ * SECOPER 3.0 Types & Interfaces
+ */
+
+export interface SecoperTriage {
+    isQualified: boolean;
+    triageReason: string;
+    isJustDoIt: boolean;
+    parkingLotSolutions: string[];
+}
+
+export interface SecoperSituation {
+    situationStatement: string;
+    targetStatement: string;
+    guardrailMetric: {
+        name: string;
+        threshold: string;
+        rationale: string;
+    };
+    shadowMetric?: {
+        name: string;
+        rationale: string;
+    };
+    rawGap: string;
+    sCurveSanityCheck: {
+        status: 'OPTIMIZATION_ALLOWED' | 'S_CURVE_CEILING_REACHED';
+        analysis: string;
+        recommendation: string;
+    };
+    isProxyOrFermi: boolean;
+}
+
+export interface SecoperEvidenceItem {
+    assumption: string;
+    falsifier: string;
+    evidence: string;
+    conclusion: 'TRUE' | 'FALSE' | 'INSUFFICIENT_DATA';
+    riskLabel?: string;
+}
+
+export interface SecoperEvidence {
+    assumptions: SecoperEvidenceItem[];
+    metricValidityConclusion: string;
+    redTeamReviewSummary: string;
+}
+
+export interface SecoperCoreGapCandidate {
+    id: string;
+    text: string;
+    label: 'Symptom' | 'Gap' | 'Contradiction' | 'Cause' | 'Consequence';
+    impactScore?: number; // 1-5
+    leverageScore?: number; // 1-5
+    rank?: number;
+    isStrategicBypass?: boolean; // Leverage = 5/5
+    isAdministrativeContradictionRejected?: boolean;
+}
+
+export interface SecoperCoreGap {
+    allCandidates: SecoperCoreGapCandidate[];
+    validCandidates: SecoperCoreGapCandidate[];
+    dependencyAnalysis: string;
+    selectedCoreGap: {
+        type: 'Gap' | 'Contradiction';
+        statement: string;
+        rationale: string;
+    };
+    parallelBranch?: {
+        type: 'STRATEGIC_RESTRUCTURING' | 'INDEPENDENT_CORE_GAP';
+        statement: string;
+    };
+}
+
+export interface SecoperCauseNode {
+    id: string;
+    name: string;
+    parentId?: string;
+    impactScore?: number;
+    directnessScore?: number;
+    isLeaf?: boolean;
+    isAlternativeBranch?: boolean;
+}
+
+export interface SecoperObstacle {
+    causeTree: SecoperCauseNode[];
+    leafCauses: {
+        cause: string;
+        impactScore: number;
+        directnessScore: number;
+    }[];
+    selectedObstacle: string;
+    impactRationale: string;
+    reinforcingLoopCheck: {
+        isReinforcingLoop: boolean;
+        analysis: string;
+        weakestLink?: string;
+    };
+    incentiveCheck: {
+        hasVestedInterest: boolean;
+        cobraEffectAnalysis: string;
+        recommendation: string;
+    };
+}
+
+export interface SecoperPerspective {
+    locus: 'INDIVIDUAL' | 'DEPARTMENT' | 'SYSTEM' | 'MARKET';
+    authorityLevelNeeded: string;
+    keyDecisionMaker: string;
+    decisionToChange: string;
+    escalationCase?: {
+        businessCaseSummary: string;
+        defaultToActionNotice: string;
+        horizontalHandshakeCoSignDepartment?: string;
+    };
+    marketHandlingStrategy?: 'ESCALATE' | 'TURN_HARM_INTO_BENEFIT' | 'REDUCE_SCOPE_TO_SUB_SYSTEM';
+}
+
+export interface SecoperEssence {
+    branchType: 'A_GAP' | 'B_CONTRADICTION';
+    statement: string;
+    anchorsCheck: {
+        isCoreGapMatched: boolean;
+        isObstacleMatched: boolean;
+        isSituationMatched: boolean;
+    };
+}
+
+export interface SecoperReframe {
+    reframeQuestion: string;
+    resourceRadar: {
+        emptySpace: string;
+        idleTime: string;
+        wasteInfo: string;
+        physicalDifferential: string;
+        turnHarmIntoBenefit: string;
+    };
+    fiveGoldenGates: {
+        noImplicitSolution: boolean;
+        isMeasurable: boolean;
+        hasAuthority: boolean;
+        isUnambiguous: boolean;
+        areRealConstraints: boolean;
+    };
+    gateNotes: string[];
+    livingHypothesisNotice: string;
+}
+
+export interface FullSecoperResult {
+    triage: SecoperTriage;
+    situation: SecoperSituation;
+    evidence: SecoperEvidence;
+    coreGap: SecoperCoreGap;
+    obstacle: SecoperObstacle;
+    perspective: SecoperPerspective;
+    essence: SecoperEssence;
+    reframe: SecoperReframe;
+}
+

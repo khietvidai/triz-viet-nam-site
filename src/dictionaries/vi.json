@@ -123,5 +123,19 @@
             "contactTitle": "Liên hệ",
             "contactDesc": "Nhà phát triển"
         }
+    },
+    "secoper": {
+        "title": "SECOPER 3.0 AI Chẩn Đoán",
+        "subtitle": "Quy trình 7 bước bóc tách dữ liệu, diệt thiên kiến, tìm đúng điểm nghẽn và phát biểu chuẩn bài toán trước khi giải bằng TRIZ",
+        "inputPlaceholder": "Nhập tình huống thực tế cần chẩn đoán (ví dụ: Tỷ lệ chuyển đổi giảm 30% trong 3 tháng qua dù tăng ngân sách quảng cáo 50%)...",
+        "parkingLotLabel": "BÃI ĐỖ XE GIẢI PHÁP (PARKING LOT)",
+        "parkingLotPlaceholder": "Ghi các giải pháp bạn đang nghĩ sẵn trong đầu để niêm phong (chống bẫy định kiến kỹ sư ngược)... Mỗi giải pháp 1 dòng.",
+        "diagnoseButton": "Chẩn đoán SECOPER 3.0",
+        "diagnosing": "DeepSeek đang suy luận đa tầng...",
+        "examplesLabel": "Tình huống mẫu",
+        "handoffToTriz": "Chuyển sang TRIZ AI Solver",
+        "downloadPdf": "Tải báo cáo PDF",
+        "copyMarkdown": "Sao chép Markdown",
+        "copied": "Đã sao chép vào bộ nhớ tạm!"
     }
 }

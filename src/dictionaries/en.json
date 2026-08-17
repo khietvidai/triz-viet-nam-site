@@ -123,5 +123,19 @@
       "contactTitle": "Contact",
       "contactDesc": "Developer"
     }
+  },
+  "secoper": {
+    "title": "SECOPER 3.0 AI Diagnosis",
+    "subtitle": "7-step diagnostic framework to decouple facts from assumptions, isolate root bottlenecks, and formulate the exact problem before TRIZ solving",
+    "inputPlaceholder": "Describe the real-world situation (e.g. Conversion rate dropped 30% over the last 3 months despite a 50% increase in ad spend)...",
+    "parkingLotLabel": "SOLUTION PARKING LOT",
+    "parkingLotPlaceholder": "Write preconceived solutions you have in mind to seal them (anti-reverse-engineering bias)... One solution per line.",
+    "diagnoseButton": "Diagnose with SECOPER 3.0",
+    "diagnosing": "DeepSeek Deep Reasoning in progress...",
+    "examplesLabel": "Example Scenarios",
+    "handoffToTriz": "Handoff to TRIZ AI Solver",
+    "downloadPdf": "Download PDF Report",
+    "copyMarkdown": "Copy Markdown",
+    "copied": "Copied to clipboard!"
   }
 }

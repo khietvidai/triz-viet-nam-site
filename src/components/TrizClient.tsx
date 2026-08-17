@@ -76,6 +76,16 @@ export default function TrizClient({ lang, dict }: TrizClientProps) {
         risk: 50
     });
 
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const params = new URLSearchParams(window.location.search);
+            const promptParam = params.get('prompt') || params.get('problem');
+            if (promptParam) {
+                setSituation(promptParam);
+            }
+        }
+    }, []);
+
     const handleSolve = async () => {
         if (!situation.trim()) return;
 
