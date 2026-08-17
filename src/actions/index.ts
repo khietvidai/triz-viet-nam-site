@@ -48,21 +48,27 @@ function createClient(locals: App.Locals): OpenAI {
 type ChatMessage = { role: 'system' | 'user'; content: string };
 
 /**
- * Calls DeepSeek with high-speed JSON mode enabled.
+ * Calls DeepSeek with high-speed JSON mode or Deep Reasoning mode.
  */
 async function callDeepSeek(
     client: OpenAI,
     messages: ChatMessage[],
-    options: { json?: boolean } = {}
+    options: { json?: boolean; model?: string } = {}
 ): Promise<string> {
+    const selectedModel = options.model || DEEPSEEK_MODEL;
+    const isReasoner = selectedModel.includes('reasoner');
+
     const baseParams: Record<string, unknown> = {
-        model: DEEPSEEK_MODEL,
+        model: selectedModel,
         messages,
-        temperature: 0.3,
         stream: false,
     };
 
-    const params = options.json
+    if (!isReasoner) {
+        baseParams.temperature = 0.3;
+    }
+
+    const params = options.json && !isReasoner
         ? { ...baseParams, response_format: { type: 'json_object' } }
         : baseParams;
 
@@ -70,7 +76,7 @@ async function callDeepSeek(
         const completion = await client.chat.completions.create(params as any);
         return (completion as any).choices?.[0]?.message?.content ?? '';
     } catch (error) {
-        if (!options.json) throw error;
+        if (!options.json || isReasoner) throw error;
         console.error('DeepSeek JSON-mode call failed, retrying without response_format:', error);
         const completion = await client.chat.completions.create(baseParams as any);
         return (completion as any).choices?.[0]?.message?.content ?? '';
@@ -298,13 +304,15 @@ export const server = {
             situation: z.string(),
             parkingLotSolutions: z.array(z.string()).optional().default([]),
             lang: z.enum(['en', 'vi']).default('vi'),
+            modelMode: z.enum(['fast', 'deep']).default('fast'),
         }),
-        handler: async ({ situation, parkingLotSolutions, lang }, context) => {
+        handler: async ({ situation, parkingLotSolutions, lang, modelMode }, context) => {
             if (!situation || situation.trim() === "") {
                 return { error: lang === 'vi' ? "Vui lòng nhập tình huống cần chẩn đoán." : "Please enter a problem situation." };
             }
             try {
                 const client = createClient(context.locals);
+                const targetModel = modelMode === 'deep' ? 'deepseek-reasoner' : 'deepseek-chat';
 
                 const parkingLotText = parkingLotSolutions && parkingLotSolutions.length > 0
                     ? parkingLotSolutions.map((s, i) => `${i + 1}. ${s}`).join('\n')
@@ -529,7 +537,7 @@ IMPORTANT: Output ONLY pure JSON.`;
                         { role: 'system', content: systemPrompt },
                         { role: 'user', content: userPrompt },
                     ],
-                    { json: true }
+                    { json: true, model: targetModel }
                 );
 
                 console.log("--- SECOPER RAW LLM RESPONSE START ---");

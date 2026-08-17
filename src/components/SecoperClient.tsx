@@ -20,6 +20,7 @@ import {
     GitBranch,
     Building2,
     Zap,
+    Cpu,
     FileText
 } from 'lucide-react';
 import type { FullSecoperResult, Dictionary } from '@/types';
@@ -44,6 +45,7 @@ export default function SecoperClient({ lang, dict }: SecoperClientProps) {
     const [parkingLotInput, setParkingLotInput] = useState('');
     const [parkingLotSolutions, setParkingLotSolutions] = useState<string[]>([]);
     const [showParkingLot, setShowParkingLot] = useState(false);
+    const [modelMode, setModelMode] = useState<'fast' | 'deep'>('fast');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [result, setResult] = useState<FullSecoperResult | null>(null);
@@ -110,7 +112,8 @@ export default function SecoperClient({ lang, dict }: SecoperClientProps) {
             const response = await actions.solveSecoperProblem({
                 situation,
                 parkingLotSolutions,
-                lang
+                lang,
+                modelMode
             });
 
             if (response.error) {
@@ -353,6 +356,69 @@ ${result.evidence?.assumptions?.map((a, i) => `${i + 1}. **Giả định:** ${a.
                                 )}
                             </div>
                         )}
+                    </div>
+
+                    {/* Model Mode Selector */}
+                    <div className="pt-3 border-t border-slate-800/80 space-y-2.5">
+                        <div className="flex items-center justify-between">
+                            <span className="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-1.5">
+                                <Cpu className="w-3.5 h-3.5 text-cyan-400" />
+                                <span>{isVi ? 'CHỌN MÔ HÌNH AI (MODEL SELECTION):' : 'AI MODEL SELECTION:'}</span>
+                            </span>
+                            <span className="text-[11px] text-slate-400">
+                                {modelMode === 'fast'
+                                    ? (isVi ? '⚡ Tốc độ ~3s (Khuyên dùng)' : '⚡ Fast ~3s (Recommended)')
+                                    : (isVi ? '🧠 Lập luận sâu ~30-60s' : '🧠 Deep Reasoning ~30-60s')}
+                            </span>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button
+                                type="button"
+                                onClick={() => setModelMode('fast')}
+                                className={`p-3.5 rounded-2xl border text-left transition-all cursor-pointer flex items-start gap-3 ${
+                                    modelMode === 'fast'
+                                        ? 'bg-gradient-to-br from-violet-950/40 via-slate-900 to-cyan-950/30 border-cyan-500/60 shadow-md shadow-cyan-500/10'
+                                        : 'bg-slate-950/40 border-slate-800/80 hover:border-slate-700 text-slate-400'
+                                }`}
+                            >
+                                <div className={`p-2 rounded-xl shrink-0 ${modelMode === 'fast' ? 'bg-cyan-500/20 text-cyan-300' : 'bg-slate-800 text-slate-500'}`}>
+                                    <Zap className="w-4 h-4" />
+                                </div>
+                                <div className="space-y-1">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs font-bold text-white">DeepSeek V3 (Siêu Tốc)</span>
+                                        <span className="text-[10px] px-2 py-0.2 rounded-full bg-cyan-500/20 text-cyan-300 font-mono font-bold">~3s</span>
+                                    </div>
+                                    <p className="text-[11px] text-slate-400 leading-relaxed">
+                                        {isVi ? 'Phản hồi tức thì, bám sát cấu trúc JSON 100%, trải nghiệm mượt mà không phải chờ.' : 'Instant response, strict JSON format, best for responsive user experience.'}
+                                    </p>
+                                </div>
+                            </button>
+
+                            <button
+                                type="button"
+                                onClick={() => setModelMode('deep')}
+                                className={`p-3.5 rounded-2xl border text-left transition-all cursor-pointer flex items-start gap-3 ${
+                                    modelMode === 'deep'
+                                        ? 'bg-gradient-to-br from-indigo-950/40 via-slate-900 to-violet-950/30 border-violet-500/60 shadow-md shadow-violet-500/10'
+                                        : 'bg-slate-950/40 border-slate-800/80 hover:border-slate-700 text-slate-400'
+                                }`}
+                            >
+                                <div className={`p-2 rounded-xl shrink-0 ${modelMode === 'deep' ? 'bg-violet-500/20 text-violet-300' : 'bg-slate-800 text-slate-500'}`}>
+                                    <Cpu className="w-4 h-4" />
+                                </div>
+                                <div className="space-y-1">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs font-bold text-white">DeepSeek R1 (Suy Luận Sâu)</span>
+                                        <span className="text-[10px] px-2 py-0.2 rounded-full bg-violet-500/20 text-violet-300 font-mono font-bold">~30-60s</span>
+                                    </div>
+                                    <p className="text-[11px] text-slate-400 leading-relaxed">
+                                        {isVi ? 'Chuỗi suy nghĩ đa tầng (Chain of Thought), đào sâu phản chứng Red-Team và phân tích vòng lặp.' : 'Multi-step Chain of Thought, deep Red-Team falsification and feedback loop analysis.'}
+                                    </p>
+                                </div>
+                            </button>
+                        </div>
                     </div>
 
                     {/* Action Button */}
