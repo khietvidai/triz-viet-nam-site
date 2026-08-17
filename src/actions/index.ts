@@ -7,7 +7,7 @@ import { saveAnalysis } from '@/lib/db';
 import principlesText from '../Data/40principles.md?raw';
 
 const DEEPSEEK_BASE_URL = 'https://api.deepseek.com';
-const DEEPSEEK_MODEL = 'deepseek-v4-pro';
+const DEEPSEEK_MODEL = 'deepseek-chat';
 
 /**
  * Cloudflare bindings reachable from an Astro action context.
@@ -48,9 +48,7 @@ function createClient(locals: App.Locals): OpenAI {
 type ChatMessage = { role: 'system' | 'user'; content: string };
 
 /**
- * Calls DeepSeek with thinking mode enabled. If the request fails with the
- * JSON response format (not every reasoning model supports it), it retries
- * once without it and relies on safeParseJSON to clean the output.
+ * Calls DeepSeek with high-speed JSON mode enabled.
  */
 async function callDeepSeek(
     client: OpenAI,
@@ -60,8 +58,7 @@ async function callDeepSeek(
     const baseParams: Record<string, unknown> = {
         model: DEEPSEEK_MODEL,
         messages,
-        thinking: { type: 'enabled' },
-        reasoning_effort: 'high',
+        temperature: 0.3,
         stream: false,
     };
 
