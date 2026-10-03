@@ -40,8 +40,9 @@ const isApproved = Boolean(user && (isAdmin || user.approved === 1));
 const err = Astro.url.searchParams.get("err");
 const ERROR_MESSAGES: Record<string, string> = {
     auth: lang === "vi" ? "Có lỗi khi xác thực qua Google, vui lòng thử lại." : "Authentication error with Google, please try again.",
-    login: lang === "vi" ? "Tài khoản hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại." : "Incorrect account or password. Please try again.",
-    missing: lang === "vi" ? "Vui lòng nhập đầy đủ tài khoản và mật khẩu." : "Please enter both username/email and password.",
+    login: lang === "vi" ? "Tài khoản không chính xác hoặc chưa được cấp quyền. Vui lòng kiểm tra lại (VD: chinhi)." : "Account not found or not approved. Please check again (e.g. chinhi).",
+    missing: lang === "vi" ? "Vui lòng nhập tên tài khoản (Ví dụ: chinhi)." : "Please enter account name (e.g. chinhi).",
+    admin_google: lang === "vi" ? "Tài khoản Quản trị viên vui lòng đăng nhập bằng nút Google bên dưới." : "Admin accounts please sign in using Google button below.",
     server: lang === "vi" ? "Có lỗi hệ thống, vui lòng thử lại sau." : "System error, please try again later.",
     forbidden: lang === "vi" ? "Bạn không có quyền truy cập trang quản trị." : "You do not have permission to access the admin page.",
 };
@@ -104,12 +105,12 @@ const title = lang === "vi" ? "Video đào tạo nội bộ" : "Internal Trainin
                             </p>
                         </div>
 
-                        {/* Form đăng nhập tài khoản & mật khẩu */}
+                        {/* Form đăng nhập chỉ với 1 ô tài khoản */}
                         <form method="POST" action="/api/noibo/login" class="space-y-4">
                             <input type="hidden" name="redirect" value={`/${lang}/noi-bo`} />
                             <div>
                                 <label for="login-account" class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1.5">
-                                    {lang === "vi" ? "Tài khoản hoặc Email" : "Username or Email"}
+                                    {lang === "vi" ? "Tài khoản của bạn" : "Your Account"}
                                 </label>
                                 <div class="relative">
                                     <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
@@ -123,39 +124,17 @@ const title = lang === "vi" ? "Video đào tạo nội bộ" : "Internal Trainin
                                         name="account"
                                         required
                                         autocomplete="username"
-                                        placeholder={lang === "vi" ? "Ví dụ: chinhi hoặc email của bạn" : "e.g. chinhi or your email"}
-                                        class="w-full rounded-xl border border-gray-300 pl-10 pr-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all bg-gray-50/50 hover:bg-white focus:bg-white"
-                                    />
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="login-password" class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1.5">
-                                    {lang === "vi" ? "Mật khẩu" : "Password"}
-                                </label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                                        </svg>
-                                    </div>
-                                    <input
-                                        id="login-password"
-                                        type="password"
-                                        name="password"
-                                        required
-                                        autocomplete="current-password"
-                                        placeholder="••••••••"
-                                        class="w-full rounded-xl border border-gray-300 pl-10 pr-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all bg-gray-50/50 hover:bg-white focus:bg-white"
+                                        placeholder={lang === "vi" ? "Ví dụ: chinhi" : "e.g. chinhi"}
+                                        class="w-full rounded-xl border border-gray-300 pl-10 pr-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all bg-gray-50/50 hover:bg-white focus:bg-white"
                                     />
                                 </div>
                             </div>
 
                             <button
                                 type="submit"
-                                class="w-full py-3 px-5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 group active:scale-[0.99]"
+                                class="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 group active:scale-[0.99]"
                             >
-                                <span>{lang === "vi" ? "Đăng nhập bằng tài khoản" : "Sign in with Account"}</span>
+                                <span>{lang === "vi" ? "Đăng nhập vào xem" : "Sign in & Watch"}</span>
                                 <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                                 </svg>
@@ -187,8 +166,8 @@ const title = lang === "vi" ? "Video đào tạo nội bộ" : "Internal Trainin
                         <div class="pt-3 border-t border-gray-100 text-center">
                             <p class="text-xs text-gray-500">
                                 {lang === "vi"
-                                    ? "✨ Video công khai & Bài 1–2 xem tự do. Khách hàng đã được cấp tài khoản nhập tài khoản & mật khẩu phía trên để mở khóa trọn bộ."
-                                    : "✨ Public videos & Lessons 1–2 are free. Authorized members enter username & password above for full access."}
+                                    ? "✨ Video công khai & Bài 1–2 xem tự do. Khách hàng chỉ cần nhập tên tài khoản (Ví dụ: chinhi) rồi bấm Đăng nhập để mở khóa trọn bộ."
+                                    : "✨ Public videos & Lessons 1–2 are free. Authorized members enter account name (e.g. chinhi) for full access."}
                             </p>
                         </div>
                     </div>

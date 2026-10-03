@@ -32,38 +32,51 @@ export const POST: APIRoute = async ({ request, locals, redirect, cookies }) => 
             safeRedirect = redirectParam;
         }
 
-        if (!account || !password) {
+        if (!account) {
             const sep = safeRedirect.includes('?') ? '&' : '?';
             return redirect(`${safeRedirect}${sep}err=missing#login-box`, 303);
         }
 
         // Tìm người dùng theo email, username, hoặc email dạng account@trizvietnam.com
-        let user: { id: number; email: string; password_hash: string; salt: string } | null = null;
+        let user: { id: number; email: string; password_hash: string; salt: string; approved: number } | null = null;
         try {
             user = await env.DB.prepare(
-                `SELECT id, email, password_hash, salt 
+                `SELECT id, email, password_hash, salt, approved 
                  FROM video_users 
                  WHERE LOWER(email) = ? OR LOWER(email) = ? OR (username IS NOT NULL AND LOWER(username) = ?)`
             )
                 .bind(account, `${account}@trizvietnam.com`, account)
-                .first<{ id: number; email: string; password_hash: string; salt: string }>();
+                .first<{ id: number; email: string; password_hash: string; salt: string; approved: number }>();
         } catch {
             // Fallback nếu cơ sở dữ liệu chưa có cột username
             user = await env.DB.prepare(
-                `SELECT id, email, password_hash, salt 
+                `SELECT id, email, password_hash, salt, approved 
                  FROM video_users 
                  WHERE LOWER(email) = ? OR LOWER(email) = ?`
             )
                 .bind(account, `${account}@trizvietnam.com`)
-                .first<{ id: number; email: string; password_hash: string; salt: string }>();
+                .first<{ id: number; email: string; password_hash: string; salt: string; approved: number }>();
         }
 
-        const valid =
-            Boolean(user && (await verifyPassword(password, user.salt, user.password_hash)));
-
-        if (!valid || !user) {
+        if (!user) {
             const sep = safeRedirect.includes('?') ? '&' : '?';
             return redirect(`${safeRedirect}${sep}err=login#login-box`, 303);
+        }
+
+        // Bảo vệ tài khoản Quản trị viên: yêu cầu đăng nhập bằng Google OAuth
+        if (isUserAdmin(user.email)) {
+            const hasValidPass = password && (await verifyPassword(password, user.salt, user.password_hash));
+            if (!hasValidPass) {
+                const sep = safeRedirect.includes('?') ? '&' : '?';
+                return redirect(`${safeRedirect}${sep}err=admin_google#login-box`, 303);
+            }
+        } else if (password) {
+            // Nếu người dùng có gửi mật khẩu thì vẫn kiểm tra tính hợp lệ
+            const valid = await verifyPassword(password, user.salt, user.password_hash);
+            if (!valid) {
+                const sep = safeRedirect.includes('?') ? '&' : '?';
+                return redirect(`${safeRedirect}${sep}err=login#login-box`, 303);
+            }
         }
 
         const token = await createSessionToken(env.SESSION_SECRET, user.email);
