@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Equipotentiality.
+Scene: Orthographic front view of two workbenches with roller tops and a short connecting roller bridge, all perfectly at same height. Orange box straddles bridge, grey ghost previous position on left. Ground baseline visible.
+Must show: Exactly aligned tops; supported bridge; box bottom at common height.
+Avoid: Ramp; staircase; floating box; lower destination.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

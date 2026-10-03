@@ -387,7 +387,7 @@ ${result.evidence?.assumptions?.map((a, i) => `${i + 1}. **Giả định:** ${a.
                                 </div>
                                 <div className="space-y-1">
                                     <div className="flex items-center gap-2">
-                                        <span className="text-xs font-bold text-white">DeepSeek V3 (Siêu Tốc)</span>
+                                        <span className="text-xs font-bold text-white">DeepSeek Flash (Siêu Tốc)</span>
                                         <span className="text-[10px] px-2 py-0.2 rounded-full bg-cyan-500/20 text-cyan-300 font-mono font-bold">~3s</span>
                                     </div>
                                     <p className="text-[11px] text-slate-400 leading-relaxed">
@@ -410,8 +410,8 @@ ${result.evidence?.assumptions?.map((a, i) => `${i + 1}. **Giả định:** ${a.
                                 </div>
                                 <div className="space-y-1">
                                     <div className="flex items-center gap-2">
-                                        <span className="text-xs font-bold text-white">DeepSeek R1 (Suy Luận Sâu)</span>
-                                        <span className="text-[10px] px-2 py-0.2 rounded-full bg-violet-500/20 text-violet-300 font-mono font-bold">~30-60s</span>
+                                        <span className="text-xs font-bold text-white">DeepSeek V4 Pro (Suy Luận Sâu)</span>
+                                        <span className="text-[10px] px-2 py-0.2 rounded-full bg-violet-500/20 text-violet-300 font-mono font-bold">~15-30s</span>
                                     </div>
                                     <p className="text-[11px] text-slate-400 leading-relaxed">
                                         {isVi ? 'Chuỗi suy nghĩ đa tầng (Chain of Thought), đào sâu phản chứng Red-Team và phân tích vòng lặp.' : 'Multi-step Chain of Thought, deep Red-Team falsification and feedback loop analysis.'}

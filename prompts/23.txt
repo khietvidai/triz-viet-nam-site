@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Feedback.
+Scene: Four isolated objects arranged as a square loop: top-left controller box, top-right irrigation valve, bottom-right potted plant with wet soil cutaway, bottom-left soil moisture probe. No wires, arrows, labels or screen text. Python will draw the exact closed feedback topology.
+Must show: Four separate objects in prescribed quadrants.
+Avoid: AI-drawn connections; display without actuator; open-loop clock.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

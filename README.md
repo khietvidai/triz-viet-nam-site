@@ -83,6 +83,28 @@ node scripts/generate-lesson-skeleton.mjs
 
 Cách khoá mục 1: xem [docs/cloudflare-access.md](docs/cloudflare-access.md).
 
+## Bộ thẻ 40 nguyên tắc (Python)
+
+Gói `triz-cards` dàn 40 thẻ hai mặt theo `TRIZ_40_CARDS_PLAN_MACOS.md`. Dùng venv của dự án, không sửa Python hệ thống.
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -e .
+.venv/bin/python -m triz_cards validate-content
+.venv/bin/python -m triz_cards compile-prompts
+.venv/bin/python -m triz_cards generate --ids 01,09,12,23,36,40
+# Tạo ảnh bằng công cụ phiên, rồi:
+.venv/bin/python -m triz_cards start-job <job_id>
+.venv/bin/python -m triz_cards import-image --job <job_id> --file path.png
+.venv/bin/python -m triz_cards select --candidate <id> --scores 5,5,5,5,5 --note "…"
+.venv/bin/python -m triz_cards render --all
+.venv/bin/python -m triz_cards export-pdf
+.venv/bin/python -m triz_cards contact-sheet
+.venv/bin/python -m triz_cards qa
+```
+
+Tên chuẩn khóa trong `data/terminology_vi.json`. Ảnh không chữ; chữ và sơ đồ chính xác do Python dựng. PDF là bản thử RGB, chưa in thử vật lý.
+
 ## Lưu ý bảo mật
 
 - `apikey.txt`, `.env`, `triz-data.db` đều nằm trong `.gitignore` — không được commit.

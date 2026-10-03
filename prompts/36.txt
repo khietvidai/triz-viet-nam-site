@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Phase Transitions.
+Scene: Cutaway sealed cold pack beside small lunchbox: pack visibly contains both solid pale teal chunks and teal liquid of the SAME material, partly melted. No arrows; Python draws heat entering pack from outside.
+Must show: Coexisting solid and liquid inside sealed pack.
+Avoid: Heat arrow out of melting pack; only blue cold color; boiling liquid.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

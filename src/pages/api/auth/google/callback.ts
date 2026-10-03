@@ -2,8 +2,10 @@ import type { APIRoute } from 'astro';
 import {
     createSessionToken,
     getNoiboEnv,
+    isUserAdmin,
     SESSION_COOKIE,
 } from '@/lib/videoAuth';
+import { notifyAdminNewUserRegistration } from '@/lib/smtp';
 
 export const prerender = false;
 
@@ -94,6 +96,7 @@ export const GET: APIRoute = async ({ request, locals, cookies }) => {
         }
 
         const lowerEmail = email.trim().toLowerCase();
+        const isAdmin = isUserAdmin(lowerEmail);
 
         // 1. Kiểm tra theo google_id hoặc email
         const existingUser = await db
@@ -102,17 +105,33 @@ export const GET: APIRoute = async ({ request, locals, cookies }) => {
             .first<{ id: number; email: string; approved: number; google_id: string | null }>();
 
         if (existingUser) {
-            // Cập nhật google_id, name, avatar_url nếu cần
+            // Nếu là admin thì luôn approved = 1, nếu user thường thì giữ nguyên trạng thái duyệt đã có
+            const targetApproved = isAdmin ? 1 : existingUser.approved;
             await db
-                .prepare('UPDATE video_users SET google_id = ?, name = COALESCE(?, name), avatar_url = COALESCE(?, avatar_url) WHERE id = ?')
-                .bind(googleId, name ?? null, avatarUrl ?? null, existingUser.id)
+                .prepare('UPDATE video_users SET google_id = ?, name = COALESCE(?, name), avatar_url = COALESCE(?, avatar_url), approved = ? WHERE id = ?')
+                .bind(googleId, name ?? null, avatarUrl ?? null, targetApproved, existingUser.id)
                 .run();
         } else {
-            // Tạo mới người dùng (approved = 0: chờ Admin duyệt)
+            // Tạo mới người dùng: Admin được duyệt luôn (1), người dùng thường ở trạng thái chờ duyệt (0)
+            const initialApproved = isAdmin ? 1 : 0;
             await db
-                .prepare('INSERT INTO video_users (email, password_hash, salt, google_id, name, avatar_url, approved) VALUES (?, ?, ?, ?, ?, ?, 0)')
-                .bind(lowerEmail, '', '', googleId, name ?? null, avatarUrl ?? null)
+                .prepare('INSERT INTO video_users (email, password_hash, salt, google_id, name, avatar_url, approved) VALUES (?, ?, ?, ?, ?, ?, ?)')
+                .bind(lowerEmail, '', '', googleId, name ?? null, avatarUrl ?? null, initialApproved)
                 .run();
+
+            // Gửi email thông báo tới Admin trizungdung2023@gmail.com khi có thành viên mới đăng ký
+            if (!isAdmin) {
+                try {
+                    await notifyAdminNewUserRegistration({
+                        userEmail: lowerEmail,
+                        userName: name,
+                        smtpUser: env.SMTP_USER,
+                        smtpPass: env.SMTP_PASS,
+                    });
+                } catch (emailErr) {
+                    console.error('Failed to send registration notice email:', emailErr);
+                }
+            }
         }
 
         // Tạo token phiên và lưu cookie
@@ -133,7 +152,12 @@ export const GET: APIRoute = async ({ request, locals, cookies }) => {
             cookies.delete('auth_redirect', { path: '/' });
         } catch (_) {}
 
-        return Response.redirect(`${origin}${redirectUrl}`, 302);
+        return new Response(null, {
+            status: 302,
+            headers: {
+                Location: `${origin}${redirectUrl}`,
+            },
+        });
     } catch (err: any) {
         console.error('Google OAuth callback error:', err);
         return new Response(

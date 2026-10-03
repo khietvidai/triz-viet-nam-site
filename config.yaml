@@ -1,0 +1,15 @@
+project: "40 nguyên tắc (thủ thuật) sáng tạo cơ bản"
+style_version: "ivory-navy-1"
+trim_mm: [70, 120]
+bleed_mm: 3
+safe_mm: 5
+dpi: 300
+body_pt: 10
+duplex: long-edge
+image_backend: codex-tool
+max_image_calls: 52
+max_cost: null
+price_verified: false
+concurrency: 1
+font_regular: assets/fonts/NotoSans-Regular.ttf
+font_bold: assets/fonts/NotoSans-Bold.ttf

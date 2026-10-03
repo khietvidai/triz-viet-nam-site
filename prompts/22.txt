@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: "Blessing in Disguise" (Convert Harmful into Useful).
+Scene: Simple heat exchanger between warm orange machine exhaust duct and separate teal water tank coil; two fluids remain separated by metal wall. Python adds heat direction overlay.
+Must show: Separate exhaust and water circuits; intervening exchanger.
+Avoid: Dirty exhaust mixed directly into water; magic electricity.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

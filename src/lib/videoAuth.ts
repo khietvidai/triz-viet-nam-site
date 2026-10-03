@@ -13,6 +13,8 @@ export type NoiboEnv = {
     ADMIN_SECRET?: string;
     GOOGLE_CLIENT_ID?: string;
     GOOGLE_CLIENT_SECRET?: string;
+    SMTP_USER?: string;
+    SMTP_PASS?: string;
 };
 
 export type VideoUser = {
@@ -22,9 +24,19 @@ export type VideoUser = {
     name?: string | null;
     avatar_url?: string | null;
     google_id?: string | null;
+    username?: string | null;
 };
 
 export const SESSION_COOKIE = 'noibo_session';
+export const ADMIN_EMAILS: readonly string[] = [
+    'trizungdung2023@gmail.com',
+    'khietvidai@gmail.com',
+];
+
+export function isUserAdmin(email?: string | null): boolean {
+    if (!email) return false;
+    return ADMIN_EMAILS.includes(email.trim().toLowerCase());
+}
 const SESSION_TTL_SECONDS = 60 * 60 * 24 * 7; // 7 ngày
 const PBKDF2_ITERATIONS = 100_000;
 
@@ -39,6 +51,8 @@ export function getNoiboEnv(locals: unknown): NoiboEnv {
         ADMIN_SECRET: env.ADMIN_SECRET ?? import.meta.env.ADMIN_SECRET,
         GOOGLE_CLIENT_ID: env.GOOGLE_CLIENT_ID ?? import.meta.env.GOOGLE_CLIENT_ID,
         GOOGLE_CLIENT_SECRET: env.GOOGLE_CLIENT_SECRET ?? import.meta.env.GOOGLE_CLIENT_SECRET,
+        SMTP_USER: env.SMTP_USER ?? import.meta.env.SMTP_USER ?? 'khietvidai@gmail.com',
+        SMTP_PASS: env.SMTP_PASS ?? import.meta.env.SMTP_PASS ?? 'xxhqykiqphrcpjgj',
     };
 }
 
@@ -141,14 +155,23 @@ export async function getSessionUser(
     cookieValue: string | undefined
 ): Promise<VideoUser | null> {
     if (!env.SESSION_SECRET || !env.DB) return null;
-    const email = await verifySessionToken(env.SESSION_SECRET, cookieValue);
-    if (!email) return null;
-    const row = await env.DB.prepare(
-        'SELECT id, email, approved, name, avatar_url, google_id FROM video_users WHERE email = ?'
-    )
-        .bind(email)
-        .first<VideoUser>();
-    return row ?? null;
+    const identifier = await verifySessionToken(env.SESSION_SECRET, cookieValue);
+    if (!identifier) return null;
+    try {
+        const row = await env.DB.prepare(
+            'SELECT id, email, approved, name, avatar_url, google_id, username FROM video_users WHERE LOWER(email) = LOWER(?) OR (username IS NOT NULL AND LOWER(username) = LOWER(?))'
+        )
+            .bind(identifier, identifier)
+            .first<VideoUser>();
+        return row ?? null;
+    } catch {
+        const row = await env.DB.prepare(
+            'SELECT id, email, approved, name, avatar_url, google_id FROM video_users WHERE LOWER(email) = LOWER(?)'
+        )
+            .bind(identifier)
+            .first<VideoUser>();
+        return row ?? null;
+    }
 }
 
 export function isValidEmail(email: string): boolean {

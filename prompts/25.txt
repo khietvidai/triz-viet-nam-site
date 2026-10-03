@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Self-service.
+Scene: Top view rotating lawn sprinkler: two opposite curved arms discharge water tangentially in opposite directions, mounted on central bearing and supply hose. No electric motor or cables. Python draws rotation if needed.
+Must show: Tangential jets; central bearing; water supply.
+Avoid: External motor; radial jets claiming torque.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

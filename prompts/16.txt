@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Partial or Excessive Actions.
+Scene: Three sequential small panels: oversized orange foam sheet above teal tray; sheet laid across tray with narrow excess border; trimmed sheet fitting inside tray with offcut visible. No measurement labels.
+Must show: Excess margin then removed; same tray size.
+Avoid: Exactly fitted from first step; cutting tray instead of sheet.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

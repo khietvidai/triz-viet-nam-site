@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Parameter Changes.
+Scene: Small bottle of dark teal concentrate beside larger transparent mixing jug with pale teal diluted solution; clear water pitcher between them; same liquid family, no measurement scales or text.
+Must show: Concentrate small volume; diluted large volume; added water.
+Avoid: Phase-change ice; multiplying liquid with no added water.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

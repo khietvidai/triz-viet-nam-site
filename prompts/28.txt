@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Mechanics Substitution (Replace Mechanical System).
+Scene: Large teal horseshoe magnet suspended just above a shallow tray, orange steel washers clustered at poles; no mechanical jaws. A few nonmagnetic wooden pieces remain in tray.
+Must show: Steel items attached at magnetic poles; no jaws.
+Avoid: Wood attracted to magnet; invisible unsupported heavy objects.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

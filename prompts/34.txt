@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Discarding and Recovering.
+Scene: Two panels: teal hollow 3D printed arch with orange soluble supports filling cavity; same arch immersed in transparent bath, supports partly dissolving and open cavity emerging. Outer teal arch stays intact.
+Must show: Temporary supports disappearing; final part intact.
+Avoid: Whole object dissolving; cutting main part away.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

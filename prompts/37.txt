@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Thermal Expansion.
+Scene: Three panels: orange metal ring with small gap to teal shaft; warmer slightly expanded ring sliding over same shaft; cooled ring snug around shaft. No flames, arrows, temperature values, melting or dimensional labels.
+Must show: Hole expands along with ring; solid metal throughout.
+Avoid: Heating makes hole smaller; molten ring.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

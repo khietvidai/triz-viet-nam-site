@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Flexible Shells and Thin Films.
+Scene: Two bowls with different rim diameters sealed by very thin transparent stretch film clinging to rims; lifted spare corner shows flexible sheet, contents visible, no inflated chamber.
+Must show: Thin conforming transparent film; rim contact.
+Avoid: Thick rigid lid; inflated support cushion.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

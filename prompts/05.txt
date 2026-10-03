@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Merging (Consolidation).
+Scene: Bench drill with three identical parallel vertical drill bits on a shared head over one clamped wooden panel, three matching holes, equal spacing, machine static and no hands.
+Must show: Three drill bits; shared head; one clamped panel.
+Avoid: One drill bit changing functions; loose unsafe workpiece.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

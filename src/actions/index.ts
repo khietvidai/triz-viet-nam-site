@@ -7,7 +7,7 @@ import { saveAnalysis } from '@/lib/db';
 import principlesText from '../Data/40principles.md?raw';
 
 const DEEPSEEK_BASE_URL = 'https://api.deepseek.com';
-const DEEPSEEK_MODEL = 'deepseek-chat';
+const DEEPSEEK_MODEL = 'deepseek-flash';
 
 /**
  * Cloudflare bindings reachable from an Astro action context.
@@ -48,15 +48,15 @@ function createClient(locals: App.Locals): OpenAI {
 type ChatMessage = { role: 'system' | 'user'; content: string };
 
 /**
- * Calls DeepSeek with high-speed JSON mode or Deep Reasoning mode.
+ * Calls DeepSeek with standard OpenAI format, supporting deepseek-flash and deepseek-v4-pro.
  */
 async function callDeepSeek(
     client: OpenAI,
     messages: ChatMessage[],
-    options: { json?: boolean; model?: string } = {}
+    options: { json?: boolean; model?: string; thinking?: boolean } = {}
 ): Promise<string> {
     const selectedModel = options.model || DEEPSEEK_MODEL;
-    const isReasoner = selectedModel.includes('reasoner');
+    const isReasoning = selectedModel === 'deepseek-v4-pro' || selectedModel.includes('reasoner') || options.thinking;
 
     const baseParams: Record<string, unknown> = {
         model: selectedModel,
@@ -64,19 +64,37 @@ async function callDeepSeek(
         stream: false,
     };
 
-    if (!isReasoner) {
+    if (isReasoning) {
+        // DeepSeek reasoning thinking parameter
+        baseParams.thinking = { type: 'enabled' };
+        baseParams.reasoning_effort = 'high';
+    } else {
         baseParams.temperature = 0.3;
     }
 
-    const params = options.json && !isReasoner
+    const params = options.json && !isReasoning
         ? { ...baseParams, response_format: { type: 'json_object' } }
         : baseParams;
 
     try {
         const completion = await client.chat.completions.create(params as any);
         return (completion as any).choices?.[0]?.message?.content ?? '';
-    } catch (error) {
-        if (!options.json || isReasoner) throw error;
+    } catch (error: any) {
+        // Nếu deepseek-v4-pro chưa khả dụng hoặc lỗi, tự động fallback sang deepseek-flash có thinking
+        if (selectedModel === 'deepseek-v4-pro') {
+            console.warn('deepseek-v4-pro error, falling back to deepseek-flash with thinking:', error?.message);
+            const fallbackParams: Record<string, unknown> = {
+                model: 'deepseek-flash',
+                messages,
+                stream: false,
+                thinking: { type: 'enabled' },
+                reasoning_effort: 'high',
+            };
+            const fallbackCompletion = await client.chat.completions.create(fallbackParams as any);
+            return (fallbackCompletion as any).choices?.[0]?.message?.content ?? '';
+        }
+
+        if (!options.json || isReasoning) throw error;
         console.error('DeepSeek JSON-mode call failed, retrying without response_format:', error);
         const completion = await client.chat.completions.create(baseParams as any);
         return (completion as any).choices?.[0]?.message?.content ?? '';
@@ -312,7 +330,7 @@ export const server = {
             }
             try {
                 const client = createClient(context.locals);
-                const targetModel = modelMode === 'deep' ? 'deepseek-reasoner' : 'deepseek-chat';
+                const targetModel = modelMode === 'deep' ? 'deepseek-v4-pro' : 'deepseek-flash';
 
                 const parkingLotText = parkingLotSolutions && parkingLotSolutions.length > 0
                     ? parkingLotSolutions.map((s, i) => `${i + 1}. ${s}`).join('\n')

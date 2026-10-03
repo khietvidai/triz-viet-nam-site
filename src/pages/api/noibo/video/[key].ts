@@ -1,27 +1,45 @@
 import type { APIRoute } from 'astro';
-import { getNoiboEnv, getSessionUser, SESSION_COOKIE } from '@/lib/videoAuth';
+import { getNoiboEnv, getSessionUser, isUserAdmin, SESSION_COOKIE } from '@/lib/videoAuth';
 import videoManifest from '@/Data/noibo_videos.json';
 
 export const prerender = false;
 
 const ALLOWED_KEYS = new Set(videoManifest.map((v) => v.key));
+// Các clip được xem tự do (công khai / miễn phí không cần duyệt)
+const FREE_KEYS = new Set(
+    videoManifest
+        .filter((v: any) => v.isFree || v.isPublic)
+        .map((v) => v.key)
+);
 
 /**
- * Stream video từ R2 private bucket, chỉ cho người dùng đã được duyệt.
+ * Stream video từ R2 bucket:
+ * - 2 clip đầu tiên: xem tự do không cần đăng nhập.
+ * - Các clip còn lại: yêu cầu tài khoản đã đăng nhập và được duyệt (hoặc là Admin).
  * Hỗ trợ HTTP Range để trình phát video tua được.
  */
 export const GET: APIRoute = async ({ params, request, locals, cookies }) => {
     const env = getNoiboEnv(locals);
-    if (!env.VIDEOS || !env.DB || !env.SESSION_SECRET) {
+    if (!env.VIDEOS) {
         return new Response('Service unavailable', { status: 503 });
     }
-
-    const user = await getSessionUser(env, cookies.get(SESSION_COOKIE)?.value);
-    if (!user) return new Response('Unauthorized', { status: 401 });
-    if (!user.approved) return new Response('Forbidden', { status: 403 });
-
     const key = params.key ?? '';
     if (!ALLOWED_KEYS.has(key)) return new Response('Not found', { status: 404 });
+
+    // Kiểm tra quyền xem: nếu không thuộc danh sách công khai/miễn phí thì phải đăng nhập và được duyệt (hoặc là Admin)
+    if (!FREE_KEYS.has(key)) {
+        const sessionToken = cookies.get(SESSION_COOKIE)?.value;
+        const user = await getSessionUser(env, sessionToken);
+        if (!user) {
+            return new Response('Unauthorized: Vui lòng đăng nhập để xem video này', { status: 401 });
+        }
+        if (!isUserAdmin(user.email) && !user.approved) {
+            return new Response(
+                'Forbidden: Tài khoản của bạn đang chờ duyệt. Vui lòng liên hệ email trizungdung2023@gmail.com để được kích hoạt xem full video.',
+                { status: 403 }
+            );
+        }
+    }
 
     try {
         const rangeHeader = request.headers.get('Range');

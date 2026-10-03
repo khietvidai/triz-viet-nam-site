@@ -1,15 +1,37 @@
 [
     {
+        "key": "tam-su.mp4",
+        "title": "Tâm sự",
+        "tag": "Chia sẻ kinh nghiệm & Lộ trình phương pháp luận TRIZ",
+        "tagEn": "Experience Sharing & TRIZ Learning Roadmap",
+        "principleIds": [],
+        "sourceFile": "TÂM SỰ.mp4",
+        "isPublic": true,
+        "isFree": true
+    },
+    {
+        "key": "phat-bieu-bai-toan.mp4",
+        "title": "Phát biểu bài toán",
+        "tag": "Phương pháp luận & Kỹ năng phát biểu bài toán TRIZ",
+        "tagEn": "TRIZ Methodology & Problem Formulation",
+        "principleIds": [],
+        "sourceFile": "PHÁT BIỂU BÀI TOÁN.mp4",
+        "isPublic": true,
+        "isFree": true
+    },
+    {
         "key": "principles-01-05.mp4",
         "title": "Bài 1: Nguyên tắc 1 – 5",
         "principleIds": [1, 2, 3, 4, 5],
-        "sourceFile": "1 - 5 PRINCIPLE.mp4"
+        "sourceFile": "1 - 5 PRINCIPLE.mp4",
+        "isFree": true
     },
     {
         "key": "principles-06-11.mp4",
         "title": "Bài 2: Nguyên tắc 6 – 11",
         "principleIds": [6, 7, 8, 9, 10, 11],
-        "sourceFile": "6 - 11 PRINCIPLES.mp4"
+        "sourceFile": "6 - 11 PRINCIPLES.mp4",
+        "isFree": true
     },
     {
         "key": "principles-12-18.mp4",

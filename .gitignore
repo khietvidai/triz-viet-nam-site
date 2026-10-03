@@ -21,6 +21,7 @@ pnpm-debug.log*
 
 # secrets
 apikey.txt
+metaapi.txt
 *.key
 *.pem
 
@@ -38,4 +39,17 @@ triz-data.db
 
 # Large local media
 video-triz/
+
+# Cloudflare wrangler
+.wrangler/
+
+# Python card renderer
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+images/staging/
+output/
+state/
 

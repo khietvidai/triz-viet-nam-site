@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Continuity of Useful Action.
+Scene: Two stacked closeups of same printer carriage over paper: carriage at left with freshly printed teal swath behind toward right; then carriage at right with next orange swath behind toward left. Python adds direction arrows.
+Must show: Ink deposited on both passes; same carriage and paper.
+Avoid: Return pass with no ink; two unrelated printers.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

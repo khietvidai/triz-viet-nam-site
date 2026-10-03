@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Preliminary Anti-Action (Prior Counteraction).
+Scene: Two stacked isolated orthographic beam bodies, identical geometry, with straight orange steel tendon below center and end anchorage plates. Lower beam rests on two simple supports. Blank background, no forces, arrows, cracks, text or curvature. Python will draw stress directions and load.
+Must show: Straight tendon; anchorage at both ends; same beam geometry.
+Avoid: AI force arrows; bent tendon; upward external load; claimed design dimensions.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

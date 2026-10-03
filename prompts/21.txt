@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Rushing Through (Skipping).
+Scene: Conceptual close-up of guarded hot cutting blade rapidly crossing a thin teal plastic film; narrow orange heat zone limited to cut edge, surrounding film flat. No operator or temperature values.
+Must show: Narrow heat-affected strip; film remains flat.
+Avoid: Broad melting puddle; implied universal safe cutting speed.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

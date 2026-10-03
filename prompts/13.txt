@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: The Other Way Round (Inversion).
+Scene: Sink countertop with fixed upright brush on suction base; transparent cup inverted over brush, simple hand holding cup outside. Keep brush base anchored and cup recognizable.
+Must show: Fixed brush base; inverted cup around brush.
+Avoid: Both brush and cup loose; cup resting beside brush.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

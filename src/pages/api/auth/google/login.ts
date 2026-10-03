@@ -57,5 +57,10 @@ export const GET: APIRoute = async ({ request, locals, cookies }) => {
             prompt: 'select_account',
         }).toString();
 
-    return Response.redirect(googleAuthUrl, 302);
+    return new Response(null, {
+        status: 302,
+        headers: {
+            Location: googleAuthUrl,
+        },
+    });
 };

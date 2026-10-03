@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Universality (Multi-functionality).
+Scene: Two scenes of the same rigid orange food container lid: fitted on teal food box; then removed flat on table as cutting board with a few vegetable slices and a resting knife.
+Must show: Same lid recognizable in both uses.
+Avoid: Separate cutting board; many unrelated attachments.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

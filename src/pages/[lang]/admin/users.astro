@@ -1,0 +1,497 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import {
+    getNoiboEnv,
+    getSessionUser,
+    isUserAdmin,
+    ADMIN_EMAILS,
+    SESSION_COOKIE,
+} from "../../../lib/videoAuth";
+
+export const prerender = false;
+
+const { lang } = Astro.params;
+if (lang !== "en" && lang !== "vi") {
+    return Astro.redirect("/vi/admin/users");
+}
+
+const env = getNoiboEnv(Astro.locals);
+const sessionCookie = Astro.cookies.get(SESSION_COOKIE)?.value;
+const user = await getSessionUser(env, sessionCookie);
+
+// Kiểm tra quyền: Bắt buộc đăng nhập và phải nằm trong danh sách Admin
+if (!user) {
+    return Astro.redirect(
+        `/api/auth/google/login?redirect=/${lang}/admin/users`
+    );
+}
+
+if (!isUserAdmin(user.email)) {
+    return Astro.redirect(`/${lang}/noi-bo?err=forbidden`);
+}
+
+// Lấy danh sách thành viên từ D1
+let userList: Array<{
+    id: number;
+    email: string;
+    username?: string | null;
+    name: string | null;
+    avatar_url: string | null;
+    google_id: string | null;
+    approved: number;
+    created_at: string;
+    isAdmin: boolean;
+}> = [];
+
+if (env.DB) {
+    try {
+        const { results } = await env.DB.prepare(
+            "SELECT id, email, username, name, avatar_url, google_id, approved, created_at FROM video_users ORDER BY created_at DESC"
+        ).all<{
+            id: number;
+            email: string;
+            username?: string | null;
+            name: string | null;
+            avatar_url: string | null;
+            google_id: string | null;
+            approved: number;
+            created_at: string;
+        }>();
+
+        userList = (results ?? []).map((u) => ({
+            ...u,
+            isAdmin: isUserAdmin(u.email),
+            // Admin luôn hiển thị approved = 1
+            approved: isUserAdmin(u.email) ? 1 : u.approved,
+        }));
+    } catch {
+        try {
+            const { results } = await env.DB.prepare(
+                "SELECT id, email, name, avatar_url, google_id, approved, created_at FROM video_users ORDER BY created_at DESC"
+            ).all<{
+                id: number;
+                email: string;
+                name: string | null;
+                avatar_url: string | null;
+                google_id: string | null;
+                approved: number;
+                created_at: string;
+            }>();
+
+            userList = (results ?? []).map((u) => ({
+                ...u,
+                isAdmin: isUserAdmin(u.email),
+                approved: isUserAdmin(u.email) ? 1 : u.approved,
+            }));
+        } catch (e) {
+            console.error("Admin users page fetch error:", e);
+        }
+    }
+}
+
+const totalUsers = userList.length;
+const approvedCount = userList.filter((u) => u.approved === 1).length;
+const pendingCount = userList.filter((u) => u.approved === 0 && !u.isAdmin).length;
+const adminCount = userList.filter((u) => u.isAdmin).length;
+
+const title = lang === "vi" ? "Quản lý thành viên Video nội bộ" : "Manage Video Members";
+---
+
+<Layout title={title} lang={lang}>
+    <Header lang={lang} />
+    <main class="min-h-screen bg-gray-50 flex flex-col pt-24 pb-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <!-- Header navigation & user status -->
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <a
+                            href={`/${lang}/noi-bo`}
+                            class="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-700 hover:text-purple-900 bg-purple-50 hover:bg-purple-100 border border-purple-200 px-3 py-1.5 rounded-lg transition-colors"
+                        >
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                            </svg>
+                            <span>{lang === "vi" ? "Quay lại trang Video Nội bộ" : "Back to Member Videos"}</span>
+                        </a>
+                        <span class="text-xs px-2.5 py-0.5 rounded-full font-semibold bg-purple-100 text-purple-800 border border-purple-200">
+                            👑 Admin Panel
+                        </span>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
+                        {lang === "vi" ? "Quản trị Quyền xem Video" : "Video Access Management"}
+                    </h1>
+                    <p class="text-sm text-gray-600 mt-1">
+                        {lang === "vi"
+                            ? "Duyệt hoặc thu hồi quyền truy cập bài giảng từ Bài 3 đến Bài 7 cho các thành viên đăng ký."
+                            : "Approve or revoke member access to lectures 3 through 7."}
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-3 bg-white p-3 rounded-2xl border border-gray-200 shadow-sm self-start md:self-auto">
+                    {user.avatar_url ? (
+                        <img
+                            src={user.avatar_url}
+                            alt={user.name || user.email}
+                            class="w-10 h-10 rounded-full border border-purple-200"
+                            referrerpolicy="no-referrer"
+                        />
+                    ) : (
+                        <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center">
+                            {(user.name || user.email).charAt(0).toUpperCase()}
+                        </div>
+                    )}
+                    <div class="text-xs pr-2">
+                        <p class="font-bold text-gray-900">{user.name || "Quản trị viên"}</p>
+                        <p class="text-gray-500 font-mono">{user.email}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KPI Summary Cards -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm">
+                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                        {lang === "vi" ? "Tổng thành viên" : "Total Users"}
+                    </p>
+                    <p id="stat-total" class="text-3xl font-black text-gray-900 mt-2">{totalUsers}</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-emerald-200/80 shadow-sm bg-gradient-to-br from-emerald-50/40 to-white">
+                    <p class="text-xs font-semibold text-emerald-700 uppercase tracking-wider">
+                        {lang === "vi" ? "Đã duyệt (Full video)" : "Approved (Full)"}
+                    </p>
+                    <p id="stat-approved" class="text-3xl font-black text-emerald-600 mt-2">{approvedCount}</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-amber-200/80 shadow-sm bg-gradient-to-br from-amber-50/40 to-white">
+                    <p class="text-xs font-semibold text-amber-700 uppercase tracking-wider">
+                        {lang === "vi" ? "Chờ duyệt kích hoạt" : "Pending Approval"}
+                    </p>
+                    <p id="stat-pending" class="text-3xl font-black text-amber-600 mt-2">{pendingCount}</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-purple-200/80 shadow-sm bg-gradient-to-br from-purple-50/40 to-white">
+                    <p class="text-xs font-semibold text-purple-700 uppercase tracking-wider">
+                        {lang === "vi" ? "Admin quản trị" : "Admins"}
+                    </p>
+                    <p class="text-3xl font-black text-purple-600 mt-2">{ADMIN_EMAILS.length}</p>
+                </div>
+            </div>
+
+            <!-- Filter and Search Bar -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-4 mb-6 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+                <!-- Search input -->
+                <div class="relative flex-1">
+                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder={lang === "vi" ? "Tìm kiếm theo email, họ tên..." : "Search by email or name..."}
+                        class="w-full pl-10 pr-4 py-2 text-sm bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:bg-white transition-all"
+                    />
+                </div>
+
+                <!-- Status Filter tabs -->
+                <div class="flex items-center gap-1.5 p-1 bg-gray-100/90 rounded-xl self-start sm:self-auto overflow-x-auto">
+                    <button
+                        data-filter="all"
+                        class="filter-tab active px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all bg-white text-gray-900 shadow-sm"
+                    >
+                        {lang === "vi" ? "Tất cả" : "All"} ({totalUsers})
+                    </button>
+                    <button
+                        data-filter="pending"
+                        class="filter-tab px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all text-gray-600 hover:text-gray-900"
+                    >
+                        {lang === "vi" ? "Chờ duyệt" : "Pending"} ({pendingCount})
+                    </button>
+                    <button
+                        data-filter="approved"
+                        class="filter-tab px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all text-gray-600 hover:text-gray-900"
+                    >
+                        {lang === "vi" ? "Đã duyệt" : "Approved"} ({approvedCount})
+                    </button>
+                </div>
+            </div>
+
+            <!-- User Table List -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-gray-50/80 border-b border-gray-200 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                            <tr>
+                                <th class="px-6 py-4">{lang === "vi" ? "Thành viên" : "Member"}</th>
+                                <th class="px-6 py-4">{lang === "vi" ? "Phương thức" : "Auth Method"}</th>
+                                <th class="px-6 py-4">{lang === "vi" ? "Trạng thái" : "Status"}</th>
+                                <th class="px-6 py-4">{lang === "vi" ? "Ngày đăng ký" : "Registered At"}</th>
+                                <th class="px-6 py-4 text-right">{lang === "vi" ? "Hành động" : "Actions"}</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-table-body" class="divide-y divide-gray-200">
+                            {userList.length === 0 ? (
+                                <tr>
+                                    <td colspan="5" class="px-6 py-12 text-center text-gray-500">
+                                        {lang === "vi" ? "Chưa có thành viên nào đăng ký." : "No registered members yet."}
+                                    </td>
+                                </tr>
+                            ) : (
+                                userList.map((u) => {
+                                    const initial = (u.name || u.email).charAt(0).toUpperCase();
+                                    return (
+                                        <tr
+                                            class="user-row hover:bg-purple-50/30 transition-colors"
+                                            data-email={u.email.toLowerCase()}
+                                            data-name={(u.name || "").toLowerCase()}
+                                            data-status={u.isAdmin ? "admin" : u.approved ? "approved" : "pending"}
+                                        >
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                <div class="flex items-center gap-3">
+                                                    {u.avatar_url ? (
+                                                        <img
+                                                            src={u.avatar_url}
+                                                            alt={u.name || u.email}
+                                                            class="w-10 h-10 rounded-full border border-gray-200 shadow-sm flex-shrink-0"
+                                                            referrerpolicy="no-referrer"
+                                                        />
+                                                    ) : (
+                                                        <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center flex-shrink-0">
+                                                            {initial}
+                                                        </div>
+                                                    )}
+                                                    <div>
+                                                        <div class="font-bold text-gray-900 flex items-center gap-1.5">
+                                                            <span>{u.name || "Chưa đặt tên"}</span>
+                                                            {u.isAdmin && (
+                                                                <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-700 border border-purple-200">
+                                                                    Admin
+                                                                </span>
+                                                            )}
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 font-mono flex items-center gap-1.5 flex-wrap">
+                                                            {u.username && (
+                                                                <span class="font-semibold text-purple-700 bg-purple-50 px-1.5 py-0.5 rounded border border-purple-200">
+                                                                    @{u.username}
+                                                                </span>
+                                                            )}
+                                                            <span>{u.email}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                {u.google_id ? (
+                                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100">
+                                                        <svg viewBox="0 0 48 48" class="w-3.5 h-3.5">
+                                                            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                                                            <path fill="#4285F4" d="M46.5 24c0-1.55-.15-3.24-.47-4.75H24v9.03h12.75c-.53 2.87-2.14 5.3-4.57 6.92l7.13 5.53C43.46 36.21 46.5 30.73 46.5 24z"/>
+                                                            <path fill="#FBBC05" d="M10.54 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.98-6.19z"/>
+                                                            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.13-5.53c-2.11 1.41-4.81 2.34-8.76 2.34-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                                                        </svg>
+                                                        <span>Google OAuth</span>
+                                                    </span>
+                                                ) : (
+                                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-100">
+                                                        <span>🔑 Tài khoản</span>
+                                                    </span>
+                                                )}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                {u.isAdmin ? (
+                                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-800 border border-purple-200">
+                                                        <span>👑</span>
+                                                        <span>Toàn quyền</span>
+                                                    </span>
+                                                ) : u.approved ? (
+                                                    <span class="status-badge inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                                        <span>Đã duyệt (Full)</span>
+                                                    </span>
+                                                ) : (
+                                                    <span class="status-badge inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 border border-amber-200">
+                                                        <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                                                        <span>Chờ duyệt</span>
+                                                    </span>
+                                                )}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-xs text-gray-500 font-mono">
+                                                {u.created_at || "—"}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-right text-xs font-medium">
+                                                {u.isAdmin ? (
+                                                    <span class="text-xs text-gray-400 italic">Quản trị viên chính</span>
+                                                ) : (
+                                                    <div class="inline-flex items-center gap-2">
+                                                        {u.approved ? (
+                                                            <button
+                                                                type="button"
+                                                                data-action="revoke"
+                                                                data-email={u.email}
+                                                                class="btn-action px-3 py-1.5 rounded-lg border border-red-200 bg-red-50 hover:bg-red-100 text-red-700 font-semibold transition-colors"
+                                                            >
+                                                                ✕ Khóa
+                                                            </button>
+                                                        ) : (
+                                                            <button
+                                                                type="button"
+                                                                data-action="approve"
+                                                                data-email={u.email}
+                                                                class="btn-action px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors shadow-sm"
+                                                            >
+                                                                ✓ Duyệt kích hoạt
+                                                            </button>
+                                                        )}
+                                                        <button
+                                                            type="button"
+                                                            data-action="delete"
+                                                            data-email={u.email}
+                                                            class="btn-action p-1.5 rounded-lg text-gray-400 hover:text-red-600 hover:bg-red-50 transition-colors"
+                                                            title="Xóa tài khoản"
+                                                        >
+                                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                )}
+                                            </td>
+                                        </tr>
+                                    );
+                                })
+                            )}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Toast notification -->
+            <div
+                id="toast"
+                class="fixed bottom-6 right-6 max-w-md bg-gray-900 text-white px-4 py-3 rounded-2xl shadow-xl border border-gray-800 flex items-center gap-3 transition-all transform translate-y-20 opacity-0 pointer-events-none z-50 text-sm"
+            >
+                <span id="toast-icon">ℹ️</span>
+                <span id="toast-msg">Thông báo</span>
+            </div>
+        </div>
+    </main>
+    <Footer lang={lang} />
+</Layout>
+
+<script>
+    function showToast(message: string, isError = false) {
+        const toast = document.getElementById("toast");
+        const msg = document.getElementById("toast-msg");
+        const icon = document.getElementById("toast-icon");
+        if (!toast || !msg || !icon) return;
+
+        msg.textContent = message;
+        icon.textContent = isError ? "⚠️" : "✅";
+        toast.className = `fixed bottom-6 right-6 max-w-md ${
+            isError ? "bg-red-900 border-red-800" : "bg-gray-900 border-gray-800"
+        } text-white px-4 py-3 rounded-2xl shadow-xl border flex items-center gap-3 transition-all transform translate-y-0 opacity-100 z-50 text-sm`;
+
+        setTimeout(() => {
+            toast.className =
+                "fixed bottom-6 right-6 max-w-md bg-gray-900 text-white px-4 py-3 rounded-2xl shadow-xl border border-gray-800 flex items-center gap-3 transition-all transform translate-y-20 opacity-0 pointer-events-none z-50 text-sm";
+        }, 3000);
+    }
+
+    // Filter & Search Logic
+    const searchInput = document.getElementById("search-input") as HTMLInputElement | null;
+    const filterTabs = document.querySelectorAll(".filter-tab");
+    const rows = document.querySelectorAll(".user-row");
+
+    let currentFilter = "all";
+    let searchQuery = "";
+
+    function applyFilters() {
+        rows.forEach((r) => {
+            const row = r as HTMLElement;
+            const email = row.dataset.email || "";
+            const name = row.dataset.name || "";
+            const status = row.dataset.status || "";
+
+            const matchSearch =
+                !searchQuery ||
+                email.includes(searchQuery) ||
+                name.includes(searchQuery);
+
+            let matchFilter = true;
+            if (currentFilter === "pending") {
+                matchFilter = status === "pending";
+            } else if (currentFilter === "approved") {
+                matchFilter = status === "approved" || status === "admin";
+            }
+
+            if (matchSearch && matchFilter) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    }
+
+    searchInput?.addEventListener("input", (e) => {
+        searchQuery = (e.target as HTMLInputElement).value.trim().toLowerCase();
+        applyFilters();
+    });
+
+    filterTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            filterTabs.forEach((t) => {
+                t.classList.remove("active", "bg-white", "text-gray-900", "shadow-sm");
+                t.classList.add("text-gray-600");
+            });
+            tab.classList.add("active", "bg-white", "text-gray-900", "shadow-sm");
+            tab.classList.remove("text-gray-600");
+            currentFilter = tab.getAttribute("data-filter") || "all";
+            applyFilters();
+        });
+    });
+
+    // Handle Actions (Approve, Revoke, Delete)
+    document.addEventListener("click", async (e) => {
+        const target = (e.target as HTMLElement).closest(".btn-action") as HTMLButtonElement | null;
+        if (!target) return;
+
+        const action = target.dataset.action;
+        const email = target.dataset.email;
+        if (!action || !email) return;
+
+        if (action === "delete") {
+            const confirmed = window.confirm(`Bạn có chắc chắn muốn xóa vĩnh viễn tài khoản: ${email}?`);
+            if (!confirmed) return;
+        }
+
+        const originalText = target.innerHTML;
+        target.disabled = true;
+        target.style.opacity = "0.6";
+
+        try {
+            const res = await fetch("/api/admin/users", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ action, email }),
+            });
+
+            const data = await res.json();
+            if (!res.ok) {
+                throw new Error(data.error || "Thao tác thất bại");
+            }
+
+            showToast(data.message || "Thao tác thành công!");
+            // Reload lại dữ liệu để bảng đồng bộ trạng thái chuẩn xác
+            setTimeout(() => {
+                window.location.reload();
+            }, 600);
+        } catch (err: any) {
+            showToast(err.message || "Có lỗi xảy ra", true);
+            target.disabled = false;
+            target.style.opacity = "1";
+            target.innerHTML = originalText;
+        }
+    });
+</script>

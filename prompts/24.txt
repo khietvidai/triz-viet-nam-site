@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Intermediary.
+Scene: Close-up resting hammer over sacrificial orange wooden block contacting edge of finished teal wooden board. Show hammer-block-board order, no hand, board on solid bench.
+Must show: Block physically between hammer and finished surface.
+Avoid: Hammer hitting finished board directly; floating block.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

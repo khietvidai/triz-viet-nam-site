@@ -1,0 +1,2414 @@
+[
+  {
+    "id": 1,
+    "name_vi": "phân nhỏ",
+    "name_en": "Segmentation",
+    "aliases_vi": [],
+    "definition_vi": "Chia vật thành những phần độc lập, tháo lắp được hoặc nhỏ hơn để thuận tiện xử lý.",
+    "memory_hook_vi": "Chia nhỏ để dễ xử lý",
+    "front_question_vi": "Làm sao đưa chiếc kệ qua cửa hẹp mà vẫn giữ đủ công năng sử dụng?",
+    "example_vi": "Kệ rộng được tháo thành ba mô-đun đứng. Từng mô-đun lọt cửa rồi ghép lại thành kệ.",
+    "mechanism_vi": "Kệ rộng được tháo thành ba mô-đun đứng.",
+    "benefit_vi": "Từng mô-đun lọt cửa rồi ghép lại thành kệ.",
+    "application_question_vi": "Phần nào trong việc của bạn có thể làm thành mô-đun độc lập?",
+    "confusable_with": [
+      2
+    ],
+    "distinction_vi": "01 chia thành phần; 02 lấy riêng phần cần hoặc gây phiền.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 01"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 1"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/1",
+        "section": "Nguyên tắc 1"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Two stacked scenes: a wide cabinet made of three side-by-side vertical modules cannot pass a doorway; then three detached intact modules individually fit through the same doorway. Keep scale fixed and show matching connectors.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Kệ rộng được tháo thành ba mô-đun đứng. Từng mô-đun lọt cửa rồi ghép lại thành kệ.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Ống nước dài khó chở; chia thành đoạn có khớp nối để vận chuyển rồi lắp lại.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Intact detachable narrow modules; identical doorway; matching connectors.",
+      "must_show": [
+        "Intact detachable narrow modules",
+        "identical doorway",
+        "matching connectors"
+      ],
+      "must_avoid": [
+        "Broken furniture",
+        "modules stacked vertically instead of side-by-side",
+        "wider doorway"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational.\nCreate one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered orthographic view, generous negative space. All important objects inside the central 84 percent.\nTeaching mechanism: segmentation makes a bulky cabinet movable by separating intact detachable modules.\nShow two scenes, top and bottom. Top: a wide cabinet composed of three equal SIDE-BY-SIDE narrow vertical modules is blocked at a narrow doorway. Bottom: the same three intact narrow modules are detached; one fits through an IDENTICAL doorway, the other two stand nearby. Cabinet height is lower than doorway height in both scenes. The assembled cabinet is too WIDE; each single module is narrow enough. Matching small connectors suggest reassembly. Keep modules and doorway at the same scale in both scenes.\nMust show: three useful intact modules, unchanged doorway, width reduction by separation, matching connectors.\nAvoid: stacked horizontal modules (they would retain the same width), broken wood, destruction, discarded pieces, enlarged door, shrinking furniture, perspective tricks, additional objects.\nNo text, letters, numbers, labels, logos, watermark, card border or arrows.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 2,
+    "name_vi": "tách khỏi",
+    "name_en": "Taking out (Extraction)",
+    "aliases_vi": [],
+    "definition_vi": "Lấy riêng phần cần thiết hoặc đưa phần gây phiền ra khỏi đối tượng hay khu vực đang dùng.",
+    "memory_hook_vi": "Lấy đúng phần cần",
+    "front_question_vi": "Làm sao dùng khí nén ở bàn làm việc mà không phải chịu tiếng máy ngay cạnh?",
+    "example_vi": "Máy nén ồn đặt trong phòng riêng. Ống dẫn đưa khí đến bàn, tách nguồn ồn khỏi người dùng.",
+    "mechanism_vi": "Máy nén ồn đặt trong phòng riêng.",
+    "benefit_vi": "Ống dẫn đưa khí đến bàn, tách nguồn ồn khỏi người dùng.",
+    "application_question_vi": "Bạn chỉ cần tác dụng nào, còn bộ phận nào có thể đặt xa?",
+    "confusable_with": [
+      1
+    ],
+    "distinction_vi": "02 tách nguồn gây phiền; 01 chú trọng chia thành phần độc lập.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 02"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 2"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/2",
+        "section": "Nguyên tắc 2"
+      }
+    ],
+    "visual_brief": {
+      "scene": "One cutaway workshop: orange air compressor in a separate enclosure at left; one continuous teal air hose passes through wall to a handheld air tool on a quiet workbench at right. No person.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Máy nén ồn đặt trong phòng riêng. Ống dẫn đưa khí đến bàn, tách nguồn ồn khỏi người dùng.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Ấm trà có giỏ lọc; nhấc riêng bã ra khi trà đủ đậm để không ngâm tiếp.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Separate compressor room; continuous hose; tool remains usable.",
+      "must_show": [
+        "Separate compressor room",
+        "continuous hose",
+        "tool remains usable"
+      ],
+      "must_avoid": [
+        "Splitting compressor into pieces",
+        "disconnected hose"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Taking out (Extraction).\nScene: One cutaway workshop: orange air compressor in a separate enclosure at left; one continuous teal air hose passes through wall to a handheld air tool on a quiet workbench at right. No person.\nMust show: Separate compressor room; continuous hose; tool remains usable.\nAvoid: Splitting compressor into pieces; disconnected hose.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 3,
+    "name_vi": "phẩm chất cục bộ",
+    "name_en": "Local Quality",
+    "aliases_vi": [],
+    "definition_vi": "Cho từng vùng tính chất hoặc điều kiện riêng, phù hợp công việc của vùng đó thay vì làm đồng loạt.",
+    "memory_hook_vi": "Mỗi vùng làm đúng việc",
+    "front_question_vi": "Làm sao cùng một chiếc găng vừa dễ cử động vừa bám chắc vào dụng cụ?",
+    "example_vi": "Găng có lòng bàn tay nhám để bám, mu tay mỏng để thoáng. Hai vùng đáp ứng hai nhu cầu.",
+    "mechanism_vi": "Găng có lòng bàn tay nhám để bám, mu tay mỏng để thoáng.",
+    "benefit_vi": "Hai vùng đáp ứng hai nhu cầu.",
+    "application_question_vi": "Vùng nào cần tính chất khác để làm tốt nhiệm vụ riêng?",
+    "confusable_with": [
+      40
+    ],
+    "distinction_vi": "03 nhấn mạnh từng vùng; 40 nhấn mạnh vật liệu phối hợp.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 03"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 3"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/3",
+        "section": "Nguyên tắc 3"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Single large work glove with clearly textured orange gripping palm and thin teal breathable back shown in two adjacent views of the same glove. Keep fingertips flexible.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Găng có lòng bàn tay nhám để bám, mu tay mỏng để thoáng. Hai vùng đáp ứng hai nhu cầu.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Dao có lưỡi cứng để cắt và cán nhám để cầm chắc, mỗi vùng phục vụ việc riêng.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Distinct functional palm and back zones.",
+      "must_show": [
+        "Distinct functional palm and back zones"
+      ],
+      "must_avoid": [
+        "Uniform texture across glove",
+        "random decorative color patches"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Local Quality.\nScene: Single large work glove with clearly textured orange gripping palm and thin teal breathable back shown in two adjacent views of the same glove. Keep fingertips flexible.\nMust show: Distinct functional palm and back zones.\nAvoid: Uniform texture across glove; random decorative color patches.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 4,
+    "name_vi": "phản đối xứng",
+    "name_en": "Asymmetry",
+    "aliases_vi": [],
+    "definition_vi": "Giảm tính đối xứng hoặc tăng độ bất đối xứng để hình dạng phù hợp hơn với điều kiện sử dụng.",
+    "memory_hook_vi": "Lệch có chủ đích",
+    "front_question_vi": "Làm sao đầu cắm tự ngăn người dùng cắm ngược mà không cần đọc hướng dẫn?",
+    "example_vi": "Đầu cắm có tiết diện hình chữ D. Ổ tương ứng chỉ nhận đúng chiều, tránh nối nhầm.",
+    "mechanism_vi": "Đầu cắm có tiết diện hình chữ D.",
+    "benefit_vi": "Ổ tương ứng chỉ nhận đúng chiều, tránh nối nhầm.",
+    "application_question_vi": "Bạn có thể đổi hình dạng nào để thao tác đúng trở nên tự nhiên?",
+    "confusable_with": [
+      3
+    ],
+    "distinction_vi": "04 đổi tính đối xứng; 03 phân vùng theo chức năng.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 04"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 4"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/4",
+        "section": "Nguyên tắc 4"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Close-up of an unplugged D-shaped keyed connector beside matching D-shaped socket; flat side at top and curved lower side on both. One correct alignment evident. No electrical pins complexity.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Đầu cắm có tiết diện hình chữ D. Ổ tương ứng chỉ nhận đúng chiều, tránh nối nhầm.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Bình rót có vòi lệch một bên để dòng nước tập trung và dễ hướng vào cốc.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Matching asymmetric D profiles.",
+      "must_show": [
+        "Matching asymmetric D profiles"
+      ],
+      "must_avoid": [
+        "Symmetric circular connector",
+        "random unmatched shapes"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Asymmetry.\nScene: Close-up of an unplugged D-shaped keyed connector beside matching D-shaped socket; flat side at top and curved lower side on both. One correct alignment evident. No electrical pins complexity.\nMust show: Matching asymmetric D profiles.\nAvoid: Symmetric circular connector; random unmatched shapes.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 5,
+    "name_vi": "kết hợp",
+    "name_en": "Merging (Consolidation)",
+    "aliases_vi": [],
+    "definition_vi": "Đưa các đối tượng hoặc thao tác tương tự, kế cận lại gần nhau trong không gian hoặc thời gian.",
+    "memory_hook_vi": "Gom việc để cùng làm",
+    "front_question_vi": "Làm sao tạo nhiều lỗ trên tấm gỗ trong một lần đặt và giữ phôi?",
+    "example_vi": "Ba mũi khoan cùng gắn trên một đầu máy, khoan ba vị trí đồng thời khi phôi đã cố định.",
+    "mechanism_vi": "Ba mũi khoan cùng gắn trên một đầu máy, khoan ba vị trí đồng thời khi phôi đã cố định..",
+    "benefit_vi": "Ba mũi khoan cùng gắn trên một đầu máy, khoan ba vị trí đồng thời khi phôi đã cố định.",
+    "application_question_vi": "Những thao tác lặp nào có thể thực hiện chung một lượt?",
+    "confusable_with": [
+      6
+    ],
+    "distinction_vi": "05 gom nhiều phần cùng làm; 06 một phần làm nhiều chức năng.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 05"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 5"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/5",
+        "section": "Nguyên tắc 5"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Bench drill with three identical parallel vertical drill bits on a shared head over one clamped wooden panel, three matching holes, equal spacing, machine static and no hands.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Ba mũi khoan cùng gắn trên một đầu máy, khoan ba vị trí đồng thời khi phôi đã cố định.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Kẹp nhiều tờ giấy thành một tập rồi bấm lỗ chung để các lỗ trùng nhau.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Three drill bits; shared head; one clamped panel.",
+      "must_show": [
+        "Three drill bits",
+        "shared head",
+        "one clamped panel"
+      ],
+      "must_avoid": [
+        "One drill bit changing functions",
+        "loose unsafe workpiece"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Merging (Consolidation).\nScene: Bench drill with three identical parallel vertical drill bits on a shared head over one clamped wooden panel, three matching holes, equal spacing, machine static and no hands.\nMust show: Three drill bits; shared head; one clamped panel.\nAvoid: One drill bit changing functions; loose unsafe workpiece.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 6,
+    "name_vi": "vạn năng",
+    "name_en": "Universality (Multi-functionality)",
+    "aliases_vi": [],
+    "definition_vi": "Cho một đối tượng đảm nhiệm nhiều chức năng để giảm nhu cầu dùng những đối tượng riêng biệt khác.",
+    "memory_hook_vi": "Một vật, nhiều việc",
+    "front_question_vi": "Làm sao chiếc nắp hộp vẫn hữu ích khi bạn đã mở hộp để chuẩn bị thức ăn?",
+    "example_vi": "Nắp hộp có mặt phẳng phù hợp làm thớt. Cùng một nắp vừa đóng hộp vừa đỡ thực phẩm khi cắt.",
+    "mechanism_vi": "Nắp hộp có mặt phẳng phù hợp làm thớt.",
+    "benefit_vi": "Cùng một nắp vừa đóng hộp vừa đỡ thực phẩm khi cắt.",
+    "application_question_vi": "Bộ phận nào có thể nhận thêm chức năng để bớt một dụng cụ?",
+    "confusable_with": [
+      5
+    ],
+    "distinction_vi": "06 một vật kiêm nhiệm; 05 kết hợp nhiều vật hoặc thao tác.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 06"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 6"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/6",
+        "section": "Nguyên tắc 6"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Two scenes of the same rigid orange food container lid: fitted on teal food box; then removed flat on table as cutting board with a few vegetable slices and a resting knife.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Nắp hộp có mặt phẳng phù hợp làm thớt. Cùng một nắp vừa đóng hộp vừa đỡ thực phẩm khi cắt.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Ghế đẩu có khoang rỗng dùng cất đồ, cùng một vật vừa ngồi vừa chứa.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Same lid recognizable in both uses.",
+      "must_show": [
+        "Same lid recognizable in both uses"
+      ],
+      "must_avoid": [
+        "Separate cutting board",
+        "many unrelated attachments"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Universality (Multi-functionality).\nScene: Two scenes of the same rigid orange food container lid: fitted on teal food box; then removed flat on table as cutting board with a few vegetable slices and a resting knife.\nMust show: Same lid recognizable in both uses.\nAvoid: Separate cutting board; many unrelated attachments.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 7,
+    "name_vi": "chứa trong",
+    "name_en": "Nesting (Matryoshka)",
+    "aliases_vi": [],
+    "definition_vi": "Đặt vật trong vật khác hoặc cho một phần đi xuyên khoảng rỗng của phần khác để dùng không gian hiệu quả.",
+    "memory_hook_vi": "Gọn nhờ chứa trong",
+    "front_question_vi": "Làm sao cất cả bộ bát mà chúng chỉ chiếm gần bằng chỗ của chiếc lớn nhất?",
+    "example_vi": "Bát nhỏ nằm trong bát lớn theo thứ tự kích cỡ. Bộ bát dùng chung khoảng không khi cất.",
+    "mechanism_vi": "Bát nhỏ nằm trong bát lớn theo thứ tự kích cỡ.",
+    "benefit_vi": "Bộ bát dùng chung khoảng không khi cất.",
+    "application_question_vi": "Khoảng rỗng nào có thể chứa một phần khác khi chưa sử dụng?",
+    "confusable_with": [
+      17
+    ],
+    "distinction_vi": "07 tận dụng bên trong; 17 mở thêm chiều hoặc tầng bố trí.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 07"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 7"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/7",
+        "section": "Nguyên tắc 7"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Three simple bowls of graduated diameter shown separated on left and nested neatly on right; a cutaway on nested set makes all three rims visible. Same bowls and scale.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Bát nhỏ nằm trong bát lớn theo thứ tự kích cỡ. Bộ bát dùng chung khoảng không khi cất.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Ống kính có các ống lồng nhau, kéo dài khi dùng và thu gọn khi cất.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Three rims visible within largest bowl.",
+      "must_show": [
+        "Three rims visible within largest bowl"
+      ],
+      "must_avoid": [
+        "Stacked bowls without nesting",
+        "disappearing smallest bowl"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Nesting (Matryoshka).\nScene: Three simple bowls of graduated diameter shown separated on left and nested neatly on right; a cutaway on nested set makes all three rims visible. Same bowls and scale.\nMust show: Three rims visible within largest bowl.\nAvoid: Stacked bowls without nesting; disappearing smallest bowl.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 8,
+    "name_vi": "phản trọng lượng",
+    "name_en": "Anti-Weight (Counterweight)",
+    "aliases_vi": [],
+    "definition_vi": "Bù trọng lượng bằng lực nâng của vật khác hoặc tương tác với môi trường để giảm sức nâng cần thiết.",
+    "memory_hook_vi": "Mượn lực để đỡ nặng",
+    "front_question_vi": "Làm sao giữ đầu ống nổi trên mặt nước mà không phải treo nó bằng dây từ bờ?",
+    "example_vi": "Phao ôm đầu ống hút, tạo lực nổi nâng cụm ống. Đầu ống theo mặt nước khi mực nước đổi.",
+    "mechanism_vi": "Phao ôm đầu ống hút, tạo lực nổi nâng cụm ống.",
+    "benefit_vi": "Đầu ống theo mặt nước khi mực nước đổi.",
+    "application_question_vi": "Bạn có thể tận dụng lực nổi hoặc lực nâng sẵn có ở đâu?",
+    "confusable_with": [
+      12
+    ],
+    "distinction_vi": "08 bù trọng lượng bằng lực; 12 giảm nhu cầu đổi cao độ.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 08"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 8"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/8",
+        "section": "Nguyên tắc 8"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Cutaway calm water with a teal intake hose end supported at surface by an orange buoyant ring float; hose enters from shore, intake just below waterline; water displaced by float visible.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Phao ôm đầu ống hút, tạo lực nổi nâng cụm ống. Đầu ống theo mặt nước khi mực nước đổi.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Cửa nâng dùng đối trọng nối qua ròng rọc để giảm lực người kéo.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Float partly submerged; hose supported by float.",
+      "must_show": [
+        "Float partly submerged",
+        "hose supported by float"
+      ],
+      "must_avoid": [
+        "Levitation",
+        "float fully above water",
+        "unsupported hose"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Anti-Weight (Counterweight).\nScene: Cutaway calm water with a teal intake hose end supported at surface by an orange buoyant ring float; hose enters from shore, intake just below waterline; water displaced by float visible.\nMust show: Float partly submerged; hose supported by float.\nAvoid: Levitation; float fully above water; unsupported hose.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 9,
+    "name_vi": "gây ứng suất sơ bộ",
+    "name_en": "Preliminary Anti-Action (Prior Counteraction)",
+    "aliases_vi": [],
+    "definition_vi": "Tạo trước tác động ngược với tác động bất lợi dự kiến; có thể đặt ứng suất trước để đối lại ứng suất khi làm việc.",
+    "memory_hook_vi": "Đối lại từ trước",
+    "front_question_vi": "Làm sao chuẩn bị dầm trước khi chịu tải để giảm nguy cơ nứt ở phía dưới?",
+    "example_vi": "Cáp căng truyền lực nén trước vào dầm. Khi tải gây kéo ở đáy, phần nén sẵn giúp giảm kéo.",
+    "mechanism_vi": "Cáp căng truyền lực nén trước vào dầm.",
+    "benefit_vi": "Khi tải gây kéo ở đáy, phần nén sẵn giúp giảm kéo.",
+    "application_question_vi": "Tác động bất lợi nào có thể được bù ngược ngay từ đầu?",
+    "confusable_with": [
+      10
+    ],
+    "distinction_vi": "09 tạo tác động đối nghịch; 10 làm trước việc cần làm.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 09"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 9"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/9",
+        "section": "Nguyên tắc 9"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Two stacked isolated orthographic beam bodies, identical geometry, with straight orange steel tendon below center and end anchorage plates. Lower beam rests on two simple supports. Blank background, no forces, arrows, cracks, text or curvature. Python will draw stress directions and load.",
+      "layout": "controlled_diagram",
+      "alternatives": [
+        {
+          "scene_vi": "Cáp căng truyền lực nén trước vào dầm. Khi tải gây kéo ở đáy, phần nén sẵn giúp giảm kéo.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Kéo căng nan hoa trước khi bánh xe chịu tải để các nan vẫn duy trì lực căng.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Straight tendon; anchorage at both ends; same beam geometry.",
+      "must_show": [
+        "Straight tendon",
+        "anchorage at both ends",
+        "same beam geometry"
+      ],
+      "must_avoid": [
+        "AI force arrows",
+        "bent tendon",
+        "upward external load",
+        "claimed design dimensions"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Preliminary Anti-Action (Prior Counteraction).\nScene: Two stacked isolated orthographic beam bodies, identical geometry, with straight orange steel tendon below center and end anchorage plates. Lower beam rests on two simple supports. Blank background, no forces, arrows, cracks, text or curvature. Python will draw stress directions and load.\nMust show: Straight tendon; anchorage at both ends; same beam geometry.\nAvoid: AI force arrows; bent tendon; upward external load; claimed design dimensions.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [
+      {
+        "kind": "prestress",
+        "stages": [
+          "Nén trước",
+          "Tải làm việc"
+        ],
+        "compression_arrows": [
+          [
+            0.1,
+            0.3,
+            0.3,
+            0.3
+          ],
+          [
+            0.9,
+            0.3,
+            0.7,
+            0.3
+          ]
+        ],
+        "load_arrow": [
+          0.5,
+          0.6,
+          0.5,
+          0.8
+        ],
+        "note": "Sơ đồ khái niệm; không dùng tính toán kết cấu."
+      }
+    ],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 10,
+    "name_vi": "thực hiện sơ bộ",
+    "name_en": "Preliminary Action (Prior Action)",
+    "aliases_vi": [],
+    "definition_vi": "Làm sẵn toàn bộ hoặc một phần việc cần làm; sắp xếp đối tượng ở vị trí thuận lợi trước thời điểm sử dụng.",
+    "memory_hook_vi": "Chuẩn bị đúng việc trước",
+    "front_question_vi": "Làm sao mỗi lần đóng đơn hàng bạn không phải đo lại từng đoạn băng dính?",
+    "example_vi": "Các đoạn băng dính được cắt và đặt sẵn trên giá. Khi đóng hộp, chỉ lấy đoạn đã chuẩn bị.",
+    "mechanism_vi": "Các đoạn băng dính được cắt và đặt sẵn trên giá.",
+    "benefit_vi": "Khi đóng hộp, chỉ lấy đoạn đã chuẩn bị.",
+    "application_question_vi": "Công đoạn nào có thể làm trước để thời điểm chính bớt chờ?",
+    "confusable_with": [
+      9
+    ],
+    "distinction_vi": "10 làm sẵn việc hữu ích; 09 tạo trước tác động đối nghịch.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 10"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 10"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/10",
+        "section": "Nguyên tắc 10"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Packing workbench: simple dispenser rack holds several pre-cut equal strips of orange tape, next to teal parcel ready for sealing; one strip positioned across seam. Clearly show prepared strips.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Các đoạn băng dính được cắt và đặt sẵn trên giá. Khi đóng hộp, chỉ lấy đoạn đã chuẩn bị.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Chia sẵn nguyên liệu theo từng mẻ trước giờ nấu để lúc nấu không phải cân lại.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Several pre-cut strips ready on rack; parcel seam.",
+      "must_show": [
+        "Several pre-cut strips ready on rack",
+        "parcel seam"
+      ],
+      "must_avoid": [
+        "Emergency spare tape",
+        "opposing stress"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Preliminary Action (Prior Action).\nScene: Packing workbench: simple dispenser rack holds several pre-cut equal strips of orange tape, next to teal parcel ready for sealing; one strip positioned across seam. Clearly show prepared strips.\nMust show: Several pre-cut strips ready on rack; parcel seam.\nAvoid: Emergency spare tape; opposing stress.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 11,
+    "name_vi": "dự phòng",
+    "name_en": "Beforehand Cushioning (Cushion in Advance)",
+    "aliases_vi": [],
+    "definition_vi": "Chuẩn bị phương tiện bảo vệ hoặc ứng cứu trước để giảm thiệt hại nếu đối tượng hoạt động không đáng tin cậy.",
+    "memory_hook_vi": "Có đường lui từ trước",
+    "front_question_vi": "Làm sao người đang sửa mái vẫn được giữ lại nếu bước hụt khỏi chỗ đứng?",
+    "example_vi": "Dây chống rơi đã nối đai người với điểm neo. Khi trượt chân, hệ giữ người để hạn chế rơi.",
+    "mechanism_vi": "Dây chống rơi đã nối đai người với điểm neo.",
+    "benefit_vi": "Khi trượt chân, hệ giữ người để hạn chế rơi.",
+    "application_question_vi": "Nếu bước này thất bại, phương tiện ứng cứu nào phải có sẵn?",
+    "confusable_with": [
+      10
+    ],
+    "distinction_vi": "11 dành cho tình huống sự cố; 10 chuẩn bị hoạt động bình thường.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 11"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 11"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/11",
+        "section": "Nguyên tắc 11"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Conceptual small roof maintenance scene: worker safely standing, wearing harness connected by visibly continuous slack safety tether to structural anchor above. No fall in progress. Simple helmet, few details.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Dây chống rơi đã nối đai người với điểm neo. Khi trượt chân, hệ giữ người để hạn chế rơi.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Đèn thoát hiểm có nguồn dự phòng để vẫn sáng khi mất điện lưới.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Harness; continuous tether; structural anchor.",
+      "must_show": [
+        "Harness",
+        "continuous tether",
+        "structural anchor"
+      ],
+      "must_avoid": [
+        "Tether tied to loose tile",
+        "fall without protection",
+        "instructional rigging detail"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Beforehand Cushioning (Cushion in Advance).\nScene: Conceptual small roof maintenance scene: worker safely standing, wearing harness connected by visibly continuous slack safety tether to structural anchor above. No fall in progress. Simple helmet, few details.\nMust show: Harness; continuous tether; structural anchor.\nAvoid: Tether tied to loose tile; fall without protection; instructional rigging detail.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 12,
+    "name_vi": "đẳng thế",
+    "name_en": "Equipotentiality",
+    "aliases_vi": [],
+    "definition_vi": "Đổi điều kiện thao tác để đối tượng không cần được nâng lên hay hạ xuống trong quá trình làm việc.",
+    "memory_hook_vi": "Giữ cùng cao độ",
+    "front_question_vi": "Làm sao chuyển thùng giữa hai bàn làm việc mà người dùng không phải nhấc nó lên?",
+    "example_vi": "Hai mặt bàn và cầu nối cùng cao độ. Thùng trượt ngang giữa các trạm, giảm việc nâng hạ.",
+    "mechanism_vi": "Hai mặt bàn và cầu nối cùng cao độ.",
+    "benefit_vi": "Thùng trượt ngang giữa các trạm, giảm việc nâng hạ.",
+    "application_question_vi": "Bạn có thể đưa các điểm giao nhận về cùng cao độ không?",
+    "confusable_with": [
+      8
+    ],
+    "distinction_vi": "12 loại nhu cầu nâng hạ; 08 dùng lực để bù trọng lượng.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 12"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 12"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/12",
+        "section": "Nguyên tắc 12"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Orthographic front view of two workbenches with roller tops and a short connecting roller bridge, all perfectly at same height. Orange box straddles bridge, grey ghost previous position on left. Ground baseline visible.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Hai mặt bàn và cầu nối cùng cao độ. Thùng trượt ngang giữa các trạm, giảm việc nâng hạ.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Xe đẩy nhận hàng có sàn ngang mặt bàn để chuyển khay sang mà không nâng.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Exactly aligned tops; supported bridge; box bottom at common height.",
+      "must_show": [
+        "Exactly aligned tops",
+        "supported bridge",
+        "box bottom at common height"
+      ],
+      "must_avoid": [
+        "Ramp",
+        "staircase",
+        "floating box",
+        "lower destination"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Equipotentiality.\nScene: Orthographic front view of two workbenches with roller tops and a short connecting roller bridge, all perfectly at same height. Orange box straddles bridge, grey ghost previous position on left. Ground baseline visible.\nMust show: Exactly aligned tops; supported bridge; box bottom at common height.\nAvoid: Ramp; staircase; floating box; lower destination.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 13,
+    "name_vi": "đảo ngược",
+    "name_en": "The Other Way Round (Inversion)",
+    "aliases_vi": [],
+    "definition_vi": "Thử đảo chiều tác động, đổi phần chuyển động thành đứng yên hoặc lật đối tượng để tìm cách giải khác.",
+    "memory_hook_vi": "Đảo vai để mở cách",
+    "front_question_vi": "Làm sao rửa mặt trong chiếc cốc bằng chổi mà bàn tay không phải xoay chổi liên tục?",
+    "example_vi": "Chổi cố định hướng lên; người dùng úp cốc và xoay cốc quanh chổi. Vai chuyển động được đổi lại.",
+    "mechanism_vi": "Chổi cố định hướng lên; người dùng úp cốc và xoay cốc quanh chổi.",
+    "benefit_vi": "Vai chuyển động được đổi lại.",
+    "application_question_vi": "Nếu giữ dụng cụ đứng yên và cho vật chuyển động thì sao?",
+    "confusable_with": [
+      15
+    ],
+    "distinction_vi": "13 đảo vai tác động; 15 cho đặc tính thay đổi theo điều kiện.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 13"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 13"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/13",
+        "section": "Nguyên tắc 13"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Sink countertop with fixed upright brush on suction base; transparent cup inverted over brush, simple hand holding cup outside. Keep brush base anchored and cup recognizable.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Chổi cố định hướng lên; người dùng úp cốc và xoay cốc quanh chổi. Vai chuyển động được đổi lại.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Máy chạy bộ đưa băng tải chạy dưới chân để người đi vẫn ở một vị trí.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Fixed brush base; inverted cup around brush.",
+      "must_show": [
+        "Fixed brush base",
+        "inverted cup around brush"
+      ],
+      "must_avoid": [
+        "Both brush and cup loose",
+        "cup resting beside brush"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: The Other Way Round (Inversion).\nScene: Sink countertop with fixed upright brush on suction base; transparent cup inverted over brush, simple hand holding cup outside. Keep brush base anchored and cup recognizable.\nMust show: Fixed brush base; inverted cup around brush.\nAvoid: Both brush and cup loose; cup resting beside brush.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 14,
+    "name_vi": "cầu hóa",
+    "name_en": "Spheroidality (Curvature)",
+    "aliases_vi": [],
+    "definition_vi": "Dùng đường cong, mặt cầu, con lăn hoặc chuyển động quay thay cho hình thẳng, mặt phẳng hay chuyển động tịnh tiến.",
+    "memory_hook_vi": "Đổi trượt thành lăn",
+    "front_question_vi": "Làm sao chuyển chiếc hòm nặng qua sàn mà không phải kéo đáy hòm trượt trực tiếp?",
+    "example_vi": "Các con lăn nằm dưới hòm, biến tiếp xúc trượt thành lăn. Hòm tiến đi dễ hơn trên nền phù hợp.",
+    "mechanism_vi": "Các con lăn nằm dưới hòm, biến tiếp xúc trượt thành lăn.",
+    "benefit_vi": "Hòm tiến đi dễ hơn trên nền phù hợp.",
+    "application_question_vi": "Tiếp xúc trượt nào có thể đổi thành lăn trong việc của bạn?",
+    "confusable_with": [
+      28
+    ],
+    "distinction_vi": "14 vẫn dùng cơ cấu cơ học; 28 thay cách tác động cơ học.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 14"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 14"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/14",
+        "section": "Nguyên tắc 14"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Low perspective wooden crate supported on three round teal cylindrical rollers on level floor. Front roller circular end prominently visible; no wheels attached to crate.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Các con lăn nằm dưới hòm, biến tiếp xúc trượt thành lăn. Hòm tiến đi dễ hơn trên nền phù hợp.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Mái vòm phân bố tải nhờ hình cong thay cho mặt mái phẳng trong một kết cấu phù hợp.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Round roller ends; contact supporting crate.",
+      "must_show": [
+        "Round roller ends",
+        "contact supporting crate"
+      ],
+      "must_avoid": [
+        "Square rollers",
+        "floating crate",
+        "magnet suspension"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Spheroidality (Curvature).\nScene: Low perspective wooden crate supported on three round teal cylindrical rollers on level floor. Front roller circular end prominently visible; no wheels attached to crate.\nMust show: Round roller ends; contact supporting crate.\nAvoid: Square rollers; floating crate; magnet suspension.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 15,
+    "name_vi": "linh động",
+    "name_en": "Dynamics",
+    "aliases_vi": [],
+    "definition_vi": "Cho hình dạng, vị trí hoặc đặc tính thay đổi theo từng điều kiện làm việc, thay vì giữ cứng một trạng thái.",
+    "memory_hook_vi": "Đổi theo lúc cần",
+    "front_question_vi": "Làm sao một chiếc đèn vẫn rọi đúng chỗ khi bạn đổi vị trí cuốn sách trên bàn?",
+    "example_vi": "Tay đèn có khớp xoay để đưa chụp sáng đến vị trí cần. Các phần dịch chuyển tương đối với nhau.",
+    "mechanism_vi": "Tay đèn có khớp xoay để đưa chụp sáng đến vị trí cần.",
+    "benefit_vi": "Các phần dịch chuyển tương đối với nhau.",
+    "application_question_vi": "Đặc tính nào cần điều chỉnh theo từng giai đoạn sử dụng?",
+    "confusable_with": [
+      1
+    ],
+    "distinction_vi": "15 thay đổi khi dùng; 01 chú trọng chia phần để thao tác.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 15"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 15"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/15",
+        "section": "Nguyên tắc 15"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Two ghosted positions of same articulated desk lamp, solid teal arms joined by orange pivots; light shade moved above two locations of a book. One base stays fixed.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Tay đèn có khớp xoay để đưa chụp sáng đến vị trí cần. Các phần dịch chuyển tương đối với nhau.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Ghế có mặt ngồi chỉnh cao thấp để phù hợp từng người và từng bàn.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Pivot joints; same fixed base; two reachable positions.",
+      "must_show": [
+        "Pivot joints",
+        "same fixed base",
+        "two reachable positions"
+      ],
+      "must_avoid": [
+        "Two separate lamps",
+        "detached broken arms"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Dynamics.\nScene: Two ghosted positions of same articulated desk lamp, solid teal arms joined by orange pivots; light shade moved above two locations of a book. One base stays fixed.\nMust show: Pivot joints; same fixed base; two reachable positions.\nAvoid: Two separate lamps; detached broken arms.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 16,
+    "name_vi": "giải quyết từng phần",
+    "name_en": "Partial or Excessive Actions",
+    "aliases_vi": [],
+    "definition_vi": "Khi khó đạt đúng mức yêu cầu, thử làm ít hơn hoặc nhiều hơn một chút để bài toán dễ xử lý.",
+    "memory_hook_vi": "Chấp nhận lệch một chút",
+    "front_question_vi": "Làm sao lắp tấm đệm vừa chiếc khay khi rất khó cắt đúng kích thước ngay lần đầu?",
+    "example_vi": "Cắt tấm đệm dư viền, đặt vào khay rồi tỉa phần thừa. Chấp nhận dư để đạt độ vừa sau cùng.",
+    "mechanism_vi": "Cắt tấm đệm dư viền, đặt vào khay rồi tỉa phần thừa.",
+    "benefit_vi": "Chấp nhận dư để đạt độ vừa sau cùng.",
+    "application_question_vi": "Có thể cho phép dư hoặc thiếu ở bước nào rồi xử lý tiếp?",
+    "confusable_with": [
+      10
+    ],
+    "distinction_vi": "16 thay mức đạt được; 10 đổi thời điểm làm một việc.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 16"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 16"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/16",
+        "section": "Nguyên tắc 16"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Three sequential small panels: oversized orange foam sheet above teal tray; sheet laid across tray with narrow excess border; trimmed sheet fitting inside tray with offcut visible. No measurement labels.",
+      "layout": "sequence",
+      "alternatives": [
+        {
+          "scene_vi": "Cắt tấm đệm dư viền, đặt vào khay rồi tỉa phần thừa. Chấp nhận dư để đạt độ vừa sau cùng.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Rót gần đầy bằng dòng lớn rồi thêm từng ít để đạt mức mong muốn.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Excess margin then removed; same tray size.",
+      "must_show": [
+        "Excess margin then removed",
+        "same tray size"
+      ],
+      "must_avoid": [
+        "Exactly fitted from first step",
+        "cutting tray instead of sheet"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Partial or Excessive Actions.\nScene: Three sequential small panels: oversized orange foam sheet above teal tray; sheet laid across tray with narrow excess border; trimmed sheet fitting inside tray with offcut visible. No measurement labels.\nMust show: Excess margin then removed; same tray size.\nAvoid: Exactly fitted from first step; cutting tray instead of sheet.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 17,
+    "name_vi": "chuyển sang chiều khác",
+    "name_en": "Another Dimension",
+    "aliases_vi": [],
+    "definition_vi": "Tận dụng chiều không gian khác, nhiều tầng, mặt sau hoặc đổi hướng đặt vật để vượt giới hạn bố trí hiện tại.",
+    "memory_hook_vi": "Mở thêm một chiều",
+    "front_question_vi": "Làm sao tăng chỗ phơi khăn trong căn phòng nhỏ mà không chiếm thêm diện tích sàn?",
+    "example_vi": "Giá phơi nhiều tầng đưa khăn lên các độ cao khác nhau. Diện tích sàn giữ nguyên nhưng thêm chỗ treo.",
+    "mechanism_vi": "Giá phơi nhiều tầng đưa khăn lên các độ cao khác nhau.",
+    "benefit_vi": "Diện tích sàn giữ nguyên nhưng thêm chỗ treo.",
+    "application_question_vi": "Bạn có thể dùng chiều cao hoặc mặt sau nào còn bỏ trống?",
+    "confusable_with": [
+      7
+    ],
+    "distinction_vi": "17 mở chiều bố trí; 07 đặt một vật trong khoảng rỗng vật khác.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 17"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 17"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/17",
+        "section": "Nguyên tắc 17"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Side-by-side comparison: one-level towel rack and three-level tall towel rack with identical footprint, towels spaced to hang without overlap. Floor footprint outlined in same pale teal.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Giá phơi nhiều tầng đưa khăn lên các độ cao khác nhau. Diện tích sàn giữ nguyên nhưng thêm chỗ treo.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Bảng thông báo dùng cả hai mặt để thêm nội dung trong cùng diện tích treo.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Same footprint; clearly separate usable levels.",
+      "must_show": [
+        "Same footprint",
+        "clearly separate usable levels"
+      ],
+      "must_avoid": [
+        "Bigger floor area",
+        "tightly packed wet towels touching"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Another Dimension.\nScene: Side-by-side comparison: one-level towel rack and three-level tall towel rack with identical footprint, towels spaced to hang without overlap. Floor footprint outlined in same pale teal.\nMust show: Same footprint; clearly separate usable levels.\nAvoid: Bigger floor area; tightly packed wet towels touching.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 18,
+    "name_vi": "dao động cơ học",
+    "name_en": "Mechanical Vibration",
+    "aliases_vi": [],
+    "definition_vi": "Dùng rung động cơ học, điều chỉnh tần số hoặc khai thác cộng hưởng để tạo tác dụng hữu ích lên đối tượng.",
+    "memory_hook_vi": "Rung để tạo tác dụng",
+    "front_question_vi": "Làm sao hạt đang mắc trên mặt sàng tiếp tục đi qua lỗ mà không cần gạt từng hạt?",
+    "example_vi": "Bộ rung làm mặt sàng dao động, giúp hạt dịch chuyển và lọt lỗ. Tác dụng đến từ rung cơ học.",
+    "mechanism_vi": "Bộ rung làm mặt sàng dao động, giúp hạt dịch chuyển và lọt lỗ.",
+    "benefit_vi": "Tác dụng đến từ rung cơ học.",
+    "application_question_vi": "Vật liệu nào có thể được xử lý tốt hơn bằng dao động?",
+    "confusable_with": [
+      19
+    ],
+    "distinction_vi": "18 là rung cơ học; 19 là nhịp tác động, không nhất thiết rung.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 18"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 18"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/18",
+        "section": "Nguyên tắc 18"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Close-up tilted sieve tray on springs with grains above and falling through holes into bin; tiny offset ghost outlines of tray imply mechanical oscillation; no sound icons.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Bộ rung làm mặt sàng dao động, giúp hạt dịch chuyển và lọt lỗ. Tác dụng đến từ rung cơ học.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Bàn rung giúp vật liệu hạt sắp xếp chặt hơn trong khuôn phù hợp.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Springs; vibrating tray ghost outlines; grains through holes.",
+      "must_show": [
+        "Springs",
+        "vibrating tray ghost outlines",
+        "grains through holes"
+      ],
+      "must_avoid": [
+        "Only flashing lamp",
+        "continuous rigid stationary sieve"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Mechanical Vibration.\nScene: Close-up tilted sieve tray on springs with grains above and falling through holes into bin; tiny offset ghost outlines of tray imply mechanical oscillation; no sound icons.\nMust show: Springs; vibrating tray ghost outlines; grains through holes.\nAvoid: Only flashing lamp; continuous rigid stationary sieve.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 19,
+    "name_vi": "tác động theo chu kỳ",
+    "name_en": "Periodic Action",
+    "aliases_vi": [],
+    "definition_vi": "Chuyển tác động liên tục thành từng đợt, đổi chu kỳ hoặc dùng khoảng nghỉ giữa các đợt cho việc khác.",
+    "memory_hook_vi": "Có nhịp, có khoảng nghỉ",
+    "front_question_vi": "Làm sao tưới đủ nước mà đất có thời gian thấm giữa những lần được cấp thêm nước?",
+    "example_vi": "Van cấp nước theo từng đợt xen khoảng nghỉ. Nước có thời gian thấm trước khi đợt tiếp theo bắt đầu.",
+    "mechanism_vi": "Van cấp nước theo từng đợt xen khoảng nghỉ.",
+    "benefit_vi": "Nước có thời gian thấm trước khi đợt tiếp theo bắt đầu.",
+    "application_question_vi": "Khoảng nghỉ nào giúp quá trình của bạn vận hành tốt hơn?",
+    "confusable_with": [
+      20
+    ],
+    "distinction_vi": "19 chủ ý ngắt nhịp; 20 loại khoảng ngừng không hữu ích.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 19"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 19"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/19",
+        "section": "Nguyên tắc 19"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Three panels of same plant and drip emitter: water dripping; stopped emitter with water soaking into soil; dripping again. Same soil cutaway and pot, no controller or sensor.",
+      "layout": "sequence",
+      "alternatives": [
+        {
+          "scene_vi": "Van cấp nước theo từng đợt xen khoảng nghỉ. Nước có thời gian thấm trước khi đợt tiếp theo bắt đầu.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Đèn cảnh báo nháy theo nhịp để dễ nhận thấy mà không cần phát sáng liên tục.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: On-off-on water delivery; infiltration during pause.",
+      "must_show": [
+        "On-off-on water delivery",
+        "infiltration during pause"
+      ],
+      "must_avoid": [
+        "Soil moisture sensor feedback",
+        "vibrating pot"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Periodic Action.\nScene: Three panels of same plant and drip emitter: water dripping; stopped emitter with water soaking into soil; dripping again. Same soil cutaway and pot, no controller or sensor.\nMust show: On-off-on water delivery; infiltration during pause.\nAvoid: Soil moisture sensor feedback; vibrating pot.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 20,
+    "name_vi": "liên tục tác động có ích",
+    "name_en": "Continuity of Useful Action",
+    "aliases_vi": [],
+    "definition_vi": "Duy trì phần việc hữu ích, tận dụng cả các hành trình và giảm thời gian chạy không tải trong quá trình.",
+    "memory_hook_vi": "Đừng để lượt về trống",
+    "front_question_vi": "Làm sao đầu in vẫn tạo ra nội dung khi quay trở lại phía bên kia trang giấy?",
+    "example_vi": "Đầu in phun in cả lượt đi lẫn lượt về. Hành trình quay lại cũng tạo nét thay vì chỉ chạy không.",
+    "mechanism_vi": "Đầu in phun in cả lượt đi lẫn lượt về.",
+    "benefit_vi": "Hành trình quay lại cũng tạo nét thay vì chỉ chạy không.",
+    "application_question_vi": "Lượt về hoặc thời gian chờ nào có thể tạo thêm giá trị?",
+    "confusable_with": [
+      19
+    ],
+    "distinction_vi": "20 bỏ lượt chạy rỗng; 19 có thể chủ ý tạo khoảng nghỉ.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 20"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 20"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/20",
+        "section": "Nguyên tắc 20"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Two stacked closeups of same printer carriage over paper: carriage at left with freshly printed teal swath behind toward right; then carriage at right with next orange swath behind toward left. Python adds direction arrows.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Đầu in phun in cả lượt đi lẫn lượt về. Hành trình quay lại cũng tạo nét thay vì chỉ chạy không.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Băng chuyền đưa khay qua các trạm liên tiếp để công đoạn chính giảm thời gian chờ.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Ink deposited on both passes; same carriage and paper.",
+      "must_show": [
+        "Ink deposited on both passes",
+        "same carriage and paper"
+      ],
+      "must_avoid": [
+        "Return pass with no ink",
+        "two unrelated printers"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Continuity of Useful Action.\nScene: Two stacked closeups of same printer carriage over paper: carriage at left with freshly printed teal swath behind toward right; then carriage at right with next orange swath behind toward left. Python adds direction arrows.\nMust show: Ink deposited on both passes; same carriage and paper.\nAvoid: Return pass with no ink; two unrelated printers.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [
+      {
+        "kind": "passes",
+        "directions": [
+          "right",
+          "left"
+        ]
+      }
+    ],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 21,
+    "name_vi": "vượt nhanh",
+    "name_en": "Rushing Through (Skipping)",
+    "aliases_vi": [],
+    "definition_vi": "Đưa công đoạn bất lợi qua thật nhanh để tác hại chưa kịp phát triển đáng kể trong khoảng thời gian tiếp xúc.",
+    "memory_hook_vi": "Qua nhanh trước khi hại",
+    "front_question_vi": "Làm sao cắt màng nhựa bằng nhiệt mà vùng quanh đường cắt ít bị biến dạng lan rộng?",
+    "example_vi": "Lưỡi nóng đi nhanh qua màng, rút ngắn thời gian truyền nhiệt ra vùng lân cận. Cần thử chế độ phù hợp.",
+    "mechanism_vi": "Lưỡi nóng đi nhanh qua màng, rút ngắn thời gian truyền nhiệt ra vùng lân cận.",
+    "benefit_vi": "Cần thử chế độ phù hợp.",
+    "application_question_vi": "Công đoạn nào gây hại chủ yếu vì tiếp xúc kéo dài?",
+    "confusable_with": [
+      19
+    ],
+    "distinction_vi": "21 rút ngắn lần tác động; 19 điều chỉnh nhịp lặp lại.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 21"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 21"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/21",
+        "section": "Nguyên tắc 21"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Conceptual close-up of guarded hot cutting blade rapidly crossing a thin teal plastic film; narrow orange heat zone limited to cut edge, surrounding film flat. No operator or temperature values.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Lưỡi nóng đi nhanh qua màng, rút ngắn thời gian truyền nhiệt ra vùng lân cận. Cần thử chế độ phù hợp.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Cắt nhanh một khối vật liệu mềm để giảm thời gian nó bị kéo biến dạng theo dụng cụ.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Narrow heat-affected strip; film remains flat.",
+      "must_show": [
+        "Narrow heat-affected strip",
+        "film remains flat"
+      ],
+      "must_avoid": [
+        "Broad melting puddle",
+        "implied universal safe cutting speed"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Rushing Through (Skipping).\nScene: Conceptual close-up of guarded hot cutting blade rapidly crossing a thin teal plastic film; narrow orange heat zone limited to cut edge, surrounding film flat. No operator or temperature values.\nMust show: Narrow heat-affected strip; film remains flat.\nAvoid: Broad melting puddle; implied universal safe cutting speed.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 22,
+    "name_vi": "biến hại thành lợi",
+    "name_en": "\"Blessing in Disguise\" (Convert Harmful into Useful)",
+    "aliases_vi": [],
+    "definition_vi": "Tìm cách dùng yếu tố vốn gây hại để tạo ích lợi, hoặc biến đổi điều kiện để tác hại bị triệt tiêu.",
+    "memory_hook_vi": "Đổi vai của điều hại",
+    "front_question_vi": "Làm sao hơi nóng đang làm phòng máy khó chịu có thể giúp ích cho một công việc khác?",
+    "example_vi": "Nhiệt thải được dẫn qua bộ trao đổi nhiệt để làm ấm nước. Phần gây nóng phòng trở thành nguồn dùng được.",
+    "mechanism_vi": "Nhiệt thải được dẫn qua bộ trao đổi nhiệt để làm ấm nước.",
+    "benefit_vi": "Phần gây nóng phòng trở thành nguồn dùng được.",
+    "application_question_vi": "Tác nhân đang gây phiền nào có thể phục vụ nhu cầu khác?",
+    "confusable_with": [
+      25
+    ],
+    "distinction_vi": "22 đổi vai yếu tố có hại; 25 hệ tự làm việc phụ trợ.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 22"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 22"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/22",
+        "section": "Nguyên tắc 22"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Simple heat exchanger between warm orange machine exhaust duct and separate teal water tank coil; two fluids remain separated by metal wall. Python adds heat direction overlay.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Nhiệt thải được dẫn qua bộ trao đổi nhiệt để làm ấm nước. Phần gây nóng phòng trở thành nguồn dùng được.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Nước mưa gây đọng sân được gom vào bể tưới cây để tạo nguồn sử dụng.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Separate exhaust and water circuits; intervening exchanger.",
+      "must_show": [
+        "Separate exhaust and water circuits",
+        "intervening exchanger"
+      ],
+      "must_avoid": [
+        "Dirty exhaust mixed directly into water",
+        "magic electricity"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: \"Blessing in Disguise\" (Convert Harmful into Useful).\nScene: Simple heat exchanger between warm orange machine exhaust duct and separate teal water tank coil; two fluids remain separated by metal wall. Python adds heat direction overlay.\nMust show: Separate exhaust and water circuits; intervening exchanger.\nAvoid: Dirty exhaust mixed directly into water; magic electricity.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [
+      {
+        "kind": "heat_recovery",
+        "direction": "waste_to_water"
+      }
+    ],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 23,
+    "name_vi": "quan hệ phản hồi",
+    "name_en": "Feedback",
+    "aliases_vi": [],
+    "definition_vi": "Đưa thông tin về kết quả quay lại để điều chỉnh tác động tiếp theo; thay đổi cách phản hồi nếu cần.",
+    "memory_hook_vi": "Nhìn kết quả, chỉnh lại",
+    "front_question_vi": "Làm sao hệ tưới biết lúc nào nên giảm nước thay vì cứ mở van theo lịch cố định?",
+    "example_vi": "Cảm biến đo ẩm đất gửi về bộ điều khiển. Bộ điều khiển đổi độ mở van theo mức ẩm đo được.",
+    "mechanism_vi": "Cảm biến đo ẩm đất gửi về bộ điều khiển.",
+    "benefit_vi": "Bộ điều khiển đổi độ mở van theo mức ẩm đo được.",
+    "application_question_vi": "Kết quả nào cần đo để điều chỉnh hành động kế tiếp?",
+    "confusable_with": [
+      19
+    ],
+    "distinction_vi": "23 dùng kết quả để chỉnh; 19 có thể chỉ lặp theo lịch.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 23"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 23"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/23",
+        "section": "Nguyên tắc 23"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Four isolated objects arranged as a square loop: top-left controller box, top-right irrigation valve, bottom-right potted plant with wet soil cutaway, bottom-left soil moisture probe. No wires, arrows, labels or screen text. Python will draw the exact closed feedback topology.",
+      "layout": "controlled_diagram",
+      "alternatives": [
+        {
+          "scene_vi": "Cảm biến đo ẩm đất gửi về bộ điều khiển. Bộ điều khiển đổi độ mở van theo mức ẩm đo được.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Phao trong bồn đổi vị trí theo mực nước và tác động van để ngừng cấp khi đầy.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Four separate objects in prescribed quadrants.",
+      "must_show": [
+        "Four separate objects in prescribed quadrants"
+      ],
+      "must_avoid": [
+        "AI-drawn connections",
+        "display without actuator",
+        "open-loop clock"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Feedback.\nScene: Four isolated objects arranged as a square loop: top-left controller box, top-right irrigation valve, bottom-right potted plant with wet soil cutaway, bottom-left soil moisture probe. No wires, arrows, labels or screen text. Python will draw the exact closed feedback topology.\nMust show: Four separate objects in prescribed quadrants.\nAvoid: AI-drawn connections; display without actuator; open-loop clock.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [
+      {
+        "kind": "feedback",
+        "nodes": [
+          "Điều khiển",
+          "Van",
+          "Đất",
+          "Cảm biến"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "note": "Đo ẩm → chỉnh van → đổi ẩm → đo lại."
+      }
+    ],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 24,
+    "name_vi": "sử dụng trung gian",
+    "name_en": "Intermediary",
+    "aliases_vi": [],
+    "definition_vi": "Đưa một vật hoặc quá trình trung gian vào để truyền tác động hay kết nối hai bên khó tương tác trực tiếp.",
+    "memory_hook_vi": "Qua một cầu nối",
+    "front_question_vi": "Làm sao gõ chỉnh vị trí tấm gỗ mà bề mặt hoàn thiện không nhận trực tiếp vết búa?",
+    "example_vi": "Một miếng gỗ đệm nằm giữa búa và phôi. Nó truyền lực gõ đồng thời phân bố tiếp xúc lên bề mặt.",
+    "mechanism_vi": "Một miếng gỗ đệm nằm giữa búa và phôi.",
+    "benefit_vi": "Nó truyền lực gõ đồng thời phân bố tiếp xúc lên bề mặt.",
+    "application_question_vi": "Vật trung gian nào có thể giúp hai bên tác động phù hợp hơn?",
+    "confusable_with": [
+      30
+    ],
+    "distinction_vi": "24 là vai trò truyền tác động; 30 nhấn mạnh vỏ hoặc màng.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 24"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 24"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/24",
+        "section": "Nguyên tắc 24"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Close-up resting hammer over sacrificial orange wooden block contacting edge of finished teal wooden board. Show hammer-block-board order, no hand, board on solid bench.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Một miếng gỗ đệm nằm giữa búa và phôi. Nó truyền lực gõ đồng thời phân bố tiếp xúc lên bề mặt.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Phễu làm trung gian dẫn nước từ bình miệng rộng vào chai cổ nhỏ.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Block physically between hammer and finished surface.",
+      "must_show": [
+        "Block physically between hammer and finished surface"
+      ],
+      "must_avoid": [
+        "Hammer hitting finished board directly",
+        "floating block"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Intermediary.\nScene: Close-up resting hammer over sacrificial orange wooden block contacting edge of finished teal wooden board. Show hammer-block-board order, no hand, board on solid bench.\nMust show: Block physically between hammer and finished surface.\nAvoid: Hammer hitting finished board directly; floating block.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 25,
+    "name_vi": "tự phục vụ",
+    "name_en": "Self-service",
+    "aliases_vi": [],
+    "definition_vi": "Cho hệ tự thực hiện thao tác phụ trợ hoặc tận dụng tài nguyên, năng lượng sẵn có để phục vụ chính nó.",
+    "memory_hook_vi": "Dùng mình để phục vụ mình",
+    "front_question_vi": "Làm sao nước đang chảy qua vòi có thể tự làm đầu tưới quay mà không cần mô-tơ riêng?",
+    "example_vi": "Nước thoát qua các vòi lệch hướng tạo phản lực làm đầu tưới quay. Dòng nước kiêm việc dẫn động.",
+    "mechanism_vi": "Nước thoát qua các vòi lệch hướng tạo phản lực làm đầu tưới quay.",
+    "benefit_vi": "Dòng nước kiêm việc dẫn động.",
+    "application_question_vi": "Năng lượng đang có trong hệ có thể làm thêm việc phụ nào?",
+    "confusable_with": [
+      22
+    ],
+    "distinction_vi": "25 hệ tự phục vụ; 22 biến yếu tố có hại thành ích lợi.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 25"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 25"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/25",
+        "section": "Nguyên tắc 25"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Top view rotating lawn sprinkler: two opposite curved arms discharge water tangentially in opposite directions, mounted on central bearing and supply hose. No electric motor or cables. Python draws rotation if needed.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Nước thoát qua các vòi lệch hướng tạo phản lực làm đầu tưới quay. Dòng nước kiêm việc dẫn động.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Cửa có lò xo tích năng lượng khi mở rồi tự khép lại, không cần người kéo về.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Tangential jets; central bearing; water supply.",
+      "must_show": [
+        "Tangential jets",
+        "central bearing",
+        "water supply"
+      ],
+      "must_avoid": [
+        "External motor",
+        "radial jets claiming torque"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Self-service.\nScene: Top view rotating lawn sprinkler: two opposite curved arms discharge water tangentially in opposite directions, mounted on central bearing and supply hose. No electric motor or cables. Python draws rotation if needed.\nMust show: Tangential jets; central bearing; water supply.\nAvoid: External motor; radial jets claiming torque.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 26,
+    "name_vi": "sao chép",
+    "name_en": "Copying",
+    "aliases_vi": [],
+    "definition_vi": "Dùng bản sao đơn giản hoặc hình ảnh đại diện khi làm việc với vật thật khó, đắt, dễ hỏng hoặc không sẵn có.",
+    "memory_hook_vi": "Thử trên bản sao",
+    "front_question_vi": "Làm sao thử nhiều cách bố trí bàn ghế mà không phải kéo đồ thật quanh phòng mỗi lần?",
+    "example_vi": "Mô hình căn phòng và bàn ghế theo cùng tỷ lệ cho phép thử bố trí. Đồ thật không cần di chuyển.",
+    "mechanism_vi": "Mô hình căn phòng và bàn ghế theo cùng tỷ lệ cho phép thử bố trí.",
+    "benefit_vi": "Đồ thật không cần di chuyển.",
+    "application_question_vi": "Bản sao nào đủ giữ thông tin cần thiết cho quyết định của bạn?",
+    "confusable_with": [
+      27
+    ],
+    "distinction_vi": "26 thay bằng đại diện; 27 dùng vật rẻ trực tiếp làm việc.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 26"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 26"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/26",
+        "section": "Nguyên tắc 26"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Architectural tabletop room model with movable miniature tables and chairs; faint full-sized room in background at deliberately different scale. Model clearly a representative scale copy, no text.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Mô hình căn phòng và bàn ghế theo cùng tỷ lệ cho phép thử bố trí. Đồ thật không cần di chuyển.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Ảnh chụp theo tỷ lệ giúp kiểm tra hình dáng chi tiết mà không chạm vào mẫu dễ vỡ.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Recognizable room model; movable miniatures; scale relationship.",
+      "must_show": [
+        "Recognizable room model",
+        "movable miniatures",
+        "scale relationship"
+      ],
+      "must_avoid": [
+        "Toy unrelated to real room",
+        "random dimensional distortion"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Copying.\nScene: Architectural tabletop room model with movable miniature tables and chairs; faint full-sized room in background at deliberately different scale. Model clearly a representative scale copy, no text.\nMust show: Recognizable room model; movable miniatures; scale relationship.\nAvoid: Toy unrelated to real room; random dimensional distortion.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 27,
+    "name_vi": "rẻ thay cho đắt",
+    "name_en": "Cheap Short-Living Objects",
+    "aliases_vi": [],
+    "definition_vi": "Thay vật đắt bằng những vật rẻ hơn, chấp nhận giảm một số phẩm chất như tuổi thọ khi điều đó phù hợp.",
+    "memory_hook_vi": "Đủ dùng với giá thấp",
+    "front_question_vi": "Làm sao lót bàn khi pha màu mà không cần giữ một tấm lót đắt tiền qua nhiều lần dùng?",
+    "example_vi": "Tờ giấy lót rẻ nhận vết màu rồi được thay. Chấp nhận tuổi thọ ngắn để bớt việc bảo quản tấm đắt.",
+    "mechanism_vi": "Tờ giấy lót rẻ nhận vết màu rồi được thay.",
+    "benefit_vi": "Chấp nhận tuổi thọ ngắn để bớt việc bảo quản tấm đắt.",
+    "application_question_vi": "Phẩm chất nào có thể giảm mà vẫn đáp ứng nhu cầu thực tế?",
+    "confusable_with": [
+      26
+    ],
+    "distinction_vi": "27 vật rẻ làm việc thật; 26 bản sao đại diện cho vật gốc.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 27"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 27"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/27",
+        "section": "Nguyên tắc 27"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Artist mixing colors on disposable plain paper liner covering table, stained top sheet and small clean stack nearby; modest reusable tray comparison behind, no brand or money symbols.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Tờ giấy lót rẻ nhận vết màu rồi được thay. Chấp nhận tuổi thọ ngắn để bớt việc bảo quản tấm đắt.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Miếng chèn đóng gói bằng giấy dùng ngắn hạn thay phụ kiện bền đắt khi chỉ cần một chuyến.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Cheap paper actually protecting tabletop; replacement sheets.",
+      "must_show": [
+        "Cheap paper actually protecting tabletop",
+        "replacement sheets"
+      ],
+      "must_avoid": [
+        "Claim that disposable is always environmentally superior",
+        "replica only"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Cheap Short-Living Objects.\nScene: Artist mixing colors on disposable plain paper liner covering table, stained top sheet and small clean stack nearby; modest reusable tray comparison behind, no brand or money symbols.\nMust show: Cheap paper actually protecting tabletop; replacement sheets.\nAvoid: Claim that disposable is always environmentally superior; replica only.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 28,
+    "name_vi": "thay thế sơ đồ cơ học",
+    "name_en": "Mechanics Substitution (Replace Mechanical System)",
+    "aliases_vi": [],
+    "definition_vi": "Thay cách tác động cơ học bằng điện, từ, quang, âm hoặc trường thích hợp để tạo tương tác cần thiết.",
+    "memory_hook_vi": "Đổi cách tác động",
+    "front_question_vi": "Làm sao nhặt các chi tiết sắt nhỏ khỏi khay mà không phải kẹp từng chiếc bằng ngàm?",
+    "example_vi": "Nam châm hút đồng thời các chi tiết sắt. Lực từ thay cho cơ cấu ngàm kẹp tiếp xúc từng chi tiết.",
+    "mechanism_vi": "Nam châm hút đồng thời các chi tiết sắt.",
+    "benefit_vi": "Lực từ thay cho cơ cấu ngàm kẹp tiếp xúc từng chi tiết.",
+    "application_question_vi": "Tác động cơ học nào có thể chuyển sang điện, từ hoặc quang?",
+    "confusable_with": [
+      14
+    ],
+    "distinction_vi": "28 đổi phương thức tương tác; 14 đổi hình hoặc chuyển động cơ học.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 28"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 28"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/28",
+        "section": "Nguyên tắc 28"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Large teal horseshoe magnet suspended just above a shallow tray, orange steel washers clustered at poles; no mechanical jaws. A few nonmagnetic wooden pieces remain in tray.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Nam châm hút đồng thời các chi tiết sắt. Lực từ thay cho cơ cấu ngàm kẹp tiếp xúc từng chi tiết.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Cảm biến quang nhận biết vật đi qua thay cho cần gạt bị vật chạm trực tiếp.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Steel items attached at magnetic poles; no jaws.",
+      "must_show": [
+        "Steel items attached at magnetic poles",
+        "no jaws"
+      ],
+      "must_avoid": [
+        "Wood attracted to magnet",
+        "invisible unsupported heavy objects"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Mechanics Substitution (Replace Mechanical System).\nScene: Large teal horseshoe magnet suspended just above a shallow tray, orange steel washers clustered at poles; no mechanical jaws. A few nonmagnetic wooden pieces remain in tray.\nMust show: Steel items attached at magnetic poles; no jaws.\nAvoid: Wood attracted to magnet; invisible unsupported heavy objects.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 29,
+    "name_vi": "sử dụng các kết cấu khí và lỏng",
+    "name_en": "Pneumatics and Hydraulics",
+    "aliases_vi": [],
+    "definition_vi": "Dùng khí hoặc chất lỏng thay bộ phận rắn để đỡ, truyền lực hoặc tạo kết cấu phù hợp với đối tượng.",
+    "memory_hook_vi": "Nhờ khí, nhờ lỏng",
+    "front_question_vi": "Làm sao đỡ món đồ có hình dạng không đều mà không phải chế tạo một khuôn cứng riêng?",
+    "example_vi": "Đệm chứa khí biến dạng theo đáy vật, phân bố chỗ đỡ. Phần khí chịu nén thay vai trò gối đỡ cứng.",
+    "mechanism_vi": "Đệm chứa khí biến dạng theo đáy vật, phân bố chỗ đỡ.",
+    "benefit_vi": "Phần khí chịu nén thay vai trò gối đỡ cứng.",
+    "application_question_vi": "Bộ phận rắn nào có thể thay bằng thể tích khí hoặc chất lỏng?",
+    "confusable_with": [
+      30
+    ],
+    "distinction_vi": "29 khí/lỏng tạo tác dụng; 30 vỏ/màng cách ly hoặc bao che.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 29"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 29"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/29",
+        "section": "Nguyên tắc 29"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Cutaway inflatable cushion supporting irregular ceramic vase base; sealed teal flexible envelope contains pale blue air cells; contact contour follows base with visible compression.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Đệm chứa khí biến dạng theo đáy vật, phân bố chỗ đỡ. Phần khí chịu nén thay vai trò gối đỡ cứng.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Bàn nâng thủy lực truyền lực qua dầu để nâng mặt bàn bằng cơ cấu thích hợp.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Enclosed air volume; deformed support surface.",
+      "must_show": [
+        "Enclosed air volume",
+        "deformed support surface"
+      ],
+      "must_avoid": [
+        "Solid foam pores mistaken for air bladder",
+        "empty outline only"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Pneumatics and Hydraulics.\nScene: Cutaway inflatable cushion supporting irregular ceramic vase base; sealed teal flexible envelope contains pale blue air cells; contact contour follows base with visible compression.\nMust show: Enclosed air volume; deformed support surface.\nAvoid: Solid foam pores mistaken for air bladder; empty outline only.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 30,
+    "name_vi": "sử dụng vỏ dẻo và màng mỏng",
+    "name_en": "Flexible Shells and Thin Films",
+    "aliases_vi": [],
+    "definition_vi": "Thay kết cấu khối bằng vỏ mềm hoặc màng mỏng; dùng chúng để bao bọc và cách ly vật với môi trường.",
+    "memory_hook_vi": "Mỏng mà vẫn che được",
+    "front_question_vi": "Làm sao che nhiều bát miệng khác nhau mà không làm nắp cứng riêng từng cái?",
+    "example_vi": "Màng mềm ôm sát miệng bát, tạo lớp che mỏng. Nó thay nắp khối và thích ứng hình dạng mép.",
+    "mechanism_vi": "Màng mềm ôm sát miệng bát, tạo lớp che mỏng.",
+    "benefit_vi": "Nó thay nắp khối và thích ứng hình dạng mép.",
+    "application_question_vi": "Lớp bao che nào có thể mỏng, mềm hơn mà vẫn đủ chức năng?",
+    "confusable_with": [
+      29
+    ],
+    "distinction_vi": "30 nhấn vào lớp vỏ mỏng; 29 dùng khí/lỏng để đỡ hoặc truyền lực.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 30"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 30"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/30",
+        "section": "Nguyên tắc 30"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Two bowls with different rim diameters sealed by very thin transparent stretch film clinging to rims; lifted spare corner shows flexible sheet, contents visible, no inflated chamber.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Màng mềm ôm sát miệng bát, tạo lớp che mỏng. Nó thay nắp khối và thích ứng hình dạng mép.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Áo mưa mỏng gấp gọn tạo lớp ngăn nước khi cần thay vì vỏ che cứng.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Thin conforming transparent film; rim contact.",
+      "must_show": [
+        "Thin conforming transparent film",
+        "rim contact"
+      ],
+      "must_avoid": [
+        "Thick rigid lid",
+        "inflated support cushion"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Flexible Shells and Thin Films.\nScene: Two bowls with different rim diameters sealed by very thin transparent stretch film clinging to rims; lifted spare corner shows flexible sheet, contents visible, no inflated chamber.\nMust show: Thin conforming transparent film; rim contact.\nAvoid: Thick rigid lid; inflated support cushion.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 31,
+    "name_vi": "sử dụng vật liệu xốp",
+    "name_en": "Porous Materials",
+    "aliases_vi": [],
+    "definition_vi": "Tạo lỗ rỗng trong vật liệu hoặc thêm phần xốp; có thể dùng các lỗ ấy để chứa chất phục vụ công việc.",
+    "memory_hook_vi": "Để lỗ rỗng làm việc",
+    "front_question_vi": "Làm sao miếng lau giữ được dung dịch để nhả dần khi bạn ép nó lên mặt bàn?",
+    "example_vi": "Các lỗ rỗng trong miếng xốp giữ dung dịch. Khi bị ép, dung dịch thoát ra giúp làm sạch bề mặt.",
+    "mechanism_vi": "Các lỗ rỗng trong miếng xốp giữ dung dịch.",
+    "benefit_vi": "Khi bị ép, dung dịch thoát ra giúp làm sạch bề mặt.",
+    "application_question_vi": "Những lỗ rỗng nào có thể chứa hoặc dẫn một chất hữu ích?",
+    "confusable_with": [
+      29
+    ],
+    "distinction_vi": "31 có mạng lỗ trong vật liệu; 29 dùng thể tích khí/lỏng làm kết cấu.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 31"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 31"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/31",
+        "section": "Nguyên tắc 31"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Large cutaway porous sponge above wet table, interconnected visible pores holding teal liquid; slight compression by flat plate releases a few droplets beneath. Orange sponge skeleton.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Các lỗ rỗng trong miếng xốp giữ dung dịch. Khi bị ép, dung dịch thoát ra giúp làm sạch bề mặt.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Chậu đất nung xốp cho nước thấm chậm qua thành để cấp ẩm cho đất quanh chậu.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Open connected pores; liquid in pores; droplets under compression.",
+      "must_show": [
+        "Open connected pores",
+        "liquid in pores",
+        "droplets under compression"
+      ],
+      "must_avoid": [
+        "Single sealed air bladder",
+        "solid block with painted dots"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Porous Materials.\nScene: Large cutaway porous sponge above wet table, interconnected visible pores holding teal liquid; slight compression by flat plate releases a few droplets beneath. Orange sponge skeleton.\nMust show: Open connected pores; liquid in pores; droplets under compression.\nAvoid: Single sealed air bladder; solid block with painted dots.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 32,
+    "name_vi": "thay đổi màu sắc",
+    "name_en": "Color Changes",
+    "aliases_vi": [],
+    "definition_vi": "Đổi màu, độ trong suốt hoặc đặc tính phát sáng để làm trạng thái hay thông tin cần quan sát dễ nhận ra.",
+    "memory_hook_vi": "Cho trạng thái hiện ra",
+    "front_question_vi": "Làm sao nhận ra vùng tay cầm còn nóng mà không phải chạm tay vào để kiểm tra?",
+    "example_vi": "Miếng chỉ thị đổi màu theo nhiệt độ trên tay cầm. Màu làm trạng thái khó thấy trở nên dễ quan sát.",
+    "mechanism_vi": "Miếng chỉ thị đổi màu theo nhiệt độ trên tay cầm.",
+    "benefit_vi": "Màu làm trạng thái khó thấy trở nên dễ quan sát.",
+    "application_question_vi": "Trạng thái nào cần biến thành dấu hiệu nhìn được ngay?",
+    "confusable_with": [
+      35
+    ],
+    "distinction_vi": "32 tập trung tín hiệu nhìn; 35 thay thông số để đổi tác dụng.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 32"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 32"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/32",
+        "section": "Nguyên tắc 32"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Two identical kettle handles with small thermochromic patches: warm handle orange patch and steam from kettle, cooled handle teal patch and no steam. No digits, thermometers or hands.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Miếng chỉ thị đổi màu theo nhiệt độ trên tay cầm. Màu làm trạng thái khó thấy trở nên dễ quan sát.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Cửa sổ trong trên hộp cho thấy mức vật liệu bên trong mà không cần mở nắp.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Same patch changes color; contextual hot and cool states.",
+      "must_show": [
+        "Same patch changes color",
+        "contextual hot and cool states"
+      ],
+      "must_avoid": [
+        "Only decorative color variation",
+        "hands touching hot part"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Color Changes.\nScene: Two identical kettle handles with small thermochromic patches: warm handle orange patch and steam from kettle, cooled handle teal patch and no steam. No digits, thermometers or hands.\nMust show: Same patch changes color; contextual hot and cool states.\nAvoid: Only decorative color variation; hands touching hot part.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 33,
+    "name_vi": "đồng nhất",
+    "name_en": "Homogeneity",
+    "aliases_vi": [],
+    "definition_vi": "Chọn vật tương tác có cùng vật liệu hoặc tính chất tương hợp với đối tượng chính để tránh khác biệt gây bất lợi.",
+    "memory_hook_vi": "Tương hợp để cùng làm",
+    "front_question_vi": "Làm sao miếng vá giãn và co cùng chiếc áo khi người mặc vận động rồi giặt áo?",
+    "example_vi": "Miếng vá dùng cùng loại vải với áo. Hai phần có đặc tính gần nhau, giảm chênh lệch khi co giãn.",
+    "mechanism_vi": "Miếng vá dùng cùng loại vải với áo.",
+    "benefit_vi": "Hai phần có đặc tính gần nhau, giảm chênh lệch khi co giãn.",
+    "application_question_vi": "Vật tiếp xúc nào nên có tính chất gần giống vật chính?",
+    "confusable_with": [
+      40
+    ],
+    "distinction_vi": "33 tìm sự tương đồng; 40 phối hợp vật liệu khác nhau.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 33"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 33"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/33",
+        "section": "Nguyên tắc 33"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Close-up teal woven shirt fabric and matching same-weave patch stitched on elbow; adjacent small swatch clearly cut from same fabric roll. Orange stitching, cloth texture visible.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Miếng vá dùng cùng loại vải với áo. Hai phần có đặc tính gần nhau, giảm chênh lệch khi co giãn.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Que hàn chọn phù hợp vật liệu chi tiết để mối nối có tính chất tương hợp.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Same weave and material on patch and base.",
+      "must_show": [
+        "Same weave and material on patch and base"
+      ],
+      "must_avoid": [
+        "Metal patch on cloth",
+        "contrasting material layers"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Homogeneity.\nScene: Close-up teal woven shirt fabric and matching same-weave patch stitched on elbow; adjacent small swatch clearly cut from same fabric roll. Orange stitching, cloth texture visible.\nMust show: Same weave and material on patch and base.\nAvoid: Metal patch on cloth; contrasting material layers.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 34,
+    "name_vi": "phân hủy hoặc tái sinh",
+    "name_en": "Discarding and Recovering",
+    "aliases_vi": [],
+    "definition_vi": "Cho phần đã hoàn tất nhiệm vụ tự mất đi hoặc biến đổi; cũng có thể phục hồi phần hao hụt ngay khi làm việc.",
+    "memory_hook_vi": "Xong việc thì rời đi",
+    "front_question_vi": "Làm sao lấy phần chống đỡ ra khỏi chi tiết in rỗng khi dụng cụ không luồn vào được?",
+    "example_vi": "Giá đỡ hòa tan giữ hình trong lúc in. Sau đó nó tan trong dung môi phù hợp, để lại khoang rỗng.",
+    "mechanism_vi": "Giá đỡ hòa tan giữ hình trong lúc in.",
+    "benefit_vi": "Sau đó nó tan trong dung môi phù hợp, để lại khoang rỗng.",
+    "application_question_vi": "Phần tạm nào có thể tự biến mất sau khi hoàn thành nhiệm vụ?",
+    "confusable_with": [
+      25
+    ],
+    "distinction_vi": "34 phần hết nhiệm vụ mất đi; 25 hệ tự thực hiện việc phụ.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 34"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 34"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/34",
+        "section": "Nguyên tắc 34"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Two panels: teal hollow 3D printed arch with orange soluble supports filling cavity; same arch immersed in transparent bath, supports partly dissolving and open cavity emerging. Outer teal arch stays intact.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Giá đỡ hòa tan giữ hình trong lúc in. Sau đó nó tan trong dung môi phù hợp, để lại khoang rỗng.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Lưỡi dao tự mài giữ cạnh sắc nhờ các lớp mòn khác nhau trong khi sử dụng.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Temporary supports disappearing; final part intact.",
+      "must_show": [
+        "Temporary supports disappearing",
+        "final part intact"
+      ],
+      "must_avoid": [
+        "Whole object dissolving",
+        "cutting main part away"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Discarding and Recovering.\nScene: Two panels: teal hollow 3D printed arch with orange soluble supports filling cavity; same arch immersed in transparent bath, supports partly dissolving and open cavity emerging. Outer teal arch stays intact.\nMust show: Temporary supports disappearing; final part intact.\nAvoid: Whole object dissolving; cutting main part away.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 35,
+    "name_vi": "thay đổi các thông số hóa lý",
+    "name_en": "Parameter Changes",
+    "aliases_vi": [],
+    "definition_vi": "Đổi trạng thái, nồng độ, độ dẻo, nhiệt độ hoặc thông số hóa lý khác để vật phù hợp hơn với công việc.",
+    "memory_hook_vi": "Đổi thông số, đổi cách dùng",
+    "front_question_vi": "Làm sao giảm thể tích hàng cần chở mà người dùng vẫn pha được đủ dung dịch để sử dụng?",
+    "example_vi": "Dung dịch được làm đậm đặc để chở trong chai nhỏ. Tại nơi dùng, thêm nước đến nồng độ cần thiết.",
+    "mechanism_vi": "Dung dịch được làm đậm đặc để chở trong chai nhỏ.",
+    "benefit_vi": "Tại nơi dùng, thêm nước đến nồng độ cần thiết.",
+    "application_question_vi": "Thông số nào có thể thay đổi giữa lúc vận chuyển và lúc sử dụng?",
+    "confusable_with": [
+      36
+    ],
+    "distinction_vi": "35 đổi nồng độ ở đây; 36 tận dụng hiệu ứng lúc chuyển pha.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 35"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 35"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/35",
+        "section": "Nguyên tắc 35"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Small bottle of dark teal concentrate beside larger transparent mixing jug with pale teal diluted solution; clear water pitcher between them; same liquid family, no measurement scales or text.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Dung dịch được làm đậm đặc để chở trong chai nhỏ. Tại nơi dùng, thêm nước đến nồng độ cần thiết.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Vật liệu được làm mềm vừa đủ trước khi uốn rồi trở lại trạng thái dùng phù hợp.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Concentrate small volume; diluted large volume; added water.",
+      "must_show": [
+        "Concentrate small volume",
+        "diluted large volume",
+        "added water"
+      ],
+      "must_avoid": [
+        "Phase-change ice",
+        "multiplying liquid with no added water"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Parameter Changes.\nScene: Small bottle of dark teal concentrate beside larger transparent mixing jug with pale teal diluted solution; clear water pitcher between them; same liquid family, no measurement scales or text.\nMust show: Concentrate small volume; diluted large volume; added water.\nAvoid: Phase-change ice; multiplying liquid with no added water.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 36,
+    "name_vi": "sử dụng chuyển pha",
+    "name_en": "Phase Transitions",
+    "aliases_vi": [],
+    "definition_vi": "Tận dụng hiệu ứng xuất hiện trong quá trình chuyển pha, chẳng hạn thu nhiệt, tỏa nhiệt hoặc thay đổi thể tích.",
+    "memory_hook_vi": "Dùng hiệu ứng lúc đổi pha",
+    "front_question_vi": "Vì sao túi giữ mát vẫn nhận thêm nhiệt trong lúc phần lõi rắn của nó đang tan?",
+    "example_vi": "Lõi trong túi hấp thu nhiệt khi nóng chảy. Nhiệt nhận vào gắn với quá trình tan, giúp giữ mát đồ cạnh túi.",
+    "mechanism_vi": "Lõi trong túi hấp thu nhiệt khi nóng chảy.",
+    "benefit_vi": "Nhiệt nhận vào gắn với quá trình tan, giúp giữ mát đồ cạnh túi.",
+    "application_question_vi": "Hiệu ứng chuyển pha nào có thể hỗ trợ vấn đề nhiệt của bạn?",
+    "confusable_with": [
+      35
+    ],
+    "distinction_vi": "36 khai thác nhiệt khi tan; 35 rộng hơn về thay thông số.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 36"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 36"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/36",
+        "section": "Nguyên tắc 36"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Cutaway sealed cold pack beside small lunchbox: pack visibly contains both solid pale teal chunks and teal liquid of the SAME material, partly melted. No arrows; Python draws heat entering pack from outside.",
+      "layout": "controlled_diagram",
+      "alternatives": [
+        {
+          "scene_vi": "Lõi trong túi hấp thu nhiệt khi nóng chảy. Nhiệt nhận vào gắn với quá trình tan, giúp giữ mát đồ cạnh túi.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Sáp chuyển pha trong hộp đệm nhiệt thu nhiệt khi tan rồi tỏa nhiệt khi đông lại.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Coexisting solid and liquid inside sealed pack.",
+      "must_show": [
+        "Coexisting solid and liquid inside sealed pack"
+      ],
+      "must_avoid": [
+        "Heat arrow out of melting pack",
+        "only blue cold color",
+        "boiling liquid"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Phase Transitions.\nScene: Cutaway sealed cold pack beside small lunchbox: pack visibly contains both solid pale teal chunks and teal liquid of the SAME material, partly melted. No arrows; Python draws heat entering pack from outside.\nMust show: Coexisting solid and liquid inside sealed pack.\nAvoid: Heat arrow out of melting pack; only blue cold color; boiling liquid.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [
+      {
+        "kind": "heat",
+        "direction": "environment_to_pack",
+        "note": "Nhận nhiệt khi lõi đang tan."
+      }
+    ],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 37,
+    "name_vi": "sử dụng nở nhiệt",
+    "name_en": "Thermal Expansion",
+    "aliases_vi": [],
+    "definition_vi": "Dùng sự nở hoặc co do nhiệt, hay độ nở khác nhau của các vật liệu, để tạo thay đổi có ích.",
+    "memory_hook_vi": "Nhiệt đổi kích thước",
+    "front_question_vi": "Làm sao lắp vòng kim loại vừa chặt quanh trục khi ở nhiệt độ thường rất khó đưa vào?",
+    "example_vi": "Vòng được làm ấm cho lỗ nở ra, lắp lên trục rồi để nguội. Vòng co lại giúp tạo mối ghép chặt.",
+    "mechanism_vi": "Vòng được làm ấm cho lỗ nở ra, lắp lên trục rồi để nguội.",
+    "benefit_vi": "Vòng co lại giúp tạo mối ghép chặt.",
+    "application_question_vi": "Sự nở hoặc co nào có thể hỗ trợ lắp ghép trong hệ của bạn?",
+    "confusable_with": [
+      36
+    ],
+    "distinction_vi": "37 vật còn cùng pha; 36 có quá trình chuyển pha.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 37"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 37"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/37",
+        "section": "Nguyên tắc 37"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Three panels: orange metal ring with small gap to teal shaft; warmer slightly expanded ring sliding over same shaft; cooled ring snug around shaft. No flames, arrows, temperature values, melting or dimensional labels.",
+      "layout": "sequence",
+      "alternatives": [
+        {
+          "scene_vi": "Vòng được làm ấm cho lỗ nở ra, lắp lên trục rồi để nguội. Vòng co lại giúp tạo mối ghép chặt.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Thanh lưỡng kim cong khi nóng do hai lớp nở khác nhau, dùng để tác động công tắc.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Hole expands along with ring; solid metal throughout.",
+      "must_show": [
+        "Hole expands along with ring",
+        "solid metal throughout"
+      ],
+      "must_avoid": [
+        "Heating makes hole smaller",
+        "molten ring"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Thermal Expansion.\nScene: Three panels: orange metal ring with small gap to teal shaft; warmer slightly expanded ring sliding over same shaft; cooled ring snug around shaft. No flames, arrows, temperature values, melting or dimensional labels.\nMust show: Hole expands along with ring; solid metal throughout.\nAvoid: Heating makes hole smaller; molten ring.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 38,
+    "name_vi": "sử dụng chất oxy hóa mạnh",
+    "name_en": "Strong Oxidants",
+    "aliases_vi": [],
+    "definition_vi": "Tăng khả năng oxy hóa của môi trường, chẳng hạn dùng khí giàu oxy, để thúc đẩy quá trình cần oxy hóa.",
+    "memory_hook_vi": "Tăng sức oxy hóa",
+    "front_question_vi": "Làm sao hỗ trợ quá trình đốt trong lò khi lượng oxy của luồng khí cấp đang là giới hạn?",
+    "example_vi": "Luồng khí cấp được làm giàu oxy, hỗ trợ quá trình cháy. Đây là sơ đồ khái niệm của thiết bị công nghiệp.",
+    "mechanism_vi": "Luồng khí cấp được làm giàu oxy, hỗ trợ quá trình cháy.",
+    "benefit_vi": "Đây là sơ đồ khái niệm của thiết bị công nghiệp.",
+    "application_question_vi": "Quá trình nào thực sự cần tăng khả năng oxy hóa của môi trường?",
+    "confusable_with": [
+      39
+    ],
+    "distinction_vi": "38 tăng khả năng oxy hóa; 39 hạn chế tương tác bằng môi trường trơ.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 38"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 38"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/38",
+        "section": "Nguyên tắc 38"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Conceptual sealed industrial furnace shown in simple cutaway, two inlet gas streams one ordinary air pale teal and one oxygen-rich orange mixed before burner; flame contained inside guarded furnace. No gas cylinders, recipes or numeric settings.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Luồng khí cấp được làm giàu oxy, hỗ trợ quá trình cháy. Đây là sơ đồ khái niệm của thiết bị công nghiệp.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Thiết bị xử lý nước dùng chất oxy hóa phù hợp để biến đổi tạp chất trong hệ kín.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Enclosed controlled furnace; enriched oxidizing feed.",
+      "must_show": [
+        "Enclosed controlled furnace",
+        "enriched oxidizing feed"
+      ],
+      "must_avoid": [
+        "DIY torch",
+        "open oxygen bottle",
+        "inert gas shown as oxidizer"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Strong Oxidants.\nScene: Conceptual sealed industrial furnace shown in simple cutaway, two inlet gas streams one ordinary air pale teal and one oxygen-rich orange mixed before burner; flame contained inside guarded furnace. No gas cylinders, recipes or numeric settings.\nMust show: Enclosed controlled furnace; enriched oxidizing feed.\nAvoid: DIY torch; open oxygen bottle; inert gas shown as oxidizer.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 39,
+    "name_vi": "sử dụng môi trường trơ",
+    "name_en": "Inert Atmosphere",
+    "aliases_vi": [],
+    "definition_vi": "Dùng môi trường ít phản ứng hoặc chân không để giảm tương tác bất lợi giữa vật và môi trường thông thường.",
+    "memory_hook_vi": "Bớt phản ứng không cần",
+    "front_question_vi": "Làm sao bảo vệ vũng hàn khỏi phản ứng với không khí xung quanh?",
+    "example_vi": "Khí argon bao quanh vùng hàn, hạn chế tiếp xúc không khí. Môi trường ít phản ứng giúp bảo vệ mối hàn.",
+    "mechanism_vi": "Khí argon bao quanh vùng hàn, hạn chế tiếp xúc không khí.",
+    "benefit_vi": "Môi trường ít phản ứng giúp bảo vệ mối hàn.",
+    "application_question_vi": "Tương tác môi trường nào cần giảm bằng môi trường trơ hoặc chân không?",
+    "confusable_with": [
+      38
+    ],
+    "distinction_vi": "39 giảm phản ứng môi trường; 38 tăng khả năng oxy hóa.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 39"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 39"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/39",
+        "section": "Nguyên tắc 39"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Conceptual closeup welding torch nozzle surrounded by visible pale teal shielding gas envelope over small weld pool; metal plates on workbench; surrounding air outside envelope. No worker or technical settings.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Khí argon bao quanh vùng hàn, hạn chế tiếp xúc không khí. Môi trường ít phản ứng giúp bảo vệ mối hàn.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Bao bì được nạp khí nitơ để giảm oxy tiếp xúc với thực phẩm nhạy oxy hóa.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Shielding gas envelope covers weld pool.",
+      "must_show": [
+        "Shielding gas envelope covers weld pool"
+      ],
+      "must_avoid": [
+        "Oxygen feed labeled inert",
+        "unshielded arc",
+        "tutorial settings"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Inert Atmosphere.\nScene: Conceptual closeup welding torch nozzle surrounded by visible pale teal shielding gas envelope over small weld pool; metal plates on workbench; surrounding air outside envelope. No worker or technical settings.\nMust show: Shielding gas envelope covers weld pool.\nAvoid: Oxygen feed labeled inert; unshielded arc; tutorial settings.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  },
+  {
+    "id": 40,
+    "name_vi": "sử dụng vật liệu hợp thành",
+    "name_en": "Composite Materials",
+    "aliases_vi": [],
+    "definition_vi": "Phối hợp nhiều vật liệu thành một kết cấu để khai thác các tính chất bổ sung mà một vật liệu riêng khó đáp ứng.",
+    "memory_hook_vi": "Khác nhau để bổ trợ",
+    "front_question_vi": "Làm sao một tấm vách vừa nhẹ vừa chống uốn tốt mà không dùng toàn bộ kim loại đặc?",
+    "example_vi": "Tấm sandwich có hai lớp mặt cứng gắn với lõi xốp nhẹ. Mặt và lõi cùng làm việc khi tấm chịu uốn.",
+    "mechanism_vi": "Tấm sandwich có hai lớp mặt cứng gắn với lõi xốp nhẹ.",
+    "benefit_vi": "Mặt và lõi cùng làm việc khi tấm chịu uốn.",
+    "application_question_vi": "Những vật liệu nào có thể bổ sung tính chất cho nhau trong sản phẩm?",
+    "confusable_with": [
+      3
+    ],
+    "distinction_vi": "40 phối hợp vật liệu; 03 chú trọng tính chất riêng từng vùng.",
+    "source_refs": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 40"
+      },
+      {
+        "url": "https://the-trizjournal.com/40-inventive-principles-examples/",
+        "section": "Principle 40"
+      },
+      {
+        "url": "https://trizvietnam.com/vi/principles/40",
+        "section": "Nguyên tắc 40"
+      }
+    ],
+    "visual_brief": {
+      "scene": "Large clean cutaway of one BONDED sandwich panel: thin orange aluminum top and bottom face sheets firmly joined to thicker teal closed-cell polymer foam core, continuous flush edges; small enlarged cutaway shows core pores. No detached floating layers.",
+      "layout": "editorial",
+      "alternatives": [
+        {
+          "scene_vi": "Tấm sandwich có hai lớp mặt cứng gắn với lõi xốp nhẹ. Mặt và lõi cùng làm việc khi tấm chịu uốn.",
+          "assessment_vi": "Cơ chế có dấu hiệu vật lý trực tiếp trong must_show, đọc được trong một vùng hình vuông."
+        },
+        {
+          "scene_vi": "Sợi thủy tinh nằm trong nền nhựa tạo vật liệu vừa dễ tạo hình vừa được gia cường.",
+          "assessment_vi": "Hợp cơ chế nhưng cần thêm bối cảnh hoặc chi tiết nhỏ để phân biệt ở khổ thẻ."
+        }
+      ],
+      "selection_reason_vi": "Chọn cảnh thứ nhất; bằng chứng cần nhìn: Two stiff thin face sheets bonded to different lightweight core.",
+      "must_show": [
+        "Two stiff thin face sheets bonded to different lightweight core"
+      ],
+      "must_avoid": [
+        "Loose stack",
+        "identical layers",
+        "steel reinforcing bars instead of foam"
+      ],
+      "scope_note": "Minh họa một ứng dụng cụ thể; không bao quát mọi cách dùng nguyên tắc."
+    },
+    "image_prompt_en": "Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. \nTeaching objective: Composite Materials.\nScene: Large clean cutaway of one BONDED sandwich panel: thin orange aluminum top and bottom face sheets firmly joined to thicker teal closed-cell polymer foam core, continuous flush edges; small enlarged cutaway shows core pores. No detached floating layers.\nMust show: Two stiff thin face sheets bonded to different lightweight core.\nAvoid: Loose stack; identical layers; steel reinforcing bars instead of foam.\nNo text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.\n",
+    "overlay_spec": [],
+    "content_status": "editorially_reviewed"
+  }
+]

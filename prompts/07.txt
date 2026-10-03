@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Nesting (Matryoshka).
+Scene: Three simple bowls of graduated diameter shown separated on left and nested neatly on right; a cutaway on nested set makes all three rims visible. Same bowls and scale.
+Must show: Three rims visible within largest bowl.
+Avoid: Stacked bowls without nesting; disappearing smallest bowl.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

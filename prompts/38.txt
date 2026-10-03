@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Strong Oxidants.
+Scene: Conceptual sealed industrial furnace shown in simple cutaway, two inlet gas streams one ordinary air pale teal and one oxygen-rich orange mixed before burner; flame contained inside guarded furnace. No gas cylinders, recipes or numeric settings.
+Must show: Enclosed controlled furnace; enriched oxidizing feed.
+Avoid: DIY torch; open oxygen bottle; inert gas shown as oxidizer.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

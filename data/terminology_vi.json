@@ -1,0 +1,762 @@
+[
+  {
+    "id": 1,
+    "original_name_vi": "Nguyên tắc phân nhỏ",
+    "display_name_vi": "phân nhỏ",
+    "name_en": "Segmentation",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 01"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 2,
+    "original_name_vi": "Nguyên tắc tách khỏi",
+    "display_name_vi": "tách khỏi",
+    "name_en": "Taking out (Extraction)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 02"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 3,
+    "original_name_vi": "Nguyên tắc phẩm chất cục bộ",
+    "display_name_vi": "phẩm chất cục bộ",
+    "name_en": "Local Quality",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 03"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 4,
+    "original_name_vi": "Nguyên tắc phản đối xứng",
+    "display_name_vi": "phản đối xứng",
+    "name_en": "Asymmetry",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 04"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 5,
+    "original_name_vi": "Nguyên tắc kết hợp",
+    "display_name_vi": "kết hợp",
+    "name_en": "Merging (Consolidation)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 05"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 6,
+    "original_name_vi": "Nguyên tắc vạn năng",
+    "display_name_vi": "vạn năng",
+    "name_en": "Universality (Multi-functionality)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 06"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 7,
+    "original_name_vi": "Nguyên tắc chứa trong",
+    "display_name_vi": "chứa trong",
+    "name_en": "Nesting (Matryoshka)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 07"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 8,
+    "original_name_vi": "Nguyên tắc phản trọng lượng",
+    "display_name_vi": "phản trọng lượng",
+    "name_en": "Anti-Weight (Counterweight)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 08"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 9,
+    "original_name_vi": "Nguyên tắc gây ứng suất sơ bộ",
+    "display_name_vi": "gây ứng suất sơ bộ",
+    "name_en": "Preliminary Anti-Action (Prior Counteraction)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 09"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 10,
+    "original_name_vi": "Nguyên tắc thực hiện sơ bộ",
+    "display_name_vi": "thực hiện sơ bộ",
+    "name_en": "Preliminary Action (Prior Action)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 10"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 11,
+    "original_name_vi": "Nguyên tắc dự phòng",
+    "display_name_vi": "dự phòng",
+    "name_en": "Beforehand Cushioning (Cushion in Advance)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 11"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 12,
+    "original_name_vi": "Nguyên tắc đẳng thế",
+    "display_name_vi": "đẳng thế",
+    "name_en": "Equipotentiality",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 12"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 13,
+    "original_name_vi": "Nguyên tắc đảo ngược",
+    "display_name_vi": "đảo ngược",
+    "name_en": "The Other Way Round (Inversion)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 13"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 14,
+    "original_name_vi": "Nguyên tắc cầu hóa",
+    "display_name_vi": "cầu hóa",
+    "name_en": "Spheroidality (Curvature)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 14"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 15,
+    "original_name_vi": "Nguyên tắc linh động",
+    "display_name_vi": "linh động",
+    "name_en": "Dynamics",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 15"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 16,
+    "original_name_vi": "Nguyên tắc giải quyết từng phần",
+    "display_name_vi": "giải quyết từng phần",
+    "name_en": "Partial or Excessive Actions",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 16"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 17,
+    "original_name_vi": "Nguyên tắc chuyển sang chiều khác",
+    "display_name_vi": "chuyển sang chiều khác",
+    "name_en": "Another Dimension",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 17"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 18,
+    "original_name_vi": "Nguyên tắc dao động cơ học",
+    "display_name_vi": "dao động cơ học",
+    "name_en": "Mechanical Vibration",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 18"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 19,
+    "original_name_vi": "Nguyên tắc tác động theo chu kỳ",
+    "display_name_vi": "tác động theo chu kỳ",
+    "name_en": "Periodic Action",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 19"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 20,
+    "original_name_vi": "Nguyên tắc liên tục tác động có ích",
+    "display_name_vi": "liên tục tác động có ích",
+    "name_en": "Continuity of Useful Action",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 20"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 21,
+    "original_name_vi": "Nguyên tắc vượt nhanh",
+    "display_name_vi": "vượt nhanh",
+    "name_en": "Rushing Through (Skipping)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 21"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 22,
+    "original_name_vi": "Nguyên tắc biến hại thành lợi",
+    "display_name_vi": "biến hại thành lợi",
+    "name_en": "\"Blessing in Disguise\" (Convert Harmful into Useful)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 22"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 23,
+    "original_name_vi": "Nguyên tắc quan hệ phản hồi",
+    "display_name_vi": "quan hệ phản hồi",
+    "name_en": "Feedback",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 23"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 24,
+    "original_name_vi": "Nguyên tắc sử dụng trung gian",
+    "display_name_vi": "sử dụng trung gian",
+    "name_en": "Intermediary",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 24"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 25,
+    "original_name_vi": "Nguyên tắc tự phục vụ",
+    "display_name_vi": "tự phục vụ",
+    "name_en": "Self-service",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 25"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 26,
+    "original_name_vi": "Nguyên tắc sao chép",
+    "display_name_vi": "sao chép",
+    "name_en": "Copying",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 26"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 27,
+    "original_name_vi": "Nguyên tắc rẻ thay cho đắt",
+    "display_name_vi": "rẻ thay cho đắt",
+    "name_en": "Cheap Short-Living Objects",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 27"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 28,
+    "original_name_vi": "Nguyên tắc thay thế sơ đồ cơ học",
+    "display_name_vi": "thay thế sơ đồ cơ học",
+    "name_en": "Mechanics Substitution (Replace Mechanical System)",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 28"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 29,
+    "original_name_vi": "Nguyên tắc sử dụng các kết cấu khí và lỏng",
+    "display_name_vi": "sử dụng các kết cấu khí và lỏng",
+    "name_en": "Pneumatics and Hydraulics",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 29"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 30,
+    "original_name_vi": "Nguyên tắc sử dụng vỏ dẻo và màng mỏng",
+    "display_name_vi": "sử dụng vỏ dẻo và màng mỏng",
+    "name_en": "Flexible Shells and Thin Films",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 30"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 31,
+    "original_name_vi": "Nguyên tắc sử dụng vật liệu xốp",
+    "display_name_vi": "sử dụng vật liệu xốp",
+    "name_en": "Porous Materials",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 31"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 32,
+    "original_name_vi": "Nguyên tắc thay đổi màu sắc",
+    "display_name_vi": "thay đổi màu sắc",
+    "name_en": "Color Changes",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 32"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 33,
+    "original_name_vi": "Nguyên tắc đồng nhất",
+    "display_name_vi": "đồng nhất",
+    "name_en": "Homogeneity",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 33"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 34,
+    "original_name_vi": "Nguyên tắc phân hủy hoặc tái sinh",
+    "display_name_vi": "phân hủy hoặc tái sinh",
+    "name_en": "Discarding and Recovering",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 34"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 35,
+    "original_name_vi": "Nguyên tắc thay đổi các thông số hóa lý",
+    "display_name_vi": "thay đổi các thông số hóa lý",
+    "name_en": "Parameter Changes",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 35"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 36,
+    "original_name_vi": "Nguyên tắc sử dụng chuyển pha",
+    "display_name_vi": "sử dụng chuyển pha",
+    "name_en": "Phase Transitions",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 36"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 37,
+    "original_name_vi": "Nguyên tắc sử dụng nở nhiệt",
+    "display_name_vi": "sử dụng nở nhiệt",
+    "name_en": "Thermal Expansion",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 37"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 38,
+    "original_name_vi": "Nguyên tắc sử dụng chất oxy hóa mạnh",
+    "display_name_vi": "sử dụng chất oxy hóa mạnh",
+    "name_en": "Strong Oxidants",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 38"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 39,
+    "original_name_vi": "Nguyên tắc sử dụng môi trường trơ",
+    "display_name_vi": "sử dụng môi trường trơ",
+    "name_en": "Inert Atmosphere",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 39"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  },
+  {
+    "id": 40,
+    "original_name_vi": "Nguyên tắc sử dụng vật liệu hợp thành",
+    "display_name_vi": "sử dụng vật liệu hợp thành",
+    "name_en": "Composite Materials",
+    "aliases_vi": [],
+    "sources": [
+      {
+        "url": "https://trizvietnam.com/vi/noi-bo",
+        "section": "Danh sách bài giảng / nguyên tắc 40"
+      }
+    ],
+    "verification_status": "verified_designated_web_source",
+    "verified_at": "2026-09-11",
+    "evidence_path": "data/evidence/noi-bo-2026-09-11.html",
+    "evidence_sha256": "f67a16992a2e20c2b6a803c56ce0ba7fa16d3ea39a6a5299855a4156979ae1fc",
+    "book_comparison_status": "not_independently_checked",
+    "display_rule": "remove_exact_prefix_only"
+  }
+]

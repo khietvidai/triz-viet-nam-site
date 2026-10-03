@@ -1,0 +1,6 @@
+Use case: scientific-educational. Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered composition, all essential objects within central 84 percent. 
+Teaching objective: Mechanical Vibration.
+Scene: Close-up tilted sieve tray on springs with grains above and falling through holes into bin; tiny offset ghost outlines of tray imply mechanical oscillation; no sound icons.
+Must show: Springs; vibrating tray ghost outlines; grains through holes.
+Avoid: Only flashing lamp; continuous rigid stationary sieve.
+No text, letters, numbers, labels, logos, watermarks, card borders or arrows. Python supplies precise overlays.

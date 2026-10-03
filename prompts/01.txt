@@ -1,0 +1,7 @@
+Use case: scientific-educational.
+Create one square editorial illustration for an adult TRIZ learning card. Crisp vector-like shapes, dark navy outlines (#163447), warm ivory background (#F7F3E9), restrained teal (#268B88) and orange (#E99049), subtle shadows, uncluttered orthographic view, generous negative space. All important objects inside the central 84 percent.
+Teaching mechanism: segmentation makes a bulky cabinet movable by separating intact detachable modules.
+Show two scenes, top and bottom. Top: a wide cabinet composed of three equal SIDE-BY-SIDE narrow vertical modules is blocked at a narrow doorway. Bottom: the same three intact narrow modules are detached; one fits through an IDENTICAL doorway, the other two stand nearby. Cabinet height is lower than doorway height in both scenes. The assembled cabinet is too WIDE; each single module is narrow enough. Matching small connectors suggest reassembly. Keep modules and doorway at the same scale in both scenes.
+Must show: three useful intact modules, unchanged doorway, width reduction by separation, matching connectors.
+Avoid: stacked horizontal modules (they would retain the same width), broken wood, destruction, discarded pieces, enlarged door, shrinking furniture, perspective tricks, additional objects.
+No text, letters, numbers, labels, logos, watermark, card border or arrows.
