@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import {
     createSessionToken,
     getNoiboEnv,
+    isUserAdmin,
     SESSION_COOKIE,
     verifyPassword,
 } from '@/lib/videoAuth';
